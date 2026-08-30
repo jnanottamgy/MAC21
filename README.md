@@ -13,12 +13,17 @@ Ramaiah Institute of Technology).
 - [`syllabus/MAC21-course-handbook.pdf`](syllabus/MAC21-course-handbook.pdf) — official
   course handbook: course content, COs, textbooks, the 10 lab programs, assessment scheme.
 
-### Previous year papers
-- [`pyq/PATTERN-ANALYSIS.md`](pyq/PATTERN-ANALYSIS.md) — **the main artefact.** Repeat
-  questions ranked by frequency, the rigid paper format, and a unit-by-unit breakdown of
-  what actually gets asked.
+### Papers
+- ⭐ [`pyq/MODEL-PAPER-I-MAC21.md`](pyq/MODEL-PAPER-I-MAC21.md) — **the official
+  departmental model paper. Start here.** 17 of its 40 parts have been traced into real
+  exams, many verbatim.
+- [`pyq/PATTERN-ANALYSIS.md`](pyq/PATTERN-ANALYSIS.md) — **the main artefact.** The model-paper
+  leak, repeat questions ranked by frequency, the rigid paper format, and a unit-by-unit
+  breakdown of what actually gets asked.
+- [`pyq/SYLLABUS-CHANGE-2025.md`](pyq/SYLLABUS-CHANGE-2025.md) — 🚨 MAC21 vs 25MAC21:
+  what moved, what was dropped, what was added, and how much of the 2026 paper you can use.
 - [`pyq/README.md`](pyq/README.md) — index of all papers, with off-syllabus warnings.
-- 2 exact-match MAC21 papers (2023, 2024) and 2 partially-matching sister papers.
+- 2 exact-match MAC21 papers (2023, 2024), the 2026 new-scheme paper, and 2 sister papers.
 - Original PDFs preserved under [`pyq/raw/`](pyq/raw/).
 
 ## Exam format

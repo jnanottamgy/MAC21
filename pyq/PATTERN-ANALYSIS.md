@@ -9,6 +9,48 @@ Shorthand used below:
 | **M24** | MAC21, Jul/Aug 2024 (CSE) | ✅ exact |
 | **MAM24** | MAM21, Jul/Aug 2024 (MECH/IEM/CHE) | ⚠️ Units I–IV only |
 | **MAE23** | MAE21, Sep/Oct 2023 (ECE/EEE) | ⚠️ Units I–III only |
+| **MP** | **MAC21 SEE Model Question Paper I** (Dept. of Mathematics) | ⭐ **exact — and predictive** |
+| **P26** | 25MAC21, Jun/Jul 2026 (CSE) | ⚠️ new scheme — see `SYLLABUS-CHANGE-2025.md` |
+
+---
+
+## 0. ⭐ The model paper leaks into the real exam
+
+The Department of Mathematics model paper (`MODEL-PAPER-I-MAC21.md`) carries the printed
+disclaimer *"Students should not be under the impression that questions from model question
+paper will appear in SEE."*
+
+**Cross-checking it against four real papers shows that disclaimer does not hold.**
+The following appeared in an actual exam, most of them word-for-word:
+
+| Model paper question | Reappeared in | Match |
+|---|---|---|
+| Taylor's series method, `dy/dt = e^(−2t) − 2y`, `y(0) = 0.1`, `t = 0.1`, 4th degree | **P26** 9c | 🎯 **verbatim** |
+| Coffee at 92°C, room 24°C, cooled to 80°C in 1 min, time to reach 65°C | **P26** 6c | 🎯 **verbatim** |
+| Gauss-Seidel on `x + 8y + 2z = −4`; `10x + 2y + z = 59`; `2x − y + 20z = 74` | **P26** 2b | 🎯 **identical system** |
+| DE of the closed circuit with L and C in series without applied e.m.f. | **P26** 5a | 🎯 **verbatim** |
+| Cubic polynomial through `(2,4) (4,56) (9,711) (10,980)` by divided difference, `y` at `x = 1.5` | **M24** 7d | 🎯 **verbatim** |
+| Prove `[1/(D+a)]X = e^(−ax) ∫ X e^(ax) dx` | **M23** 5b, **M24** 5b, **MAE23** 6b | 🎯 **verbatim ×3** |
+| Write the steps involved in solving Cauchy's LDE | **M23** 5a | 🎯 **verbatim** |
+| `f(x, y) = xy(1 − x − y)` is maximum at `(1/3, 1/3)` | **MAM24** 2b, **MAE23** 1b | 🎯 **verbatim ×2** |
+| Newton-Raphson on `x² + y = 11`, `y² + x = 7`, `x₀ = 3.5`, `y₀ = −1.8` | **MAE23** 2b | 🎯 **verbatim** |
+| Formula for `dy/dx` and `d²y/dx²` from Newton-Gregory forward | **M24** 7a | 🎯 **verbatim** |
+| Define linear and non-linear differential equations with example | **M23** 6a, **MAE23** 6a, **P26** 6a | 🎯 **verbatim ×3** |
+| Current `i = 10e^(−t) sin(2πt)`, find `t` for `i = 2` amp | **P26** 1d | same problem, Regula-Falsi instead of N-R |
+| Euler's method on `dy/dx − 2y = 3eˣ` | **P26** 10b | same equation, different `h` and start |
+| Expand `xy² + cos(xy)` about `(1, π/2)` | **M23** 2c, **MAM24** 2c, **MAE23** 2c | near-verbatim ×3 |
+| Geometrical interpretation of many solutions for `2x + 3y = 5`; `x + 1.5y = 2.5` | **M23** 10a | same question, different system |
+| Eigenvector for the largest eigenvalue by Rayleigh's power method | **M23** 10b, **M24** 9c | same method, different matrix |
+| `x′ = Ax` solved by matrix method | **M23** 10d, **M24** 10d | same technique |
+
+**That is 17 of the model paper's 40 parts traceable into real exams**, across every unit.
+Several landed in the very next paper written under a *different syllabus* — which is the
+strongest possible signal that the department reuses this question bank.
+
+### What to do with this
+**Work the model paper end to end. It is the single highest-yield document here** — higher
+than any individual PYQ, because it is the source several PYQs were drawn from. Every part
+of it is on your syllabus, and it is only 40 parts long.
 
 ---
 
@@ -186,6 +228,9 @@ From `syllabus/MAC21-course-handbook.pdf`:
 
 ## 6. Highest-yield conclusions
 
+0. **Work the official model paper first.** 17 of its 40 parts have been traced into real
+   exams, many verbatim, across every unit and across two different syllabus schemes. It
+   is short, entirely on-syllabus, and demonstrably the question bank the papers draw on.
 1. **Nine questions have appeared 3+ times.** Working through just those nine covers a
    large fraction of a typical paper.
 2. **Unit V is the most predictable unit and Unit III the most formulaic.** Together
