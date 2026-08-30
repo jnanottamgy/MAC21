@@ -1,0 +1,825 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>MAC21 All 7-Markers</title>
+<style>
+@page { size: A4; margin: 11mm 10mm 11mm 10mm; }
+*{box-sizing:border-box}
+body{font-family:"DejaVu Sans","Segoe UI",Helvetica,Arial,sans-serif;font-size:8.6pt;line-height:1.4;color:#14181d;margin:0}
+h1{font-size:20pt;margin:0 0 2mm;letter-spacing:-.4px}
+h2{font-size:12.5pt;margin:6mm 0 2.5mm;padding:2mm 3mm;background:#14181d;color:#fff;border-radius:2px}
+h3{font-size:10.2pt;margin:4.5mm 0 1.5mm;padding:1.4mm 2.5mm;background:#e4e7ea;border-left:3.5px solid #14181d;border-radius:2px}
+h4{font-size:8.8pt;margin:2.5mm 0 1mm;color:#3d454e;text-transform:uppercase;letter-spacing:.4px;font-size:7.4pt}
+p{margin:0 0 1.8mm}
+table{width:100%;border-collapse:collapse;margin:0 0 2.5mm;font-size:7.8pt}
+th{background:#eceef1;text-align:left;padding:1.2mm 1.8mm;border:.6px solid #9aa3ad;font-weight:700;font-size:7.2pt}
+td{padding:1.2mm 1.8mm;border:.6px solid #c2c8ce;vertical-align:top}
+tr:nth-child(even) td{background:#f7f8f9}
+tr{page-break-inside:avoid} h2,h3{page-break-after:avoid}
+code,.m{font-family:"DejaVu Sans Mono",Consolas,monospace;font-size:7.7pt;background:#eceef1;padding:0 1.1mm;border-radius:2px}
+.meth{border:1.2px solid #1a4d7a;background:#f4f8fc;border-radius:3px;padding:2.2mm 2.8mm;margin:0 0 2.5mm}
+.meth h4{color:#1a4d7a;margin-top:0}
+.wk{border:1.2px solid #16603a;background:#f3faf6;border-radius:3px;padding:2.2mm 2.8mm;margin:0 0 2.5mm}
+.wk h4{color:#16603a;margin-top:0}
+.trap{border:1.2px solid #8a1420;background:#fdf5f5;border-radius:3px;padding:2.2mm 2.8mm;margin:0 0 3mm}
+.trap h4{color:#8a1420;margin-top:0}
+.box{border:1.4px solid #14181d;border-radius:3px;padding:2.4mm 3mm;margin:0 0 3.5mm;background:#f7f8f9}
+.tag{display:inline-block;background:#14181d;color:#fff;padding:.25mm 1.5mm;border-radius:2px;font-weight:700;font-size:7pt;white-space:nowrap}
+.r{background:#8a1420}.o{background:#8a5410}.g{background:#16603a}.b{background:#1a4d7a}
+.ans{font-weight:800;background:#d8f0e2;padding:.3mm 1.5mm;border-radius:2px}
+ol,ul{margin:0 0 1.8mm;padding-left:4.5mm}li{margin-bottom:.8mm}
+.lead{font-size:9.2pt;color:#3d454e;margin-bottom:3mm}
+.foot{margin-top:5mm;padding-top:2mm;border-top:.8px solid #c2c8ce;font-size:7.2pt;color:#6b737c}
+.two{column-count:2;column-gap:5mm}
+</style></head><body>
+
+<h1>MAC21 &mdash; Every 7-Marker, Both Sides</h1>
+<p class="lead">All 35 problem types that carry the 7-mark parts, across <strong>both</strong> options in
+every unit &mdash; Q1 and Q2, Q3 and Q4, Q5 and Q6, Q7 and Q8, Q9 and Q10.
+Nothing here depends on which question you end up answering.</p>
+
+<div class="box">
+<strong>How each entry is laid out:</strong>
+<span class="tag b">METHOD</span> the recipe, in steps &middot;
+<span class="tag g">WORKED</span> one full example, taken from a real paper wherever one exists &middot;
+<span class="tag r">TRAP</span> what actually loses marks.<br>
+<strong>Every numerical answer below has been computed and verified</strong>, not estimated.
+Where a scan was unreadable I say so rather than guess.
+</div>
+
+<h2>UNIT I &nbsp;&mdash;&nbsp; Q1 and Q2</h2>
+
+<h3>1 &nbsp; Newton-Raphson &mdash; system of two non-linear equations <span class="tag r">4&times;</span> <span class="tag">Q1(c)</span></h3>
+<div class="meth"><h4>Method</h4>
+For <span class="m">f(x,y)=0</span>, <span class="m">g(x,y)=0</span>: at each step solve the linear system
+<span class="m">J&middot;[&Delta;x, &Delta;y]&#7488; = &minus;[f, g]&#7488;</span> where
+<span class="m">J = [[f&#8339;, f&#7527;],[g&#8339;, g&#7527;]]</span>, then update
+<span class="m">x&#8331;&#8321; = x + &Delta;x</span>, <span class="m">y&#8331;&#8321; = y + &Delta;y</span>.
+Evaluate J at the <em>current</em> point every iteration.</div>
+<div class="wk"><h4>Worked &mdash; M23 1(c) / M24 1(c) / MAM24 1(b)</h4>
+<p>Solve <span class="m">x&sup2;+y&sup2;=x</span>, <span class="m">x&sup2;&minus;y&sup2;=y</span> from
+<span class="m">(0.8, 0.4)</span>, two iterations.</p>
+<p>Write <span class="m">f = x&sup2;+y&sup2;&minus;x</span>, <span class="m">g = x&sup2;&minus;y&sup2;&minus;y</span>.
+Then <span class="m">J = [[2x&minus;1, 2y],[2x, &minus;2y&minus;1]]</span>.</p>
+<table><tr><th>Iter</th><th>f</th><th>g</th><th>&Delta;x</th><th>&Delta;y</th><th>x</th><th>y</th></tr>
+<tr><td>start</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>0.800000</td><td>0.400000</td></tr>
+<tr><td>1</td><td>0.0000</td><td>+0.0800</td><td>&minus;0.027119</td><td>+0.020339</td><td>0.772881</td><td>0.420339</td></tr>
+<tr><td>2</td><td>+0.0011</td><td>+0.0003</td><td>&minus;0.001035</td><td>&minus;0.000695</td><td><span class="ans">0.771846</span></td><td><span class="ans">0.419644</span></td></tr></table>
+</div>
+<div class="trap"><h4>Trap</h4>
+At the start point <span class="m">f = 0</span> exactly &mdash; students assume they have made an error and stop.
+They have not: <span class="m">g &ne; 0</span>, so the iteration still moves. Also, P26 writes the same system as
+<span class="m">x = x&sup2;+y&sup2;</span>, <span class="m">y = x&sup2;&minus;y&sup2;</span> &mdash; identical, just rearranged.</div>
+
+<h3>2 &nbsp; Newton-Raphson &mdash; single equation <span class="tag r">3&times;</span> <span class="tag">Q2(b)/(c)</span></h3>
+<div class="meth"><h4>Method</h4>
+<span class="m">x&#8331;&#8321; = x&#8345; &minus; f(x&#8345;)/f&prime;(x&#8345;)</span>.
+<strong>First locate the root by sign change</strong> &mdash; tabulate f at a few integers and find where it flips
+sign. Start inside that bracket. Iterate to three decimals.</div>
+<div class="wk"><h4>Worked &mdash; M24 2(b) / P26 2(c)</h4>
+<p>Find a <em>negative</em> root of <span class="m">x e&#8339; &minus; sin x = 0</span> to three decimals.</p>
+<table><tr><th>x</th><td>&minus;0.5</td><td>&minus;1</td><td>&minus;2</td><td>&minus;2.9</td><td>&minus;3.0</td><td>&minus;3.5</td></tr>
+<tr><th>f(x)</th><td>+0.176</td><td>+0.474</td><td>+0.639</td><td>+0.080</td><td>&minus;0.008</td><td>&minus;0.456</td></tr></table>
+<p>Sign change in <span class="m">(&minus;3.0, &minus;2.9)</span>. With
+<span class="m">f&prime; = e&#8339; + x e&#8339; &minus; cos x</span> and <span class="m">x&#8320; = &minus;3</span>:</p>
+<p><span class="m">x&#8321; = &minus;2.990745</span> &rarr; <span class="m">x&#8322; = &minus;2.990735</span> &rarr;
+converged. &nbsp; <span class="ans">root = &minus;2.991</span></p>
+</div>
+<div class="trap"><h4>Trap &mdash; this one is nasty</h4>
+<strong><span class="m">x = 0</span> is itself a root</strong> of this equation. Start anywhere near zero
+(&minus;0.5, &minus;1) and Newton-Raphson slides straight back to 0, which is not negative &mdash; you get
+0.000 and lose the question. <strong>You must bracket first.</strong> The first genuine negative root is near &minus;3.</div>
+
+<h3>3 &nbsp; Taylor / Maclaurin expansion &mdash; two variables <span class="tag r">4&times;</span> <span class="tag">Q2(c)</span></h3>
+<div class="meth"><h4>Method</h4>
+<span class="m">f(x,y) = f(a,b) + [h f&#8339; + k f&#7527;] + (1/2!)[h&sup2;f&#8339;&#8339; + 2hk f&#8339;&#7527; + k&sup2;f&#7527;&#7527;] + &hellip;</span>
+&nbsp;with <span class="m">h = x&minus;a</span>, <span class="m">k = y&minus;b</span>.
+Compute the five partials, evaluate all at <span class="m">(a,b)</span>, substitute.</div>
+<div class="wk"><h4>Worked &mdash; M23 2(c): expand <span class="m">xy + cos(xy)</span> about <span class="m">(1, &pi;/2)</span></h4>
+<p>At <span class="m">(1, &pi;/2)</span> we have <span class="m">xy = &pi;/2</span>, so
+<span class="m">sin(xy) = 1</span> and <span class="m">cos(xy) = 0</span>.</p>
+<table><tr><th></th><th>expression</th><th>value at (1, &pi;/2)</th></tr>
+<tr><td>f</td><td><span class="m">xy + cos(xy)</span></td><td>&pi;/2</td></tr>
+<tr><td>f&#8339;</td><td><span class="m">y(1 &minus; sin xy)</span></td><td>0</td></tr>
+<tr><td>f&#7527;</td><td><span class="m">x(1 &minus; sin xy)</span></td><td>0</td></tr>
+<tr><td>f&#8339;&#8339;</td><td><span class="m">&minus;y&sup2; cos xy</span></td><td>0</td></tr>
+<tr><td>f&#8339;&#7527;</td><td><span class="m">1 &minus; sin xy &minus; xy cos xy</span></td><td>0</td></tr>
+<tr><td>f&#7527;&#7527;</td><td><span class="m">&minus;x&sup2; cos xy</span></td><td>0</td></tr></table>
+<p><span class="ans">Every term vanishes. To second degree, f(x,y) = &pi;/2.</span></p>
+</div>
+<div class="trap"><h4>Trap &mdash; do not panic and do not "fix" it</h4>
+For the <span class="m">cos</span> version the answer really is just <span class="m">&pi;/2</span>. Students get zeros,
+assume they have blundered, and waste ten minutes. <strong>Write the table, state that all first and second
+derivatives vanish at the point, conclude <span class="m">f &asymp; &pi;/2</span>.</strong> Full marks.<br>
+<strong>The other two variants are NOT trivial</strong> &mdash; know them:<br>
+&bull; <span class="m">xy + sin(xy)</span>: f = 1+&pi;/2, f&#8339; = &pi;/2, f&#7527; = 1,
+f&#8339;&#8339; = &minus;&pi;&sup2;/4, f&#8339;&#7527; = 1&minus;&pi;/2, f&#7527;&#7527; = &minus;1<br>
+&bull; <span class="m">xy&sup2; + cos(xy)</span>: f = &pi;&sup2;/4, f&#8339; = &pi;(&pi;&minus;2)/4, f&#7527; = &pi;&minus;1,
+f&#8339;&#8339; = 0, f&#8339;&#7527; = &pi;&minus;1, f&#7527;&#7527; = 2</div>
+
+<h3>4 &nbsp; Taylor / Maclaurin expansion &mdash; one variable <span class="tag o">5&times;</span> <span class="tag">Q1(b)</span></h3>
+<div class="meth"><h4>Method</h4>
+Maclaurin: <span class="m">f(x) = f(0) + x f&prime;(0) + x&sup2;f&Prime;(0)/2! + &hellip;</span><br>
+"In powers of <span class="m">(x&minus;a)</span>" means Taylor about <span class="m">a</span>.<br>
+<strong>Shortcut for inverse-trig and log forms:</strong> differentiate once, expand the resulting
+<em>rational</em> function as a binomial series, then integrate term by term. Far faster than repeated differentiation.</div>
+<div class="wk"><h4>Worked &mdash; MAE23 1(c): Maclaurin series for <span class="m">tan x</span> up to <span class="m">x&#8308;</span></h4>
+<p><span class="m">f = tan x</span>, <span class="m">f&prime; = sec&sup2;x = 1 + f&sup2;</span>. Differentiating repeatedly
+using this identity (much quicker than the quotient rule):</p>
+<p><span class="m">f&prime; = 1+f&sup2;</span>, <span class="m">f&Prime; = 2f f&prime;</span>,
+<span class="m">f&prime;&Prime; = 2f&prime;&sup2; + 2f f&Prime;</span>,
+<span class="m">f&#8305;&#7515; = 6f&prime;f&Prime; + 2f f&prime;&Prime;</span></p>
+<p>At <span class="m">x=0</span>: <span class="m">f=0, f&prime;=1, f&Prime;=0, f&prime;&Prime;=2, f&#8305;&#7515;=0</span></p>
+<p><span class="ans">tan x = x + x&sup3;/3 + &hellip;</span> (the <span class="m">x&sup2;</span> and <span class="m">x&#8308;</span>
+terms are zero &mdash; tan is odd)</p>
+</div>
+<div class="trap"><h4>Trap</h4>
+For an odd function every even-order term vanishes. Say so explicitly rather than leaving gaps &mdash;
+it shows you knew, and it is often worth a mark.</div>
+
+<h3>5 &nbsp; Maxima and minima of two variables <span class="tag o">5&times;</span> <span class="tag">Q1(d)/Q2(b)</span></h3>
+<div class="meth"><h4>Method &mdash; the r-s-t test</h4>
+<ol><li>Solve <span class="m">f&#8339; = 0</span>, <span class="m">f&#7527; = 0</span> simultaneously for stationary points.</li>
+<li>Set <span class="m">r = f&#8339;&#8339;</span>, <span class="m">s = f&#8339;&#7527;</span>, <span class="m">t = f&#7527;&#7527;</span>.</li>
+<li>At each point: <span class="m">rt &minus; s&sup2; &gt; 0</span> and <span class="m">r &lt; 0</span> &rarr; <strong>maximum</strong>;
+<span class="m">rt &minus; s&sup2; &gt; 0</span> and <span class="m">r &gt; 0</span> &rarr; <strong>minimum</strong>;
+<span class="m">rt &minus; s&sup2; &lt; 0</span> &rarr; <strong>saddle</strong>;
+<span class="m">= 0</span> &rarr; test fails.</li></ol></div>
+<div class="wk"><h4>Worked &mdash; M23 2(b): <span class="m">x&sup3; + y&sup3; &minus; 3axy</span></h4>
+<p><span class="m">f&#8339; = 3x&sup2; &minus; 3ay = 0</span>, <span class="m">f&#7527; = 3y&sup2; &minus; 3ax = 0</span>
+&rarr; stationary points <span class="m">(0,0)</span> and <span class="m">(a,a)</span>.</p>
+<p><span class="m">r = 6x</span>, <span class="m">s = &minus;3a</span>, <span class="m">t = 6y</span>, so
+<span class="m">rt &minus; s&sup2; = 36xy &minus; 9a&sup2;</span>.</p>
+<ul><li>At <span class="m">(0,0)</span>: <span class="m">rt&minus;s&sup2; = &minus;9a&sup2; &lt; 0</span> &rarr;
+<span class="ans">saddle point</span></li>
+<li>At <span class="m">(a,a)</span>: <span class="m">rt&minus;s&sup2; = 27a&sup2; &gt; 0</span>, <span class="m">r = 6a</span>
+&rarr; <span class="ans">minimum if a &gt; 0, maximum if a &lt; 0</span></li></ul>
+</div>
+<div class="trap"><h4>Trap</h4>
+The sign of <span class="m">a</span> flips the conclusion &mdash; you must split the case, not assume <span class="m">a&gt;0</span>.
+And <span class="m">(0,0)</span> is a saddle, not "no conclusion": <span class="m">rt&minus;s&sup2;</span> is strictly negative.</div>
+
+<h3>6 &nbsp; Lagrange multipliers <span class="tag r">4&times;</span> <span class="tag">Q1(d)/Q2(d)</span></h3>
+<div class="meth"><h4>Method</h4>
+To optimise <span class="m">f</span> subject to <span class="m">g = 0</span>: form
+<span class="m">F = f &minus; &lambda;g</span> and solve
+<span class="m">F&#8339; = F&#7527; = F&#7526; = 0</span> together with <span class="m">g = 0</span> &mdash; four equations,
+four unknowns. Divide pairs of equations to eliminate <span class="m">&lambda;</span> early; it is almost never wanted.</div>
+<div class="wk"><h4>Worked A &mdash; M23 2(d) / MAM24 1(d): open-top box, volume 108 ft&sup3;, minimum surface area</h4>
+<p>Minimise <span class="m">S = xy + 2xz + 2yz</span> subject to <span class="m">xyz = 108</span>.</p>
+<p><span class="m">F = xy + 2xz + 2yz &minus; &lambda;(xyz &minus; 108)</span>:</p>
+<p><span class="m">y + 2z = &lambda;yz</span>, &nbsp; <span class="m">x + 2z = &lambda;xz</span>, &nbsp;
+<span class="m">2x + 2y = &lambda;xy</span></p>
+<p>First two give <span class="m">x = y</span>; combining with the third gives <span class="m">x = 2z</span>.
+Then <span class="m">xyz = 108</span> &rarr; <span class="m">4z&sup3; = 108</span> &rarr; <span class="m">z = 3</span>.</p>
+<p><span class="ans">x = 6, y = 6, z = 3 ft &nbsp;&mdash;&nbsp; minimum surface area S = 108 ft&sup2;</span></p>
+</div>
+<div class="wk"><h4>Worked B &mdash; M23 1(d): hottest point on the unit sphere, <span class="m">T = 400xyz&sup2;</span></h4>
+<p>Maximise <span class="m">T</span> on <span class="m">x&sup2;+y&sup2;+z&sup2; = 1</span>.
+The stationary conditions give <span class="m">x&sup2; = y&sup2; = z&sup2;/2</span>, so
+<span class="m">x&sup2; = y&sup2; = 1/4</span>, <span class="m">z&sup2; = 1/2</span>.</p>
+<p><span class="ans">Highest temperature T = 50, at (&plusmn;&frac12;, &plusmn;&frac12;, &plusmn;1/&radic;2) with xy &gt; 0</span></p>
+</div>
+<div class="trap"><h4>Trap</h4>
+"Open at the top" means <strong>one</strong> <span class="m">xy</span> face, not two &mdash; using <span class="m">2xy</span>
+gives a cube and loses the question. And in the sphere problem <span class="m">z</span> appears squared, so
+<span class="m">z&sup2; = 2x&sup2;</span>, not <span class="m">z&sup2; = x&sup2;</span>.</div>
+
+<h2>UNIT II &nbsp;&mdash;&nbsp; Q3 and Q4</h2>
+
+<div class="box"><strong>Read this first.</strong> The four numerical methods share one skeleton and are far
+faster learned together than apart. Given <span class="m">y&prime; = f(x,y)</span>, <span class="m">y(x&#8320;) = y&#8320;</span>,
+step <span class="m">h</span>:<br>
+<strong>Taylor</strong> &mdash; differentiate the ODE repeatedly, evaluate at the start point, substitute into the
+Taylor series. <strong>Euler</strong> &mdash; one slope, at the left end. <strong>Modified Euler</strong> &mdash;
+average the slopes at both ends, iterating until the value settles. <strong>RK4</strong> &mdash; a weighted
+average of four slopes. Same tabulation discipline throughout: <strong>carry 4&ndash;6 decimals, show every row.</strong></div>
+
+<h3>7 &nbsp; Taylor's series method <span class="tag r">5&times;</span> <span class="tag">Q3(c)/Q4(b)</span></h3>
+<div class="meth"><h4>Method</h4>
+<span class="m">y(x&#8320;+h) = y&#8320; + h y&prime;&#8320; + (h&sup2;/2!)y&Prime;&#8320; + (h&sup3;/3!)y&prime;&Prime;&#8320; + (h&#8308;/4!)y&#8305;&#7515;&#8320; + &hellip;</span><br>
+Get <span class="m">y&Prime;</span> by differentiating <span class="m">y&prime; = f(x,y)</span> <em>totally</em>:
+<span class="m">y&Prime; = f&#8339; + f&#7527;&middot;y&prime;</span>. Repeat. Then evaluate every derivative at the initial point.</div>
+<div class="wk"><h4>Worked &mdash; MP 3(c) / P26 9(c) <span class="tag r">verbatim repeat</span></h4>
+<p><span class="m">dy/dt = e&#8315;&sup2;&#7511; &minus; 2y</span>, <span class="m">y(0) = 0.1</span>, find
+<span class="m">y(0.1)</span> to 4th degree.</p>
+<table><tr><th>derivative</th><th>expression</th><th>value at t=0, y=0.1</th></tr>
+<tr><td>y&prime;</td><td><span class="m">e&#8315;&sup2;&#7511; &minus; 2y</span></td><td>0.8</td></tr>
+<tr><td>y&Prime;</td><td><span class="m">&minus;2e&#8315;&sup2;&#7511; &minus; 2y&prime;</span></td><td>&minus;3.6</td></tr>
+<tr><td>y&prime;&Prime;</td><td><span class="m">4e&#8315;&sup2;&#7511; &minus; 2y&Prime;</span></td><td>11.2</td></tr>
+<tr><td>y&#8305;&#7515;</td><td><span class="m">&minus;8e&#8315;&sup2;&#7511; &minus; 2y&prime;&Prime;</span></td><td>&minus;30.4</td></tr></table>
+<p><span class="m">y(0.1) = 0.1 + (0.1)(0.8) + (0.01/2)(&minus;3.6) + (0.001/6)(11.2) + (0.0001/24)(&minus;30.4)</span></p>
+<p><span class="ans">y(0.1) = 0.163740</span> &nbsp; (exact <span class="m">y = (0.1+t)e&#8315;&sup2;&#7511;</span> gives 0.163746 &mdash; agrees to 5 dp)</p>
+</div>
+<div class="trap"><h4>Trap</h4>
+<span class="m">y&Prime;</span> is a <strong>total</strong> derivative &mdash; you must substitute
+<span class="m">y&prime;</span> back in, not treat <span class="m">y</span> as constant. Read whether the paper says
+3rd or 4th degree; MP says 4th, M24 says 3rd.</div>
+
+<h3>8 &nbsp; Euler's method <span class="tag o">4&times;</span> <span class="tag">Q3(b)/Q4(b)</span></h3>
+<div class="meth"><h4>Method</h4><span class="m">y&#8331;&#8321; = y&#8345; + h f(x&#8345;, y&#8345;)</span>. One slope per step, taken at the left end. Tabulate.</div>
+<div class="wk"><h4>Worked &mdash; M23 4(b) / MAE23 3(b): bungee jumper <span class="tag r">2&times;</span></h4>
+<p><span class="m">dv/dt = g &minus; (c/m)v&sup2;</span>, <span class="m">g = 9.8</span>, <span class="m">c = 0.25</span>,
+<span class="m">m = 68.1</span>, <span class="m">v(0) = 0</span>, <span class="m">h = 1</span> s.
+So <span class="m">c/m = 0.003671</span>.</p>
+<table><tr><th>t</th><th>v</th><th>f = 9.8 &minus; 0.003671v&sup2;</th><th>v + h&middot;f</th></tr>
+<tr><td>0</td><td>0</td><td>9.8000</td><td>9.8000</td></tr>
+<tr><td>1</td><td>9.8000</td><td>9.4475</td><td>19.2475</td></tr>
+<tr><td>2</td><td>19.2475</td><td>8.4401</td><td><span class="ans">27.6876</span></td></tr></table>
+<p>Velocity after 3 s <span class="ans">&asymp; 27.69 m/s</span>. (MAE23 asks only for the <em>third</em> second: 8.44 m/s&sup2; &times; 1 s of gain.)</p>
+</div>
+<div class="trap"><h4>Trap</h4>Compute <span class="m">c/m</span> once and keep it to 6 significant figures &mdash;
+rounding it to 0.004 visibly changes the third row.</div>
+
+<h3>9 &nbsp; Modified Euler's method <span class="tag r">5&times;</span> <span class="tag">Q4(c)</span></h3>
+<div class="meth"><h4>Method &mdash; predictor / corrector</h4>
+<strong>Predictor:</strong> <span class="m">y&#8331;&#8321;&#8317;&#8304;&#8318; = y&#8345; + h f(x&#8345;, y&#8345;)</span><br>
+<strong>Corrector (iterate):</strong> <span class="m">y&#8331;&#8321;&#8317;&#7503;&#8314;&sup1;&#8318; = y&#8345; + (h/2)[f(x&#8345;,y&#8345;) + f(x&#8331;&#8321;, y&#8331;&#8321;&#8317;&#7503;&#8318;)]</span><br>
+Repeat the corrector until two successive values agree &mdash; papers usually say "two iterations at each stage".</div>
+<div class="wk"><h4>Worked &mdash; P26 9(d)</h4>
+<p><span class="m">dy/dx = &minus;y/(1+x)</span>, <span class="m">y(3) = 2</span>, find <span class="m">y(3.2)</span>,
+<span class="m">h = 0.2</span>.</p>
+<p><span class="m">f(3, 2) = &minus;2/4 = &minus;0.5</span></p>
+<table><tr><th>step</th><th>value</th></tr>
+<tr><td>Predictor</td><td><span class="m">2 + 0.2(&minus;0.5) = 1.900000</span></td></tr>
+<tr><td>Corrector 1</td><td><span class="m">2 + 0.1[&minus;0.5 + (&minus;1.9/4.2)] = 1.904762</span></td></tr>
+<tr><td>Corrector 2</td><td><span class="m">2 + 0.1[&minus;0.5 + (&minus;1.904762/4.2)] = 1.904649</span></td></tr>
+<tr><td>Corrector 3</td><td>1.904651 &mdash; settled</td></tr></table>
+<p><span class="ans">y(3.2) &asymp; 1.9047</span> &nbsp;(exact <span class="m">y = 8/(1+x)</span> gives 1.904762)</p>
+</div>
+<div class="trap"><h4>Trap</h4>The corrector uses <span class="m">f</span> at the <strong>new</strong> x with the
+<strong>latest</strong> y estimate, while <span class="m">f(x&#8345;,y&#8345;)</span> stays fixed throughout. Recomputing
+the first term each time is the standard error.</div>
+
+<h3>10 &nbsp; Runge-Kutta, fourth order <span class="tag r">6&times; &mdash; every paper</span> <span class="tag">Q3(d)/Q4(d)</span></h3>
+<div class="meth"><h4>Method</h4>
+<span class="m">k&#8321; = h f(x&#8345;, y&#8345;)</span> &middot;
+<span class="m">k&#8322; = h f(x&#8345;+h/2, y&#8345;+k&#8321;/2)</span> &middot;
+<span class="m">k&#8323; = h f(x&#8345;+h/2, y&#8345;+k&#8322;/2)</span> &middot;
+<span class="m">k&#8324; = h f(x&#8345;+h, y&#8345;+k&#8323;)</span><br>
+<span class="m">&Delta;y = (k&#8321; + 2k&#8322; + 2k&#8323; + k&#8324;)/6</span>, &nbsp;
+<span class="m">y&#8331;&#8321; = y&#8345; + &Delta;y</span></div>
+<div class="wk"><h4>Worked &mdash; P26 10(d)</h4>
+<p><span class="m">dy/dx = y &minus; x&sup2;</span>, <span class="m">y(2) = 5</span>, find <span class="m">y(2.1)</span>,
+<span class="m">h = 0.1</span>.</p>
+<table><tr><th>k</th><th>argument</th><th>value</th></tr>
+<tr><td>k&#8321;</td><td><span class="m">0.1&middot;f(2, 5)</span></td><td>0.100000</td></tr>
+<tr><td>k&#8322;</td><td><span class="m">0.1&middot;f(2.05, 5.05)</span></td><td>0.084750</td></tr>
+<tr><td>k&#8323;</td><td><span class="m">0.1&middot;f(2.05, 5.042375)</span></td><td>0.083988</td></tr>
+<tr><td>k&#8324;</td><td><span class="m">0.1&middot;f(2.1, 5.083988)</span></td><td>0.067399</td></tr></table>
+<p><span class="m">&Delta;y = (0.1 + 2(0.08475) + 2(0.083988) + 0.067399)/6 = 0.084146</span></p>
+<p><span class="ans">y(2.1) = 5.084146</span></p>
+</div>
+<div class="trap"><h4>Trap</h4>
+<span class="m">k&#8323;</span> uses <span class="m">k&#8322;</span> (not <span class="m">k&#8321;</span>), and
+<span class="m">k&#8324;</span> uses the <strong>full</strong> step <span class="m">h</span>, not <span class="m">h/2</span>.
+The <span class="m">k</span> values already contain <span class="m">h</span> &mdash; do not multiply by <span class="m">h</span> again at the end.</div>
+
+<h3>11 &nbsp; Newton's law of cooling <span class="tag r">5&times;</span> <span class="tag">Q3(b)/(c)/(d), Q4(d)</span></h3>
+<div class="meth"><h4>Method</h4>
+<span class="m">dT/dt = &minus;k(T &minus; T&#8320;)</span> &rarr;
+<span class="m">T = T&#8320; + (T&#8321; &minus; T&#8320;)e&#8315;&#7503;&#7511;</span> &nbsp;(T&#8320; = room temperature, T&#8321; = initial temperature).
+Use the one intermediate reading to find <span class="m">k</span>, then solve for the time asked.</div>
+<div class="wk"><h4>Worked &mdash; MP 3(d) / P26 6(c) <span class="tag r">verbatim repeat</span></h4>
+<p>Coffee 92&deg;C, room 24&deg;C, cools to 80&deg;C in 1 minute. When does it reach 65&deg;C?</p>
+<p><span class="m">T = 24 + 68 e&#8315;&#7503;&#7511;</span>. At <span class="m">t = 1</span>:
+<span class="m">80 = 24 + 68e&#8315;&#7503;</span> &rarr; <span class="m">e&#8315;&#7503; = 56/68 = 14/17</span> &rarr;
+<span class="m">k = ln(17/14) = 0.194156</span></p>
+<p>For <span class="m">T = 65</span>: <span class="m">41 = 68e&#8315;&#7503;&#7511;</span> &rarr;
+<span class="m">t = ln(68/41)/0.194156</span></p>
+<p><span class="ans">t = 2.606 minutes</span> (about 2 min 36 s)</p>
+</div>
+<div class="trap"><h4>Trap</h4>Subtract the room temperature <em>before</em> taking logs. The M24 variant uses
+90 / 24 / 75 / 60 &mdash; same working, different numbers.</div>
+
+<h3>12 &nbsp; Orthogonal trajectories &mdash; Cartesian <span class="tag r">6&times;</span> <span class="tag">Q3(b)/(d)</span></h3>
+<div class="meth"><h4>Method</h4>
+<ol><li>Differentiate the family and <strong>eliminate the parameter</strong> to get its DE.</li>
+<li>Replace <span class="m">dy/dx</span> by <span class="m">&minus;dx/dy</span>.</li>
+<li>Solve the new DE.</li></ol></div>
+<div class="wk"><h4>Worked &mdash; P26 5(c): co-axial circles <span class="m">x&sup2; + y&sup2; + 2gx + c = 0</span>, g the parameter</h4>
+<p>Differentiate: <span class="m">2x + 2y y&prime; + 2g = 0</span> &rarr;
+<span class="m">g = &minus;(x + y y&prime;)</span>. Substituting back eliminates g:</p>
+<p><span class="m">x&sup2; + y&sup2; &minus; 2x(x + y y&prime;) + c = 0</span> &rarr;
+<span class="m">y&sup2; &minus; x&sup2; + c = 2xy y&prime;</span></p>
+<p>Replace <span class="m">y&prime; &rarr; &minus;1/y&prime;</span>:
+<span class="m">y&sup2; &minus; x&sup2; + c = &minus;2xy/y&prime;</span>, a homogeneous equation.
+Solving gives the orthogonal family <span class="ans">x&sup2; + y&sup2; + 2&#955;y &minus; c = 0</span> &mdash;
+the conjugate system of co-axial circles.</p>
+</div>
+<div class="trap"><h4>Trap</h4>You must eliminate the parameter <strong>before</strong> swapping <span class="m">y&prime;</span>.
+Swapping first and eliminating after is the commonest way to lose this question.</div>
+
+<h3>13 &nbsp; Orthogonal trajectories &mdash; polar, and self-orthogonal families <span class="tag o">3&times;</span> <span class="tag">Q4(c)</span></h3>
+<div class="meth"><h4>Method &mdash; polar</h4>
+Eliminate the parameter to get <span class="m">F(r, &theta;, dr/d&theta;) = 0</span>, then replace
+<span class="m">dr/d&theta;</span> by <span class="m">&minus;r&sup2;(d&theta;/dr)</span> &mdash; equivalently replace
+<span class="m">r d&theta;/dr</span> by <span class="m">&minus;(1/r)(dr/d&theta;)</span>.</div>
+<div class="wk"><h4>Worked A &mdash; MAM24 3(b) / P26 6(b): show <span class="m">r = b sin&theta;</span> is orthogonal to <span class="m">r = a cos&theta;</span></h4>
+<p>For <span class="m">r = a cos&theta;</span>: <span class="m">dr/d&theta; = &minus;a sin&theta;</span>, and eliminating
+<span class="m">a</span> gives <span class="m">(1/r)(dr/d&theta;) = &minus;tan&theta;</span>.</p>
+<p>Swap: <span class="m">(1/r)(dr/d&theta;) &rarr; cot&theta;</span>, i.e.
+<span class="m">dr/r = cot&theta; d&theta;</span> &rarr; <span class="m">ln r = ln sin&theta; + ln b</span>
+&rarr; <span class="ans">r = b sin&theta;</span> &#10003;</p>
+</div>
+<div class="wk"><h4>Worked B &mdash; M23 4(d) / MAE23 4(c): show <span class="m">x&sup2;/(a&sup2;+&lambda;) + y&sup2;/(b&sup2;+&lambda;) = 1</span> is self-orthogonal</h4>
+<p>Differentiating and eliminating <span class="m">&lambda;</span> gives a DE in which
+<span class="m">&lambda;</span> satisfies a quadratic. The key algebraic fact: the resulting differential equation
+contains <span class="m">y&prime;</span> only through the combination
+<span class="m">(x + y y&prime;)(y &minus; x y&prime;)</span>-type symmetric terms, so substituting
+<span class="m">y&prime; &rarr; &minus;1/y&prime;</span> reproduces the <em>same</em> equation.</p>
+<p><span class="ans">The family is therefore its own orthogonal trajectory &mdash; self-orthogonal.</span>
+(These are confocal conics: every ellipse of the family cuts every hyperbola of it at right angles.)</p>
+</div>
+<div class="trap"><h4>Trap</h4>Do not try to solve for <span class="m">&lambda;</span> explicitly. Show that the DE is
+<em>invariant</em> under <span class="m">y&prime; &rarr; &minus;1/y&prime;</span> &mdash; that is the whole proof.</div>
+
+<h3>14 &nbsp; LR and RC circuits <span class="tag o">3&times;</span> <span class="tag">Q3(d)/Q4(d)</span></h3>
+<div class="meth"><h4>Method</h4>
+<strong>LR:</strong> <span class="m">L(di/dt) + Ri = E(t)</span> &nbsp;&middot;&nbsp;
+<strong>RC:</strong> <span class="m">R(dq/dt) + q/C = E(t)</span>, with <span class="m">i = dq/dt</span><br>
+<strong>LC, no e.m.f.</strong> (the 2-marker): <span class="m">L(d&sup2;q/dt&sup2;) + q/C = 0</span><br>
+All are linear first-order &mdash; integrating factor <span class="m">e&#8319;&#7511;/&#7473;</span> or <span class="m">e&#7511;/&#7476;&#7580;</span>.</div>
+<div class="wk"><h4>Worked &mdash; MAE23 3(d)</h4>
+<p><span class="m">e = 200e&#8315;&#8309;&#7511;</span> applied to <span class="m">R = 20&Omega;</span>,
+<span class="m">C = 0.01 F</span>, no initial charge.</p>
+<p><span class="m">20(dq/dt) + 100q = 200e&#8315;&#8309;&#7511;</span> &rarr;
+<span class="m">dq/dt + 5q = 10e&#8315;&#8309;&#7511;</span></p>
+<p>Integrating factor <span class="m">e&#8309;&#7511;</span>: <span class="m">d(qe&#8309;&#7511;)/dt = 10</span> &rarr;
+<span class="m">qe&#8309;&#7511; = 10t + A</span>, and <span class="m">q(0)=0</span> gives <span class="m">A = 0</span>.</p>
+<p><span class="ans">q(t) = 10t e&#8315;&#8309;&#7511;</span> &nbsp;&nbsp;
+<span class="ans">i(t) = dq/dt = 10(1 &minus; 5t)e&#8315;&#8309;&#7511;</span></p>
+</div>
+<div class="trap"><h4>Trap</h4>
+Here the forcing term <span class="m">e&#8315;&#8309;&#7511;</span> matches the complementary function, so the
+particular integral picks up a factor of <span class="m">t</span> &mdash; that is why the answer is
+<span class="m">10te&#8315;&#8309;&#7511;</span> and not a plain exponential. Recognising this resonance case is the
+whole question. Note <span class="m">1/C = 100</span>, not 0.01.</div>
+
+<h2>UNIT III &nbsp;&mdash;&nbsp; Q5 and Q6</h2>
+
+<div class="box"><strong>Everything in this unit sits on CF + P.I.</strong> Learn that first; Cauchy, Legendre,
+IVP/BVP and variation of parameters are all built on top of it. Cauchy and Legendre in particular
+<em>reduce</em> to a constant-coefficient problem, so you get them almost free.</div>
+
+<h3>15 &nbsp; Complementary function + particular integral <span class="tag r">6&times;</span> <span class="tag">Q5(c)/Q6(c)/(d)</span></h3>
+<div class="meth"><h4>CF &mdash; from the roots of the auxiliary equation</h4>
+<table><tr><th>Roots</th><th>Contribution to CF</th></tr>
+<tr><td>real, distinct <span class="m">m&#8321;, m&#8322;</span></td><td><span class="m">C&#8321;e&#7504;&sup1;&#8339; + C&#8322;e&#7504;&sup2;&#8339;</span></td></tr>
+<tr><td>real, repeated <span class="m">m</span> (twice)</td><td><span class="m">(C&#8321; + C&#8322;x)e&#7504;&#8339;</span></td></tr>
+<tr><td>repeated <span class="m">k</span> times</td><td><span class="m">(C&#8321; + C&#8322;x + &hellip; + C&#7503;x&#7503;&#8315;&sup1;)e&#7504;&#8339;</span></td></tr>
+<tr><td>complex <span class="m">&alpha; &plusmn; i&beta;</span></td><td><span class="m">e&#7482;&#8339;(C&#8321;cos&beta;x + C&#8322;sin&beta;x)</span></td></tr>
+<tr><td>complex repeated</td><td><span class="m">e&#7482;&#8339;[(C&#8321;+C&#8322;x)cos&beta;x + (C&#8323;+C&#8324;x)sin&beta;x]</span></td></tr></table>
+<h4>P.I. &mdash; the standard cases</h4>
+<table><tr><th>RHS</th><th>Rule</th><th>If it fails</th></tr>
+<tr><td><span class="m">e&#7491;&#8339;</span></td><td><span class="m">e&#7491;&#8339;/f(a)</span></td>
+<td><span class="m">f(a)=0</span> &rarr; multiply by <span class="m">x</span> and differentiate <span class="m">f</span>; repeat</td></tr>
+<tr><td><span class="m">sin ax</span>, <span class="m">cos ax</span></td><td>replace <span class="m">D&sup2;</span> by <span class="m">&minus;a&sup2;</span></td>
+<td>denominator 0 &rarr; multiply by <span class="m">x</span>, differentiate</td></tr>
+<tr><td><span class="m">x&#8319;</span></td><td>expand <span class="m">[f(D)]&#8315;&sup1;</span> in ascending powers of <span class="m">D</span> up to <span class="m">D&#8319;</span></td><td>&mdash;</td></tr>
+<tr><td><span class="m">e&#7491;&#8339;V(x)</span></td><td><span class="m">e&#7491;&#8339;&middot;[1/f(D+a)]V(x)</span> &mdash; the shift rule</td><td>&mdash;</td></tr>
+<tr><td><span class="m">x V(x)</span></td><td><span class="m">[x &minus; f&prime;(D)/f(D)]&middot;[1/f(D)]V</span></td><td>&mdash;</td></tr></table>
+</div>
+<div class="wk"><h4>Worked &mdash; P26 5(d): <span class="m">(D&sup2; + 2D + 1)y = x e&sup2;&#8339;</span></h4>
+<p><strong>CF:</strong> <span class="m">m&sup2;+2m+1 = (m+1)&sup2; = 0</span> &rarr; <span class="m">m = &minus;1</span> twice
+&rarr; <span class="m">y&#7580; = (C&#8321; + C&#8322;x)e&#8315;&#8339;</span></p>
+<p><strong>P.I.:</strong> shift rule with <span class="m">a = 2</span>:
+<span class="m">y&#7527; = e&sup2;&#8339;&middot;[1/((D+2)&sup2;+2(D+2)+1)]x = e&sup2;&#8339;&middot;[1/(D&sup2;+6D+9)]x</span></p>
+<p><span class="m">1/(9 + 6D + D&sup2;) = (1/9)(1 + (6D+D&sup2;)/9)&#8315;&sup1; &asymp; (1/9)(1 &minus; 6D/9 + &hellip;)</span></p>
+<p><span class="m">y&#7527; = e&sup2;&#8339;(1/9)(x &minus; 2/3) = e&sup2;&#8339;(3x&minus;2)/27</span></p>
+<p><span class="ans">y = (C&#8321; + C&#8322;x)e&#8315;&#8339; + (3x &minus; 2)e&sup2;&#8339;/27</span></p>
+</div>
+<div class="trap"><h4>Trap</h4>Repeated roots need the <span class="m">x</span> factor in the CF. And when using the shift
+rule, replace <strong>every</strong> <span class="m">D</span> by <span class="m">D+a</span>, then expand in ascending
+powers &mdash; descending powers give an infinite series that never terminates.</div>
+
+<h3>16 &nbsp; Cauchy's linear differential equation <span class="tag r">4&times;</span> <span class="tag">Q5(c)/(d)</span></h3>
+<div class="meth"><h4>Method &mdash; the 4 steps (this is also the 2-mark answer)</h4>
+<ol><li>Put <span class="m">x = e&#7611;</span>, i.e. <span class="m">z = log x</span>. Write <span class="m">D = d/dz</span>.</li>
+<li>Then <span class="m">x y&prime; = Dy</span>, &nbsp;<span class="m">x&sup2;y&Prime; = D(D&minus;1)y</span>, &nbsp;
+<span class="m">x&sup3;y&prime;&Prime; = D(D&minus;1)(D&minus;2)y</span>.</li>
+<li>The equation becomes constant-coefficient in <span class="m">z</span>. Solve for CF and P.I. as usual.</li>
+<li>Substitute back <span class="m">z = log x</span>.</li></ol></div>
+<div class="wk"><h4>Worked &mdash; MAE23 6(d): <span class="m">x&sup2;y&Prime; &minus; 4xy&prime; + 6y = cos(2 log x)</span></h4>
+<p>With <span class="m">x = e&#7611;</span>: <span class="m">D(D&minus;1)y &minus; 4Dy + 6y = cos 2z</span>
+&rarr; <span class="m">(D&sup2; &minus; 5D + 6)y = cos 2z</span></p>
+<p><strong>CF:</strong> <span class="m">m&sup2;&minus;5m+6 = (m&minus;2)(m&minus;3)</span> &rarr;
+<span class="m">C&#8321;e&sup2;&#7611; + C&#8322;e&sup3;&#7611; = C&#8321;x&sup2; + C&#8322;x&sup3;</span></p>
+<p><strong>P.I.:</strong> replace <span class="m">D&sup2; &rarr; &minus;4</span>:
+<span class="m">1/(&minus;4&minus;5D+6)cos2z = 1/(2&minus;5D)cos2z</span></p>
+<p>Multiply above and below by <span class="m">(2+5D)</span>:
+<span class="m">(2+5D)cos2z/(4&minus;25D&sup2;) = (2cos2z &minus; 10sin2z)/(4+100)</span></p>
+<p><span class="ans">y = C&#8321;x&sup2; + C&#8322;x&sup3; + [cos(2 log x) &minus; 5 sin(2 log x)]/52</span></p>
+</div>
+<div class="trap"><h4>Trap</h4>
+<span class="m">x&sup2;y&Prime; = D(D&minus;1)y</span>, <strong>not</strong> <span class="m">D&sup2;y</span> &mdash; the
+<span class="m">&minus;D</span> is the single most common slip in this unit. Also
+<span class="m">cos(2 log x)</span> becomes <span class="m">cos 2z</span>, so treat <span class="m">z</span> as the
+variable throughout and only convert back at the very end.</div>
+
+<h3>17 &nbsp; Legendre's linear differential equation <span class="tag r">4&times;</span> <span class="tag">Q6(c)/(d)</span></h3>
+<div class="meth"><h4>Method &mdash; identical to Cauchy, one extra factor</h4>
+Put <span class="m">ax + b = e&#7611;</span>. Then<br>
+<span class="m">(ax+b)y&prime; = aDy</span> &nbsp;&middot;&nbsp;
+<span class="m">(ax+b)&sup2;y&Prime; = a&sup2;D(D&minus;1)y</span> &nbsp;&middot;&nbsp;
+<span class="m">(ax+b)&sup3;y&prime;&Prime; = a&sup3;D(D&minus;1)(D&minus;2)y</span><br>
+Everything else is the same. <strong>Cauchy is just Legendre with a=1, b=0.</strong></div>
+<div class="wk"><h4>Worked &mdash; MAE23 5(b): <span class="m">(2x+3)&sup2;y&Prime; + 2(2x+3)y&prime; &minus; 12y = 0</span></h4>
+<p>Here <span class="m">a = 2</span>. Put <span class="m">2x+3 = e&#7611;</span>:</p>
+<p><span class="m">4D(D&minus;1)y + 2&middot;2Dy &minus; 12y = 0</span> &rarr;
+<span class="m">4D&sup2; &minus; 4D + 4D &minus; 12 = 0</span> &rarr; <span class="m">4D&sup2; = 12</span>
+&rarr; <span class="m">m = &plusmn;&radic;3</span></p>
+<p><span class="m">y = C&#8321;e&#8730;&sup3;&#7611; + C&#8322;e&#8315;&#8730;&sup3;&#7611;</span></p>
+<p><span class="ans">y = C&#8321;(2x+3)&#8730;&sup3; + C&#8322;(2x+3)&#8315;&#8730;&sup3;</span> &nbsp;<em>(verified by substitution)</em></p>
+</div>
+<div class="trap"><h4>Trap</h4>
+Forgetting the <span class="m">a&sup2;</span> on the second-derivative term. With <span class="m">a = 2</span> that
+factor is 4 &mdash; drop it and the auxiliary equation, and every root, is wrong.</div>
+
+<h3>18 &nbsp; Method of variation of parameters <span class="tag r">5&times; &mdash; every paper</span> <span class="tag">Q5(c)/(d)</span></h3>
+<div class="meth"><h4>Method</h4>
+For <span class="m">y&Prime; + Py&prime; + Qy = R</span> with CF <span class="m">y&#7580; = C&#8321;y&#8321; + C&#8322;y&#8322;</span>:
+<ol><li>Wronskian <span class="m">W = y&#8321;y&#8322;&prime; &minus; y&#8322;y&#8321;&prime;</span></li>
+<li><span class="m">y&#7527; = &minus;y&#8321;&int;(y&#8322;R/W)dx + y&#8322;&int;(y&#8321;R/W)dx</span></li></ol>
+<strong>The equation must be in standard form</strong> &mdash; coefficient of <span class="m">y&Prime;</span> equal to 1
+&mdash; before you read off <span class="m">R</span>.</div>
+<div class="wk"><h4>Worked &mdash; MAM24 6(c): <span class="m">y&Prime; &minus; 6y&prime; + 9y = e&sup3;&#8339;/x&sup2;</span></h4>
+<p><strong>CF:</strong> <span class="m">(m&minus;3)&sup2; = 0</span> &rarr;
+<span class="m">y&#8321; = e&sup3;&#8339;</span>, <span class="m">y&#8322; = xe&sup3;&#8339;</span></p>
+<p><strong>Wronskian:</strong> <span class="m">W = e&sup3;&#8339;(e&sup3;&#8339; + 3xe&sup3;&#8339;) &minus; xe&sup3;&#8339;&middot;3e&sup3;&#8339; = e&#8310;&#8339;</span></p>
+<p><span class="m">y&#8322;R/W = xe&sup3;&#8339;&middot;(e&sup3;&#8339;/x&sup2;)/e&#8310;&#8339; = 1/x</span> &rarr;
+<span class="m">&int; = log x</span></p>
+<p><span class="m">y&#8321;R/W = e&sup3;&#8339;&middot;(e&sup3;&#8339;/x&sup2;)/e&#8310;&#8339; = 1/x&sup2;</span> &rarr;
+<span class="m">&int; = &minus;1/x</span></p>
+<p><span class="m">y&#7527; = &minus;e&sup3;&#8339;log x + xe&sup3;&#8339;(&minus;1/x) = &minus;e&sup3;&#8339;(log x + 1)</span></p>
+<p><span class="ans">y = (C&#8321; + C&#8322;x &minus; log x)e&sup3;&#8339;</span> &nbsp;<em>(the &minus;1 is absorbed into C&#8321;)</em></p>
+</div>
+<div class="trap"><h4>Trap</h4>
+Papers choose an <span class="m">R</span> that is deliberately awkward for the P.I. rules &mdash;
+<span class="m">sec&sup3;x</span>, <span class="m">tan x</span>, <span class="m">e&sup3;&#8339;/x&sup2;</span>,
+<span class="m">cos(e&#8315;&#8339;)</span>. That awkwardness is <em>the signal</em> to use variation of parameters.
+Watch the minus sign on the first integral.</div>
+
+<h3>19 &nbsp; Initial and boundary value problems <span class="tag r">6&times;</span> <span class="tag">Q5(b)/Q6(b)/(d)</span></h3>
+<div class="meth"><h4>Method</h4>
+Find the general solution first (CF + P.I.), <strong>then</strong> apply the conditions.
+<strong>IVP</strong> = both conditions at the same <span class="m">x</span> (e.g. <span class="m">y(0)</span> and
+<span class="m">y&prime;(0)</span>). <strong>BVP</strong> = conditions at two different <span class="m">x</span> values.</div>
+<div class="wk"><h4>Worked A &mdash; P26 5(b), BVP: <span class="m">y&Prime; + y = 0</span>, <span class="m">y(0)=2</span>, <span class="m">y(&pi;/2) = &minus;2</span></h4>
+<p><span class="m">y = A cos x + B sin x</span>.
+<span class="m">y(0) = A = 2</span>; <span class="m">y(&pi;/2) = B = &minus;2</span>.</p>
+<p><span class="ans">y = 2cos x &minus; 2sin x = 2&radic;2 cos(x + &pi;/4)</span></p>
+</div>
+<div class="wk"><h4>Worked B &mdash; M23 6(d), IVP: <span class="m">(D&sup2; &minus; 2D)y = e&#8339; sin x</span>, <span class="m">y(0)=8</span>, <span class="m">y&prime;(0)=1</span></h4>
+<p><strong>CF:</strong> <span class="m">m(m&minus;2)=0</span> &rarr; <span class="m">C&#8321; + C&#8322;e&sup2;&#8339;</span></p>
+<p><strong>P.I.:</strong> shift rule, <span class="m">e&#8339;&middot;[1/((D+1)&sup2;&minus;2(D+1))]sin x = e&#8339;[1/(D&sup2;&minus;1)]sin x</span>;
+replace <span class="m">D&sup2;&rarr;&minus;1</span>: <span class="m">= &minus;e&#8339;sin x/2</span></p>
+<p>General: <span class="m">y = C&#8321; + C&#8322;e&sup2;&#8339; &minus; e&#8339;sin x/2</span>. Applying both conditions:</p>
+<p><span class="ans">y = 29/4 + (3/4)e&sup2;&#8339; &minus; e&#8339;sin x/2</span></p>
+</div>
+<div class="trap"><h4>Trap</h4>
+Apply conditions to the <strong>complete</strong> solution including the P.I. &mdash; fitting constants to the CF
+alone is a guaranteed zero. Differentiate the full expression before using <span class="m">y&prime;(0)</span>.</div>
+
+<h2>UNIT IV &nbsp;&mdash;&nbsp; Q7 and Q8</h2>
+
+<div class="box"><strong>Build the difference table first, every time.</strong> Interpolation, missing terms,
+numerical differentiation and grouped-frequency questions all start from the same table &mdash; only the
+formula you feed it into changes. Draw it once, carefully, and half the unit is done.</div>
+
+<h3>20 &nbsp; Newton-Gregory forward and backward interpolation <span class="tag o">2&times;</span> <span class="tag">Q7(c)</span></h3>
+<div class="meth"><h4>Method</h4>
+<strong>Forward</strong> (use when x is near the <em>start</em>), <span class="m">p = (x &minus; x&#8320;)/h</span>:<br>
+<span class="m">y = y&#8320; + p&Delta;y&#8320; + p(p&minus;1)/2! &middot;&Delta;&sup2;y&#8320; + p(p&minus;1)(p&minus;2)/3! &middot;&Delta;&sup3;y&#8320; + &hellip;</span><br>
+<strong>Backward</strong> (use when x is near the <em>end</em>), <span class="m">p = (x &minus; x&#8345;)/h</span>:<br>
+<span class="m">y = y&#8345; + p&nabla;y&#8345; + p(p+1)/2! &middot;&nabla;&sup2;y&#8345; + p(p+1)(p+2)/3! &middot;&nabla;&sup3;y&#8345; + &hellip;</span><br>
+<em>Note the sign pattern: forward has <span class="m">(p&minus;1)(p&minus;2)</span>, backward has <span class="m">(p+1)(p+2)</span>.</em></div>
+<div class="wk"><h4>Worked &mdash; MP 7(c): compute <span class="m">f(14.2)</span></h4>
+<table><tr><th>x</th><td>10</td><td>12</td><td>14</td><td>16</td><td>18</td></tr>
+<tr><th>y</th><td>0.240</td><td>0.281</td><td>0.318</td><td>0.352</td><td>0.384</td></tr></table>
+<p>Difference table (h = 2):</p>
+<table><tr><th>&Delta;</th><td>0.041</td><td>0.037</td><td>0.034</td><td>0.032</td></tr>
+<tr><th>&Delta;&sup2;</th><td>&minus;0.004</td><td>&minus;0.003</td><td>&minus;0.002</td><td></td></tr>
+<tr><th>&Delta;&sup3;</th><td>0.001</td><td>0.001</td><td></td><td></td></tr>
+<tr><th>&Delta;&#8308;</th><td>0.000</td><td></td><td></td><td></td></tr></table>
+<p>Backward from <span class="m">x&#8345; = 18</span>: <span class="m">p = (14.2 &minus; 18)/2 = &minus;1.9</span>.
+Backward differences at the end: <span class="m">&nabla;y = 0.032</span>,
+<span class="m">&nabla;&sup2;y = &minus;0.002</span>, <span class="m">&nabla;&sup3;y = 0.001</span>.</p>
+<p><span class="ans">f(14.2) = 0.321518</span></p>
+</div>
+<div class="trap"><h4>Trap</h4>
+Choosing the wrong end. <span class="m">x = 14.2</span> sits past the middle, so backward is correct here;
+using forward from 10 needs many more terms and drifts. <strong>Pick the end nearest your x.</strong></div>
+
+<h3>21 &nbsp; Lagrange's interpolation (and inverse) <span class="tag o">3&times;</span> <span class="tag">Q7(b)/(c), Q8(c)</span></h3>
+<div class="meth"><h4>Method</h4>
+<span class="m">y = &Sigma;&#7522; y&#7522; &middot; &Pi;&#11388;&ne;&#7522; (x &minus; x&#11388;)/(x&#7522; &minus; x&#11388;)</span><br>
+<strong>Inverse interpolation</strong> &mdash; to find <span class="m">x</span> given <span class="m">y</span> &mdash;
+is the identical formula with the roles of <span class="m">x</span> and <span class="m">y</span> swapped:
+<span class="m">x = &Sigma;&#7522; x&#7522; &middot; &Pi;&#11388;&ne;&#7522; (y &minus; y&#11388;)/(y&#7522; &minus; y&#11388;)</span><br>
+Works for <strong>unequally spaced</strong> data &mdash; that is when to reach for it.</div>
+<div class="wk"><h4>Worked &mdash; MAM24 7(b): find <span class="m">f(1)</span> from <span class="m">(&minus;1, 9), (0, 5), (2, 3)</span></h4>
+<p><span class="m">y = 9&middot;(x&minus;0)(x&minus;2)/((&minus;1)(&minus;3)) + 5&middot;(x+1)(x&minus;2)/((1)(&minus;2)) + 3&middot;(x+1)(x&minus;0)/((3)(2))</span></p>
+<p>Simplifying: <span class="m">P(x) = x&sup2; &minus; 3x + 5</span></p>
+<p><span class="ans">f(1) = 1 &minus; 3 + 5 = 3</span></p>
+</div>
+<div class="trap"><h4>Trap</h4>
+The denominators use the <span class="m">x&#7522;</span> values, never <span class="m">x</span>. For the 2-mark
+"write Lagrange's inverse interpolation formula" for two points, the answer is simply
+<span class="m">x = x&#8320;(y&minus;y&#8321;)/(y&#8320;&minus;y&#8321;) + x&#8321;(y&minus;y&#8320;)/(y&#8321;&minus;y&#8320;)</span>.</div>
+
+<h3>22 &nbsp; Newton's divided difference <span class="tag r">5&times; &mdash; every paper</span> <span class="tag">Q7(d)/Q8(c)</span></h3>
+<div class="meth"><h4>Method</h4>
+<span class="m">f[x&#8320;,x&#8321;] = (f&#8321;&minus;f&#8320;)/(x&#8321;&minus;x&#8320;)</span>, and higher orders recursively.<br>
+<span class="m">P(x) = f&#8320; + (x&minus;x&#8320;)f[x&#8320;,x&#8321;] + (x&minus;x&#8320;)(x&minus;x&#8321;)f[x&#8320;,x&#8321;,x&#8322;] + &hellip;</span><br>
+Also works for unequal spacing, and unlike Lagrange it is easy to extend when a point is added.</div>
+<div class="wk"><h4>Worked &mdash; MP 8(c) / M24 7(d) <span class="tag r">verbatim repeat</span></h4>
+<p>Cubic through <span class="m">(2,4), (4,56), (9,711), (10,980)</span>; estimate <span class="m">y</span> at <span class="m">x = 1.5</span>.</p>
+<table><tr><th>x</th><th>f</th><th>1st</th><th>2nd</th><th>3rd</th></tr>
+<tr><td>2</td><td>4</td><td>26</td><td>15</td><td>1</td></tr>
+<tr><td>4</td><td>56</td><td>131</td><td>23</td><td></td></tr>
+<tr><td>9</td><td>711</td><td>269</td><td></td><td></td></tr>
+<tr><td>10</td><td>980</td><td></td><td></td><td></td></tr></table>
+<p><span class="m">P(x) = 4 + 26(x&minus;2) + 15(x&minus;2)(x&minus;4) + 1&middot;(x&minus;2)(x&minus;4)(x&minus;9)</span></p>
+<p>Expanding: <span class="ans">P(x) = x&sup3; &minus; 2x</span></p>
+<p><span class="ans">y(1.5) = 3.375 &minus; 3 = 0.375</span></p>
+</div>
+<div class="trap"><h4>Trap</h4>
+The polynomial collapses to the very clean <span class="m">x&sup3; &minus; 2x</span> &mdash; if your expansion has
+stray <span class="m">x&sup2;</span> or constant terms, you have an arithmetic slip. Expand fully:
+the question asks for the polynomial, not just the value.</div>
+
+<h3>23 &nbsp; Finding missing terms <span class="tag r">3&times;</span> <span class="tag">Q8(b)</span></h3>
+<div class="meth"><h4>Method</h4>
+With <span class="m">n</span> known values, a polynomial of degree <span class="m">n&minus;1</span> fits, so all
+differences of order <span class="m">n</span> vanish. Set <span class="m">&Delta;&#8319;y&#7522; = 0</span> for as many
+<span class="m">i</span> as you have unknowns, and solve.<br>
+<strong>3 known values &rarr; quadratic fits &rarr; set every third difference to zero.</strong></div>
+<div class="wk"><h4>Worked &mdash; MAM24 8(b) / P26 8(b) <span class="tag r">identical data twice</span></h4>
+<table><tr><th>x</th><td>45</td><td>50</td><td>55</td><td>60</td><td>65</td></tr>
+<tr><th>y</th><td>3.0</td><td><strong>a</strong></td><td>2.0</td><td><strong>b</strong></td><td>&minus;2.4</td></tr></table>
+<p>Three known values &rarr; quadratic &rarr; both third differences vanish:</p>
+<p><span class="m">&Delta;&sup3;y&#8320; = 3a + b &minus; 9 = 0</span> &nbsp;and&nbsp;
+<span class="m">&Delta;&sup3;y&#8321; = &minus;a &minus; 3b + 3.6 = 0</span></p>
+<p>Solving: <span class="ans">y(50) = a = 2.925</span> &nbsp;&nbsp; <span class="ans">y(60) = b = 0.225</span></p>
+<p><strong>Check</strong> &mdash; second differences become <span class="m">&minus;0.85, &minus;0.85, &minus;0.85</span>,
+constant as required. Always show this check; it is worth a mark.</p>
+</div>
+<div class="trap"><h4>Trap</h4>
+Two unknowns need <strong>two</strong> equations. Setting a single fourth difference to zero gives only the
+relation <span class="m">a + b = 3.15</span> and cannot be solved &mdash; students get stuck here. Use the
+<em>third</em> differences, both of them.</div>
+
+<h3>24 &nbsp; Grouped-frequency estimation <span class="tag o">3&times;</span> <span class="tag">Q7(c)/Q8(c)/(d)</span></h3>
+<div class="meth"><h4>Method &mdash; the part nobody spots</h4>
+The data are given <em>per class</em>, but interpolation needs a <strong>cumulative</strong> ("less than") column.
+<ol><li>Convert the class frequencies to cumulative totals against the class <em>upper bounds</em>.</li>
+<li>Interpolate the cumulative value at the point asked.</li>
+<li><strong>Subtract</strong> to recover the count in the sub-interval.</li></ol></div>
+<div class="wk"><h4>Worked &mdash; P26 7(c): students scoring between 70 and 75</h4>
+<table><tr><th>Marks</th><td>30&ndash;40</td><td>40&ndash;50</td><td>50&ndash;60</td><td>60&ndash;70</td><td>70&ndash;80</td></tr>
+<tr><th>Students</th><td>31</td><td>42</td><td>51</td><td>35</td><td>31</td></tr></table>
+<p>Cumulative &mdash; students scoring <em>less than</em>:</p>
+<table><tr><th>x (marks &lt;)</th><td>40</td><td>50</td><td>60</td><td>70</td><td>80</td></tr>
+<tr><th>y</th><td>31</td><td>73</td><td>124</td><td>159</td><td>190</td></tr></table>
+<p>Forward differences: <span class="m">&Delta; = 42, 51, 35, 31</span>;
+<span class="m">&Delta;&sup2; = 9, &minus;16, &minus;4</span>; <span class="m">&Delta;&sup3; = &minus;25, 12</span>;
+<span class="m">&Delta;&#8308; = 37</span>.</p>
+<p><span class="m">p = (75 &minus; 40)/10 = 3.5</span>, giving <span class="m">y(75) = 172.80</span>.</p>
+<p><span class="ans">Students between 70 and 75 = 172.80 &minus; 159 = 13.80 &asymp; 14</span></p>
+</div>
+<div class="trap"><h4>Trap</h4>
+Interpolating the raw class frequencies instead of the cumulative column. That is the whole difficulty of
+this question &mdash; and it is worth 7 marks three papers running.</div>
+
+<h3>25 &nbsp; Numerical differentiation <span class="tag o">4&times;</span> <span class="tag">Q7(d)/Q8(c)</span></h3>
+<div class="meth"><h4>Method</h4>
+Differentiate the interpolation polynomial. <strong>Forward</strong>, with <span class="m">p = (x&minus;x&#8320;)/h</span>:<br>
+<span class="m">dy/dx = (1/h)[&Delta;y&#8320; + (2p&minus;1)/2 &middot;&Delta;&sup2;y&#8320; + (3p&sup2;&minus;6p+2)/6 &middot;&Delta;&sup3;y&#8320; + &hellip;]</span><br>
+<strong>Backward</strong>, with <span class="m">p = (x&minus;x&#8345;)/h</span>:<br>
+<span class="m">dy/dx = (1/h)[&nabla;y&#8345; + (2p+1)/2 &middot;&nabla;&sup2;y&#8345; + (3p&sup2;+6p+2)/6 &middot;&nabla;&sup3;y&#8345; + &hellip;]</span><br>
+At <span class="m">x = x&#8320;</span> exactly, <span class="m">p = 0</span> and the forward formula collapses to
+<span class="m">(1/h)[&Delta;y&#8320; &minus; &Delta;&sup2;y&#8320;/2 + &Delta;&sup3;y&#8320;/3 &minus; &hellip;]</span>.</div>
+<div class="wk"><h4>Worked &mdash; P26 7(d): rate of cooling at <span class="m">t = 8</span> s</h4>
+<table><tr><th>t</th><td>1</td><td>3</td><td>5</td><td>7</td><td>9</td></tr>
+<tr><th>&theta;</th><td>85.3</td><td>74.5</td><td>67</td><td>60.5</td><td>54.3</td></tr></table>
+<p><span class="m">h = 2</span>. Since <span class="m">t = 8</span> is near the end, use backward from
+<span class="m">t&#8345; = 9</span>, <span class="m">p = (8&minus;9)/2 = &minus;0.5</span>.</p>
+<p>Backward differences at the end: <span class="m">&nabla;&theta; = &minus;6.2</span>,
+<span class="m">&nabla;&sup2;&theta; = 0.3</span>, <span class="m">&nabla;&sup3;&theta; = &minus;0.7</span>,
+<span class="m">&nabla;&#8308;&theta; = 1.6</span>.</p>
+<p><span class="ans">d&theta;/dt at t = 8 is &minus;3.1187 &deg;C per second</span></p>
+</div>
+<div class="trap"><h4>Trap</h4>
+Do not forget the <span class="m">1/h</span> outside &mdash; with <span class="m">h = 2</span> that halves your
+answer. The result is negative because the body is cooling; a positive answer means a sign slip.</div>
+
+<h3>26&ndash;28 &nbsp; Numerical integration &mdash; all three rules <span class="tag r">5&times;</span> <span class="tag">Q7(d)/Q8(b)/(d)</span></h3>
+<div class="meth"><h4>The three formulas</h4>
+<strong>Trapezoidal</strong> (any <span class="m">n</span>):
+<span class="m">(h/2)[(y&#8320;+y&#8345;) + 2(all interior)]</span><br>
+<strong>Simpson's 1/3</strong> (<span class="m">n</span> even):
+<span class="m">(h/3)[(y&#8320;+y&#8345;) + 4(odd-indexed) + 2(even-indexed interior)]</span><br>
+<strong>Simpson's 3/8</strong> (<span class="m">n</span> a multiple of 3):
+<span class="m">(3h/8)[(y&#8320;+y&#8345;) + 3(all not divisible by 3) + 2(indices divisible by 3)]</span><br>
+<em>"Seven equidistant ordinates" means <span class="m">n = 6</span> intervals.</em></div>
+<div class="wk"><h4>Worked &mdash; the recurring integral <span class="m">&int;&#8320;&sup1; dx/(1+x&sup2;)</span> <span class="tag r">3 papers, 3 different rules</span></h4>
+<p>Exact value <span class="m">= &pi;/4 = 0.785398</span>. Ordinates for <span class="m">n = 6</span>,
+<span class="m">h = 1/6</span>:</p>
+<table><tr><th>x</th><td>0</td><td>1/6</td><td>2/6</td><td>3/6</td><td>4/6</td><td>5/6</td><td>1</td></tr>
+<tr><th>y</th><td>1.000000</td><td>0.972973</td><td>0.900000</td><td>0.800000</td><td>0.692308</td><td>0.590164</td><td>0.500000</td></tr></table>
+<table><tr><th>Rule</th><th>Result</th><th>&times;4 &rarr; &pi;</th><th>Paper</th></tr>
+<tr><td>Trapezoidal, 4 strips</td><td><span class="ans">0.782794</span></td><td>3.131176</td><td>MP 8(b)</td></tr>
+<tr><td>Simpson's 1/3, 6 intervals</td><td><span class="ans">0.785398</span></td><td>3.141592</td><td>M23 7(c)</td></tr>
+<tr><td>Simpson's 3/8, 6 intervals</td><td><span class="ans">0.785396</span></td><td>3.141583</td><td>MAM24 8(d)</td></tr></table>
+<p>Simpson's 1/3 recovers <span class="m">&pi;</span> to six decimal places &mdash; which is exactly why the paper
+keeps asking it this way.</p>
+</div>
+<div class="trap"><h4>Trap</h4>
+Simpson's 1/3 needs an <strong>even</strong> number of intervals; 3/8 needs a <strong>multiple of 3</strong>.
+"Seven ordinates" = 6 intervals, which satisfies both &mdash; that is why it is the paper's favourite.
+Count ordinates from <span class="m">y&#8320;</span>, and never apply the 4-2-4-2 weights to 3/8.</div>
+
+<h2>UNIT V &nbsp;&mdash;&nbsp; Q9 and Q10</h2>
+
+<div class="box"><strong>Eigenvalues are the spine of this unit.</strong> Diagonalization, Rayleigh's power method
+and system-of-ODEs-by-matrix are all "find the eigenvalues, then do one more step". Learn the eigen-step
+once and three 7-markers open at the same time.</div>
+
+<h3>29 &nbsp; Rank, echelon form and consistency <span class="tag o">2&times;</span> <span class="tag">Q9(b)/Q10(c)</span></h3>
+<div class="meth"><h4>Method</h4>
+Row-reduce the augmented matrix <span class="m">[A|B]</span>. With <span class="m">n</span> unknowns:
+<ul><li><span class="m">rank(A) &ne; rank(A|B)</span> &rarr; <strong>inconsistent</strong>, no solution</li>
+<li><span class="m">rank(A) = rank(A|B) = n</span> &rarr; <strong>unique</strong> solution</li>
+<li><span class="m">rank(A) = rank(A|B) = r &lt; n</span> &rarr; <strong>infinitely many</strong>, with
+<span class="m">n &minus; r</span> free parameters</li></ul></div>
+<div class="wk"><h4>Worked &mdash; conditions on a, b, c for solvability</h4>
+<p><span class="m">x + 2y &minus; z = a</span>; &nbsp;<span class="m">2x + y + z = b</span>; &nbsp;
+<span class="m">x &minus; y + 2z = c</span></p>
+<p>The coefficient determinant is <strong>0</strong> and <span class="m">rank(A) = 2</span>, so a condition is needed.
+Adding rows 1 and 3: <span class="m">2x + y + z = a + c</span>. But row 2 says <span class="m">2x + y + z = b</span>.</p>
+<p><span class="ans">Condition for consistency: b = a + c</span></p>
+<p>When it holds, <span class="m">rank = 2 &lt; 3</span>, so there is a one-parameter family. Taking
+<span class="m">a=1, b=3, c=2</span> and <span class="m">z = t</span> free:</p>
+<p><span class="ans">x = 5/3 &minus; t, &nbsp; y = t &minus; 1/3, &nbsp; z = t</span></p>
+</div>
+<div class="trap"><h4>Trap &mdash; and a note on the 2023 paper</h4>
+When <span class="m">rank &lt; n</span> you must present a <em>family</em> with a named parameter, not a single
+triple. <br><em>The exact constants in M23 10(c) are not legible in the scan &mdash; the method above is what
+matters, and the structure (det = 0, one linear condition on a, b, c, one free parameter) is standard.</em></div>
+
+<h3>30 &nbsp; Gauss elimination <span class="tag o">2&times;</span> <span class="tag">Q9(d)/Q10(c)</span></h3>
+<div class="meth"><h4>Method</h4>
+Form <span class="m">[A|B]</span>, reduce to upper triangular by row operations, then back-substitute.
+In word problems the real work is <strong>writing the system</strong> &mdash; one equation per constraint,
+one unknown per quantity asked for.</div>
+<div class="wk"><h4>Worked &mdash; M24 10(c): the dietician problem</h4>
+<table><tr><th></th><th>Food 1</th><th>Food 2</th><th>Food 3</th><th>Required</th></tr>
+<tr><td>Vitamin A</td><td>10</td><td>30</td><td>20</td><td>200</td></tr>
+<tr><td>Vitamin C</td><td>50</td><td>30</td><td>25</td><td>250</td></tr>
+<tr><td>Calcium</td><td>60</td><td>20</td><td>40</td><td>300</td></tr></table>
+<p>With <span class="m">x, y, z</span> grams of Foods 1, 2, 3:</p>
+<p><span class="m">10x + 30y + 20z = 200</span>; <span class="m">50x + 30y + 25z = 250</span>;
+<span class="m">60x + 20y + 40z = 300</span></p>
+<p><span class="ans">x = 5/8 = 0.625 g, &nbsp; y = 25/8 = 3.125 g, &nbsp; z = 5 g</span></p>
+</div>
+<div class="trap"><h4>Trap</h4>
+Read the table by <em>row</em> (one nutrient, all three foods) &mdash; transposing it gives a different system
+and a wrong answer. Divide row 1 by 10 first; the arithmetic gets much easier.</div>
+
+<h3>31 &nbsp; Gauss-Seidel iteration <span class="tag r">4&times;</span> <span class="tag">Q9(b)/Q10(b)/(c)</span></h3>
+<div class="meth"><h4>Method</h4>
+<ol><li><strong>Reorder the equations for diagonal dominance</strong> &mdash; each diagonal entry larger in
+magnitude than the sum of the others in its row. Without this the iteration may not converge.</li>
+<li>Solve each equation for its diagonal variable.</li>
+<li>Sweep in order, <strong>using each new value immediately</strong> within the same iteration.
+(That is the difference from Jacobi.)</li></ol></div>
+<div class="wk"><h4>Worked &mdash; MP 10(c) / P26 2(b) <span class="tag r">identical system twice</span></h4>
+<p>Given as: <span class="m">x + 8y + 2z = &minus;4</span>; <span class="m">10x + 2y + z = 59</span>;
+<span class="m">2x &minus; y + 20z = 74</span></p>
+<p><strong>Reorder</strong> to <span class="m">10x + 2y + z = 59</span>; <span class="m">x + 8y + 2z = &minus;4</span>;
+<span class="m">2x &minus; y + 20z = 74</span>, then</p>
+<p><span class="m">x = (59 &minus; 2y &minus; z)/10</span>, &nbsp;
+<span class="m">y = (&minus;4 &minus; x &minus; 2z)/8</span>, &nbsp;
+<span class="m">z = (74 &minus; 2x + y)/20</span></p>
+<table><tr><th>Iteration</th><th>x</th><th>y</th><th>z</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>1</td><td>5.900000</td><td>&minus;1.237500</td><td>3.048125</td></tr>
+<tr><td>2</td><td>5.842688</td><td>&minus;1.992367</td><td>3.016113</td></tr>
+<tr><td>3</td><td>5.996862</td><td>&minus;2.003636</td><td>3.000132</td></tr>
+<tr><td>4</td><td>6.000714</td><td>&minus;2.000122</td><td>2.999922</td></tr></table>
+<p>Converging to the exact solution <span class="ans">x = 6, y = &minus;2, z = 3</span></p>
+</div>
+<div class="trap"><h4>Trap &mdash; the reordering is the question</h4>
+<strong>As printed, this system is not diagonally dominant</strong> (row 1 has diagonal 1 against 8 and 2).
+You must reorder before iterating. Students who charge straight in get numbers that wander and lose most of
+the marks. Also: use the just-computed <span class="m">x</span> when finding <span class="m">y</span> in the
+<em>same</em> sweep &mdash; holding old values is Jacobi's method, not Gauss-Seidel.</div>
+
+<h3>32 &nbsp; Eigenvalues and eigenvectors <span class="tag o">foundation</span> <span class="tag">Q9(c)/(d)</span></h3>
+<div class="meth"><h4>Method</h4>
+<ol><li>Solve <span class="m">|A &minus; &lambda;I| = 0</span> for the eigenvalues.</li>
+<li>For each <span class="m">&lambda;</span>, solve <span class="m">(A &minus; &lambda;I)X = 0</span> for the eigenvector.</li></ol>
+<strong>Checks worth doing:</strong> sum of eigenvalues = trace; product = determinant.
+Both are free marks and catch algebra slips.</div>
+<div class="wk"><h4>Worked &mdash; <span class="m">A = [[1, &minus;1], [2, 4]]</span></h4>
+<p><span class="m">|A &minus; &lambda;I| = (1&minus;&lambda;)(4&minus;&lambda;) + 2 = &lambda;&sup2; &minus; 5&lambda; + 6 = (&lambda;&minus;2)(&lambda;&minus;3)</span></p>
+<p><span class="ans">&lambda; = 2, 3</span>. Check: trace <span class="m">= 5 = 2+3</span> &#10003;,
+det <span class="m">= 6 = 2&times;3</span> &#10003;</p>
+<p><span class="m">&lambda;=2</span>: <span class="m">(A&minus;2I)X=0</span> &rarr;
+<span class="m">&minus;x &minus; y = 0</span> &rarr; <span class="ans">X&#8321; = [&minus;1, 1]&#7488;</span><br>
+<span class="m">&lambda;=3</span>: <span class="m">&minus;2x &minus; y = 0</span> &rarr;
+<span class="ans">X&#8322; = [&minus;1, 2]&#7488;</span></p>
+</div>
+<div class="trap"><h4>Trap</h4>
+Eigenvectors are determined only up to a scale factor &mdash; any non-zero multiple is correct.
+Never "solve" to a unique vector and never report the zero vector.</div>
+
+<h3>33 &nbsp; Diagonalization and <span class="m">A&#8319;</span> <span class="tag r">3&times;/3</span> <span class="tag">Q9(c)/(d)</span></h3>
+<div class="meth"><h4>Method</h4>
+Build the modal matrix <span class="m">P</span> from the eigenvectors as columns, and the spectral matrix
+<span class="m">D = diag(&lambda;&#7522;)</span> <strong>in the same order</strong>. Then
+<span class="m">P&#8315;&sup1;AP = D</span>, so <span class="m">A = PDP&#8315;&sup1;</span> and
+<span class="ans">A&#8319; = P D&#8319; P&#8315;&sup1;</span> &mdash; and <span class="m">D&#8319;</span> is just the
+diagonal entries raised to the power.</div>
+<div class="wk"><h4>Worked &mdash; MP 9(c): diagonalize <span class="m">A = [[1,&minus;1],[2,4]]</span>, hence find <span class="m">A&#8312;</span></h4>
+<p>From above, <span class="m">P = [[&minus;1, &minus;1], [1, 2]]</span> and
+<span class="m">D = diag(2, 3)</span>.</p>
+<p><span class="m">P&#8315;&sup1; = [[&minus;2, &minus;1], [1, 1]]</span> &nbsp;(det <span class="m">P = &minus;1</span>)</p>
+<p><span class="m">A&#8312; = P&middot;diag(2&#8312;, 3&#8312;)&middot;P&#8315;&sup1; = P&middot;diag(256, 6561)&middot;P&#8315;&sup1;</span></p>
+<p><span class="ans">A&#8312; = [[&minus;6049, &minus;6305], [12610, 12866]]</span> &nbsp;<em>(verified against direct multiplication)</em></p>
+</div>
+<div class="trap"><h4>Trap</h4>
+The columns of <span class="m">P</span> and the diagonal of <span class="m">D</span> must be in the
+<strong>same order</strong>. Swap one and everything after is wrong. For the 2-marker: the
+<em>modal</em> matrix is <span class="m">P</span>, the <em>spectral</em> matrix is <span class="m">D</span>.
+And "is every square matrix diagonalizable?" &mdash; <strong>no</strong>: it needs
+<span class="m">n</span> linearly independent eigenvectors, which repeated eigenvalues can fail to provide.</div>
+
+<h3>34 &nbsp; Rayleigh's power method <span class="tag r">3&times;/3</span> <span class="tag">Q9(c)/(d), Q10(b)</span></h3>
+<div class="meth"><h4>Method</h4>
+Repeat: <span class="m">Y = A X</span>, then factor out the largest-magnitude component
+<span class="m">m</span> so that <span class="m">X&#8331;&#8321; = Y/m</span>.
+The <span class="m">m</span> values converge to the <strong>dominant</strong> eigenvalue and
+<span class="m">X</span> to its eigenvector.</div>
+<div class="wk"><h4>Worked &mdash; MP 9(d): <span class="m">A = [[2,&minus;1,0],[&minus;1,2,&minus;1],[0,&minus;1,2]]</span>, <span class="m">X&#8320; = [1,1,1]&#7488;</span></h4>
+<table><tr><th>Iter</th><th>&lambda; estimate</th><th>X</th></tr>
+<tr><td>1</td><td>1.00000</td><td>[1, 0, 1]</td></tr>
+<tr><td>2</td><td>2.00000</td><td>[1, &minus;1, 1]</td></tr>
+<tr><td>3</td><td>&minus;4.00000</td><td>[&minus;0.75, 1, &minus;0.75]</td></tr>
+<tr><td>4</td><td>3.50000</td><td>[&minus;0.71429, 1, &minus;0.71429]</td></tr>
+<tr><td>9</td><td>3.41423</td><td>[&minus;0.70711, 1, &minus;0.70711]</td></tr>
+<tr><td>12</td><td>3.41421</td><td>[&minus;0.70711, 1, &minus;0.70711]</td></tr></table>
+<p><span class="ans">Dominant eigenvalue = 2 + &radic;2 = 3.41421, eigenvector [&minus;1, &radic;2, &minus;1]&#7488;</span></p>
+</div>
+<div class="trap"><h4>Trap &mdash; this specific question is a trap</h4>
+<strong>The start vector <span class="m">[1,1,1]&#7488;</span> is nearly orthogonal to the dominant eigenvector</strong>,
+so the early iterates are wild: 1, then 2, then <span class="m">&minus;4</span>. A student told to "carry out two
+iterations" would report <span class="m">&lambda; = 2</span> &mdash; which is a genuine eigenvalue of this matrix
+but <em>not</em> the dominant one. The model paper asks for two decimal places, which needs about
+<strong>ten</strong> iterations. If the sequence is still jumping, keep going and say so.</div>
+
+<h3>35 &nbsp; System of ODEs by matrix method <span class="tag r">3&times;/3 &mdash; always Q10(d)</span> <span class="tag">Q10(d)</span></h3>
+<div class="meth"><h4>Method</h4>
+Write the system as <span class="m">X&prime; = AX</span>.
+<ol><li>Find the eigenvalues <span class="m">&lambda;&#7522;</span> and eigenvectors <span class="m">V&#7522;</span> of <span class="m">A</span>.</li>
+<li>General solution <span class="m">X = c&#8321;V&#8321;e&#7473;&sup1;&#7511; + c&#8322;V&#8322;e&#7473;&sup2;&#7511;</span>.</li>
+<li>Apply the initial conditions to fix <span class="m">c&#8321;, c&#8322;</span>.</li></ol></div>
+<div class="wk"><h4>Worked &mdash; M23 10(d): rabbits and wolves</h4>
+<p><span class="m">dr/dt = 4r &minus; 2w</span>, <span class="m">dw/dt = r + w</span>,
+<span class="m">r(0) = 240</span>, <span class="m">w(0) = 300</span>.</p>
+<p><span class="m">A = [[4, &minus;2], [1, 1]]</span>,
+<span class="m">|A&minus;&lambda;I| = &lambda;&sup2; &minus; 5&lambda; + 6 = (&lambda;&minus;2)(&lambda;&minus;3)</span></p>
+<p><span class="m">&lambda; = 2</span> &rarr; <span class="m">V = [1, 1]&#7488;</span>; &nbsp;
+<span class="m">&lambda; = 3</span> &rarr; <span class="m">V = [2, 1]&#7488;</span></p>
+<p><span class="m">r = c&#8321;e&sup2;&#7511; + 2c&#8322;e&sup3;&#7511;</span>, &nbsp;
+<span class="m">w = c&#8321;e&sup2;&#7511; + c&#8322;e&sup3;&#7511;</span></p>
+<p>At <span class="m">t=0</span>: <span class="m">c&#8321; + 2c&#8322; = 240</span>,
+<span class="m">c&#8321; + c&#8322; = 300</span> &rarr; <span class="m">c&#8322; = &minus;60</span>,
+<span class="m">c&#8321; = 360</span></p>
+<p><span class="ans">r(t) = 360e&sup2;&#7511; &minus; 120e&sup3;&#7511;</span> &nbsp;&nbsp;
+<span class="ans">w(t) = 360e&sup2;&#7511; &minus; 60e&sup3;&#7511;</span></p>
+<p><em>Check: <span class="m">r(0) = 360&minus;120 = 240</span> &#10003;, <span class="m">w(0) = 360&minus;60 = 300</span> &#10003;</em></p>
+</div>
+<div class="trap"><h4>Trap</h4>
+The eigenvector components must stay attached to the right variable &mdash; if
+<span class="m">V = [2,1]&#7488;</span> belongs to <span class="m">&lambda;=3</span>, then <span class="m">r</span> gets
+the 2 and <span class="m">w</span> gets the 1. Always substitute <span class="m">t = 0</span> back at the end;
+it catches a swapped pair instantly. <strong>This has been the final question of the exam in all three papers.</strong></div>
+
+<div class="box">
+<strong>Two habits worth more than any single formula.</strong><br>
+<strong>1. Check your answer when the question hands you a way to.</strong> Initial conditions, trace and
+determinant, constant differences in a table, the exact value of an integral &mdash; each is a free verification
+and often a mark in itself.<br>
+<strong>2. Show the table.</strong> Every iterative method here is method-marked. A Gauss-Seidel, RK4 or
+difference table with a slip in the last row still scores most of the marks; a bare final answer scores few.
+</div>
+
+<p class="foot">
+All 35 problem types carrying 7-mark parts, across both options in every unit.
+Every numerical result above was computed and verified symbolically or numerically before printing;
+worked examples are taken from the model paper and the 2023, 2024 and 2026 papers wherever one exists.
+Where a scanned question was not legible, that is stated rather than guessed.
+Repeat counts are out of the papers carrying each unit (I&ndash;III: 6 &middot; IV: 5 &middot; V: 3).
+</p>
+
+</body></html>
