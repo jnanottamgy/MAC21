@@ -6,12 +6,17 @@ semester, same branches — different scheme. The unit structure was substantial
 
 ## Which one are you on?
 
+> ## ✅ CONFIRMED: **MAC21 (old scheme)**
+> Confirmed by the student on 2026-08-30. Everything in this repo targets MAC21.
+> The 2026 `25MAC21` paper is kept as *partial* practice only — see the usability
+> table at the bottom of this file.
+
 **Your own documents both say MAC21 (old scheme):**
 - Your portion sheet footer: *"MAC21 - Numerical Techniques and Differential Equations"*
 - Your model paper header: *"Subject Code: MAC21 · Numerical Techniques and Differential Equations"*
 
-They are self-consistent, so **this repo is built for MAC21 (old scheme)** unless you say
-otherwise. The 2026 paper is stored as reference and cross-checked below.
+They are self-consistent, and the student has confirmed it. **This repo is built for
+MAC21 (old scheme).** The 2026 paper is stored as reference and cross-checked below.
 
 ## Unit-by-unit delta
 
@@ -41,7 +46,7 @@ otherwise. The 2026 paper is stored as reference and cross-checked below.
   of integration, polar and cylindrical coordinates, volume by triple integration
 - Weddle's rule
 
-## If you are on MAC21 (assumed)
+## Using the 2026 paper anyway
 
 The 2026 paper is still **partially usable**, because the overlap is real:
 
