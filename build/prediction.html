@@ -1,0 +1,553 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>MAC21 Prediction Sheet</title>
+<style>
+@page { size: A4; margin: 13mm 12mm 14mm 12mm; }
+* { box-sizing: border-box; }
+body { font-family: "DejaVu Sans", "Segoe UI", Helvetica, Arial, sans-serif;
+       font-size: 8.7pt; line-height: 1.42; color: #14181d; margin: 0; }
+h1 { font-size: 21pt; margin: 0 0 2mm; letter-spacing: -0.4px; }
+h2 { font-size: 12.5pt; margin: 7mm 0 2.5mm; padding: 2mm 3mm; background: #14181d;
+     color: #fff; border-radius: 2px; letter-spacing: .2px; }
+h3 { font-size: 10pt; margin: 4.5mm 0 1.8mm; padding-bottom: 1mm; border-bottom: 1.6px solid #14181d; }
+h4 { font-size: 9pt; margin: 3.5mm 0 1.5mm; }
+p { margin: 0 0 2mm; }
+table { width: 100%; border-collapse: collapse; margin: 0 0 3mm; font-size: 7.9pt; }
+th { background: #eceef1; text-align: left; padding: 1.5mm 2mm; border: 0.6px solid #9aa3ad;
+     font-weight: 700; font-size: 7.4pt; text-transform: uppercase; letter-spacing: .3px; }
+td { padding: 1.5mm 2mm; border: 0.6px solid #c2c8ce; vertical-align: top; }
+tr:nth-child(even) td { background: #f7f8f9; }
+code, .m { font-family: "DejaVu Sans Mono", Consolas, monospace; font-size: 7.6pt;
+        background: #eceef1; padding: 0 1.2mm; border-radius: 2px; }
+.lead { font-size: 9.3pt; color: #3d454e; margin-bottom: 4mm; }
+.meta { font-size: 8pt; color: #5a636d; border-left: 3px solid #14181d; padding-left: 3mm; margin: 3mm 0 5mm; }
+.tier { border: 1.8px solid #14181d; border-radius: 3px; padding: 3mm 3.5mm; margin: 0 0 5mm; }
+.t1 { border-color: #8a1420; background: #fdf5f5; }
+.t2 { border-color: #8a5410; background: #fefaf3; }
+.t3 { border-color: #1a4d7a; background: #f4f8fc; }
+.tier-h { font-size: 12pt; font-weight: 800; margin: 0 0 1mm; }
+.t1 .tier-h { color: #8a1420; } .t2 .tier-h { color: #8a5410; } .t3 .tier-h { color: #1a4d7a; }
+.tier-s { font-size: 8.2pt; color: #4a525b; margin: 0 0 3mm; }
+.hits { display: inline-block; background: #14181d; color: #fff; padding: 0.3mm 1.6mm;
+        border-radius: 2px; font-weight: 700; font-size: 7.2pt; white-space: nowrap; }
+.h4 { background: #8a1420; } .h3 { background: #a8481a; } .h2 { background: #7a6210; }
+.mk { font-weight: 800; white-space: nowrap; }
+.slot { font-family: "DejaVu Sans Mono", monospace; font-weight: 700; white-space: nowrap; font-size: 7.6pt; }
+.box { border: 1.4px solid #14181d; border-radius: 3px; padding: 3mm 3.5mm; margin: 0 0 4mm; background: #f7f8f9; }
+.warn { border-color: #8a1420; background: #fdf5f5; }
+.win { border-color: #16603a; background: #f3faf6; }
+.pb { page-break-before: always; }
+tr { page-break-inside: avoid; }
+h2, h3 { page-break-after: avoid; }
+.tier-h, .tier-s { page-break-after: avoid; }
+.box, .meta { page-break-inside: avoid; }
+ul { margin: 0 0 2mm; padding-left: 4.5mm; } li { margin-bottom: 1mm; }
+.foot { margin-top: 6mm; padding-top: 2mm; border-top: 0.8px solid #c2c8ce;
+        font-size: 7.2pt; color: #6b737c; }
+.big { font-size: 15pt; font-weight: 800; }
+.kv { display: flex; gap: 3mm; flex-wrap: wrap; margin-bottom: 2mm; }
+.kv div { border: 0.8px solid #c2c8ce; border-radius: 2px; padding: 1.5mm 2.5mm; background: #fff; font-size: 7.8pt; }
+</style></head><body>
+
+<h1>MAC21 &mdash; Prediction Sheet</h1>
+<p class="lead"><strong>Numerical Techniques and Differential Equations</strong> &middot;
+B.E. Semester II &middot; Ramaiah Institute of Technology &middot; SEE, 100 marks, 3 hours</p>
+
+<div class="meta">
+<strong>Built from 6 papers:</strong> the Department of Mathematics Model Question Paper I (MP) &middot;
+MAC21 Sep/Oct 2023 (M23) &middot; MAC21 Jul/Aug 2024 (M24) &middot; MAM21 Jul/Aug 2024 (MAM24, Units I&ndash;IV) &middot;
+MAE21 Sep/Oct 2023 (MAE23, Units I&ndash;III) &middot; 25MAC21 Jun/Jul 2026 (P26, partial &mdash; different scheme).<br>
+<strong>Everything off your syllabus has been stripped out</strong> &mdash; no multiple integrals, no Laplace
+transforms, no Beta/Gamma functions, no PDEs, no Regula-Falsi, no LU decomposition, no Weddle's rule.
+Only MAC21 content appears below.
+</div>
+
+<div class="box warn">
+<strong>How to read the repeat counts.</strong> Coverage differs by unit, so a count is always
+<em>out of the papers that actually carry that unit</em>:
+Units I&ndash;III &rarr; <strong>6 papers</strong> &middot; Unit IV &rarr; <strong>5 papers</strong>
+(MAE23's Unit IV is Laplace) &middot; Unit V &rarr; <strong>3 papers</strong> (only MP, M23, M24 &mdash;
+the 2026 scheme deleted this unit). A "3&times;" in Unit V is therefore a clean sweep, not a weak signal.
+</div>
+
+<h2>1 &nbsp; The paper pattern</h2>
+
+<table>
+<tr><th style="width:20%">Element</th><th>Rule &mdash; identical in every paper checked</th></tr>
+<tr><td><strong>Total</strong></td><td>100 marks, 3 hours</td></tr>
+<tr><td><strong>Sections</strong></td><td>5 units. Unit I &rarr; <span class="slot">Q1 / Q2</span> &middot;
+Unit II &rarr; <span class="slot">Q3 / Q4</span> &middot; Unit III &rarr; <span class="slot">Q5 / Q6</span> &middot;
+Unit IV &rarr; <span class="slot">Q7 / Q8</span> &middot; Unit V &rarr; <span class="slot">Q9 / Q10</span></td></tr>
+<tr><td><strong>Choice</strong></td><td>Answer <strong>ONE full question from each unit</strong>. Internal choice,
+always exactly 2 options. You attempt 5 questions total.</td></tr>
+<tr><td><strong>Marking</strong></td><td>Every question is <strong>a) 02 &nbsp;+&nbsp; b) 04 &nbsp;+&nbsp; c) 07 &nbsp;+&nbsp; d) 07 = 20 marks</strong>.
+Never varies.</td></tr>
+<tr><td><strong>Part (a) &mdash; 2 mk</strong></td><td><strong>Always pure recall.</strong> A definition, a formula to state, or
+"write the steps involved in&hellip;". <em>Never</em> a calculation, in any paper.</td></tr>
+<tr><td><strong>Part (b) &mdash; 4 mk</strong></td><td>Short calculation: one iteration, a small proof, a P.I., a
+definition-with-example.</td></tr>
+<tr><td><strong>Parts (c),(d) &mdash; 7 mk</strong></td><td>Full problems. Typically one standard technique + one applied
+word problem.</td></tr>
+<tr><td><strong>CO tag</strong></td><td>Unit <em>n</em> is always tagged CO<em>n</em>. Mapping is 1:1 and stable.</td></tr>
+</table>
+
+<div class="box win">
+<strong>What this hands you:</strong> the five 2-mark parts are <strong>10 marks of pure memorisation</strong>,
+and you get to pick the easier of two in each unit. The bank of definitions ever used is small &mdash;
+it is listed in full in section 6.
+</div>
+
+<h2>2 &nbsp; Which question to answer in each unit</h2>
+
+<p>The two options in a unit are not random. Each carries a recurring <em>combination</em> of topics,
+stable across years. Here is what each side reliably holds.</p>
+
+<table>
+<tr><th style="width:7%">Unit</th><th style="width:11%">Answer</th><th>Why &mdash; what that side reliably bundles</th><th style="width:13%">Confidence</th></tr>
+<tr><td><strong>I</strong></td><td class="slot">Q2<br>(usually)</td>
+<td>Q2 holds the <strong>"expand &hellip; about (1, &pi;/2)"</strong> 7-marker (4&times;) and the
+<strong>maxima&ndash;minima 4-marker</strong> (3&times;). Q1 holds the <strong>Newton-Raphson system</strong> (5&times; at slot <span class="slot">1c</span>)
++ Lagrange multipliers. <strong>Prepare both</strong> &mdash; each side has one near-certain 7-marker. Decide by the (d) parts.</td>
+<td>Medium &mdash; genuinely split</td></tr>
+<tr><td><strong>II</strong></td><td class="slot">Q4</td>
+<td><strong>Modified Euler sits at exactly <span class="slot">4c</span> in 4 of 5 papers.</strong> Q4 also carries the
+circuit-DE 2-marker and a bungee/self-orthogonal item. Q3 leans Taylor's method + cooling + RK4.</td>
+<td>High</td></tr>
+<tr><td><strong>III</strong></td><td class="slot">Q5</td>
+<td><strong>In all three exact-match papers Q5 = <span class="m">1/(D+a)</span> proof [4] + Cauchy [7] +
+variation of parameters [7] = 18 of 20 marks</strong> from three techniques you can fully prepare.
+Q6 is the Legendre/miscellaneous side &mdash; far less stable.</td>
+<td><strong>Very high</strong></td></tr>
+<tr><td><strong>IV</strong></td><td class="slot">Q8</td>
+<td>Q8 bundles <strong>Lagrange inverse formula [2] + missing terms [4] + divided difference [7] +
+grouped frequency [7]</strong> &mdash; the four most repetitive items in the unit. Missing terms sits at
+<span class="slot">8b</span> in 3 of 3 papers.</td>
+<td><strong>Very high</strong></td></tr>
+<tr><td><strong>V</strong></td><td class="slot">Q10</td>
+<td>Q10 = definition [2] + <strong>Gauss-Seidel</strong> [4] + Gauss elimination / consistency [7] +
+<strong>system of ODEs by matrix method</strong> [7]. That last one is at slot <span class="slot">10d</span>
+in <strong>3 of 3</strong> papers &mdash; always the final question of the exam. But learn all of Unit V;
+it is only ~6 techniques.</td>
+<td><strong>Very high</strong></td></tr>
+</table>
+
+<h2>3 &nbsp; TIER 1 &mdash; Lock. Same question, same values.</h2>
+
+<div class="tier t1">
+<div class="tier-h">TIER 1 &mdash; expect these verbatim</div>
+<p class="tier-s">Each has appeared <strong>2&ndash;4 times with the same numbers</strong>. Learn the worked
+answer, not the method. If it shows up you write it from memory.
+<strong>Total on the table: 60 marks.</strong> Realistically 30&ndash;40 of these land.</p>
+
+<table>
+<tr><th style="width:26%">Question</th><th style="width:6%">Mk</th><th style="width:6%">Unit</th>
+<th style="width:9%">Slot</th><th style="width:8%">Repeats</th><th style="width:13%">Seen in</th><th>Appears alongside</th></tr>
+
+<tr><td><strong>Prove <span class="m">[1/(D+a)]X = e<sup>&minus;ax</sup>&int;Xe<sup>ax</sup>dx</span></strong>
+where <span class="m">D = d/dx</span></td><td class="mk">4</td><td>III</td><td class="slot">Q5(b)</td>
+<td><span class="hits h4">4&times;/6</span></td><td>MP, M23, M24, MAE23</td>
+<td>Steps for Cauchy's LDE [5a] &middot; Cauchy's equation [5c] &middot; variation of parameters [5d]</td></tr>
+
+<tr><td><strong>Expand <span class="m">xy + cos(xy)</span> about <span class="m">(1, &pi;/2)</span> up to
+second degree terms</strong> <em>(variants: <span class="m">xy+sin(xy)</span>, <span class="m">xy&sup2;+cos(xy)</span> &mdash;
+the point (1, &pi;/2) never changes)</em></td><td class="mk">7</td><td>I</td><td class="slot">Q2(c)</td>
+<td><span class="hits h4">4&times;/6</span></td><td>M23, MAM24, MAE23, MP</td>
+<td>Maclaurin/Taylor statement [2a] &middot; <span class="m">xy(1&minus;x&minus;y)</span> maximum [2b] &middot; single-equation N-R [2d]</td></tr>
+
+<tr><td><strong>Newton-Raphson on the system <span class="m">x&sup2;+y&sup2;=x</span>, <span class="m">x&sup2;&minus;y&sup2;=y</span></strong>,
+<span class="m">x&#8320;=0.8</span>, <span class="m">y&#8320;=0.4</span>, two iterations
+<em>(P26 rewrites it as <span class="m">x=x&sup2;+y&sup2;, y=x&sup2;&minus;y&sup2;</span> &mdash; same system)</em></td>
+<td class="mk">7</td><td>I</td><td class="slot">Q1(c)</td>
+<td><span class="hits h4">4&times;/6</span></td><td>M23, M24, MAM24, P26</td>
+<td>Geom. interpretation of N-R [1a] &middot; series expansion [1b] &middot; Lagrange multipliers [1d]</td></tr>
+
+<tr><td><strong>Define linear and non-linear differential equations with example</strong></td>
+<td class="mk">2</td><td>III</td><td class="slot">Q6(a)</td>
+<td><span class="hits h3">3&times;/6</span></td><td>M23, MAE23, P26</td>
+<td>Legendre's equation [6c] &middot; IVP/BVP [6b or 6d]</td></tr>
+
+<tr><td><strong>Show <span class="m">f(x,y) = xy(1&minus;x&minus;y)</span> is maximum at <span class="m">(1/3, 1/3)</span></strong></td>
+<td class="mk">4</td><td>I</td><td class="slot">Q2(b)</td>
+<td><span class="hits h3">3&times;/6</span></td><td>MP, MAM24, MAE23</td>
+<td>Expand about (1, &pi;/2) [2c] &middot; Maclaurin statement [2a]</td></tr>
+
+<tr><td><strong>Find the missing terms:</strong> <span class="m">x = 45, 50, 55, 60, 65</span>;
+<span class="m">y = 3.0, &ndash;, 2.0, &ndash;, &minus;2.4</span></td><td class="mk">4</td><td>IV</td><td class="slot">Q8(b)</td>
+<td><span class="hits h3">3&times;/5</span><br><small>identical table 2&times;</small></td><td>MAM24, P26 <em>(same data)</em>; M24 <em>(other data)</em></td>
+<td>Lagrange inverse formula [8a] &middot; grouped frequency [8c] &middot; Simpson's 3/8 [8d]</td></tr>
+
+<tr><td><strong>Coffee at 92&deg;C, room 24&deg;C, cooled to 80&deg;C in 1 minute &mdash; time to reach 65&deg;C?</strong>
+<em>(M24 runs 90 / 24 / 75 / 60)</em></td><td class="mk">7</td><td>II</td><td class="slot">Q3(d)/Q4(d)</td>
+<td><span class="hits h3">3&times;/6</span><br><small>identical 2&times;</small></td><td>MP, P26 <em>(same)</em>; M24 <em>(variant)</em></td>
+<td>Taylor's series method [3c] &middot; Euler's method [3b] &middot; RK4 formula [3a]</td></tr>
+
+<tr><td><strong>Cubic through <span class="m">(2,4) (4,56) (9,711) (10,980)</span> by Newton's divided
+difference; estimate <span class="m">y</span> at <span class="m">x = 1.5</span></strong></td>
+<td class="mk">7</td><td>IV</td><td class="slot">Q7(d)/Q8(c)</td>
+<td><span class="hits h2">2&times;/5</span></td><td>MP, M24</td>
+<td>Missing terms [8b] &middot; trapezoidal rule [8b] &middot; Lagrange inverse formula [8a]</td></tr>
+
+<tr><td><strong>Taylor's series method:</strong> <span class="m">dy/dt = e<sup>&minus;2t</sup> &minus; 2y</span>,
+<span class="m">y(0)=0.1</span>, at <span class="m">t=0.1</span>, derivatives up to 4th degree</td>
+<td class="mk">7</td><td>II</td><td class="slot">Q3(c)</td>
+<td><span class="hits h2">2&times;/6</span></td><td>MP, P26</td>
+<td>Euler on <span class="m">dy/dx&minus;2y=3e<sup>x</sup></span> [3b] &middot; coffee cooling [3d] &middot; RK4 formula [3a]</td></tr>
+
+<tr><td><strong>Gauss-Seidel:</strong> <span class="m">x+8y+2z=&minus;4</span>; <span class="m">10x+2y+z=59</span>;
+<span class="m">2x&minus;y+20z=74</span></td><td class="mk">4&ndash;7</td><td>V</td><td class="slot">Q10(b)/(c)</td>
+<td><span class="hits h2">2&times;/3</span></td><td>MP, P26</td>
+<td>System of ODEs by matrix method [10d] &middot; consistency conditions [10a] &middot; Gauss elimination [10c]</td></tr>
+
+<tr><td><strong>Show that <span class="m">x&sup2;/(a&sup2;+&lambda;) + y&sup2;/(b&sup2;+&lambda;) = 1</span>
+is self-orthogonal</strong> (&lambda; the parameter)</td><td class="mk">7</td><td>II</td><td class="slot">Q4(c)/(d)</td>
+<td><span class="hits h2">2&times;/6</span></td><td>M23, MAE23</td>
+<td>Modified Euler [4c] &middot; bungee jumper Euler [4b] &middot; analytical vs numerical [4a]</td></tr>
+
+<tr><td><strong>Open-top rectangular box of volume 108 cubic ft &mdash; dimensions for minimum surface area</strong></td>
+<td class="mk">7</td><td>I</td><td class="slot">Q1(d)/Q2(d)</td>
+<td><span class="hits h2">2&times;/6</span></td><td>M23, MAM24</td>
+<td>Expand about (1, &pi;/2) [2c] &middot; extreme values [2b] &middot; N-R system [1c]</td></tr>
+
+<tr><td><strong>Bungee jumper, <span class="m">m = 68.1 kg</span>,
+<span class="m">dv/dt = g &minus; cv&sup2;/m</span>, <span class="m">g=9.8</span>, <span class="m">c=0.25</span>
+&mdash; Euler's method, steps of 1 second</strong></td><td class="mk">4</td><td>II</td><td class="slot">Q4(b)</td>
+<td><span class="hits h2">2&times;/6</span></td><td>M23, MAE23</td>
+<td>Modified Euler [4c] &middot; self-orthogonal family [4d] &middot; analytical vs numerical [4a]</td></tr>
+
+<tr><td><strong>Newton-Raphson on the system <span class="m">x&sup2;+y=11</span>,
+<span class="m">y&sup2;+x=7</span></strong>, from <span class="m">(3.5, &minus;1.8)</span></td>
+<td class="mk">4&ndash;7</td><td>I</td><td class="slot">Q1(c)/Q2(b)</td>
+<td><span class="hits h2">2&times;/6</span></td><td>MP, MAE23</td>
+<td>Lagrange multipliers [1d] &middot; expand <span class="m">a<sup>x</sup></span> [1b]</td></tr>
+
+<tr><td><strong>Find a negative root of <span class="m">xe<sup>x</sup> &minus; sin x = 0</span> by
+Newton-Raphson, correct to three decimals</strong></td><td class="mk">4&ndash;7</td><td>I</td><td class="slot">Q2(b)/(c)</td>
+<td><span class="hits h2">2&times;/6</span></td><td>M24, P26</td>
+<td>Maclaurin statement [2a] &middot; expand <span class="m">e<sup>x</sup>log x</span> [2c] &middot; distance to sphere [2d]</td></tr>
+
+<tr><td><strong>Write the DE of the closed circuit with L and C in series, without applied e.m.f.</strong>
+<em>(M24 asks the R&ndash;C variant with source E)</em></td><td class="mk">2</td><td>II</td><td class="slot">Q4(a)</td>
+<td><span class="hits h3">3&times;/6</span><br><small>identical 2&times;</small></td><td>MP, P26 <em>(same)</em>; M24 <em>(R&ndash;C)</em></td>
+<td>Modified Euler [4c] &middot; cardioid orthogonal trajectory [4b] &middot; RK4 [4d]</td></tr>
+
+<tr><td><strong>Give the geometrical interpretation of the Newton-Raphson method</strong></td>
+<td class="mk">2&ndash;4</td><td>I</td><td class="slot">Q1(a)/(b)</td>
+<td><span class="hits h2">2&times;/6</span></td><td>M23, P26</td>
+<td>N-R system [1c] &middot; Lagrange multipliers [1d] &middot; series expansion [1b]</td></tr>
+
+<tr><td><strong>Write Lagrange's inverse interpolation formula</strong> (for two points
+<span class="m">(x&#8320;,y&#8320;)</span>, <span class="m">(x&#8321;,y&#8321;)</span>)</td>
+<td class="mk">2</td><td>IV</td><td class="slot">Q8(a)</td>
+<td><span class="hits h2">2&times;/5</span></td><td>M23, MAM24</td>
+<td>Missing terms [8b] &middot; divided difference [8c] &middot; grouped frequency [8c/d]</td></tr>
+
+<tr><td><strong>Obtain the expression for <span class="m">&Delta;&sup2;y<sub>n</sub></span> (or
+<span class="m">&nabla;&sup2;y<sub>n</sub></span>) in terms of y values</strong></td>
+<td class="mk">2</td><td>IV</td><td class="slot">Q7(a)</td>
+<td><span class="hits h2">2&times;/5</span></td><td>M23, P26</td>
+<td>Lagrange inverse / backward difference table [7b] &middot; grouped frequency [7c]</td></tr>
+
+<tr><td><strong>Write the steps involved in solving Cauchy's LDE</strong></td>
+<td class="mk">2</td><td>III</td><td class="slot">Q5(a)</td>
+<td><span class="hits h2">2&times;/6</span></td><td>MP, M23</td>
+<td><span class="m">1/(D+a)</span> proof [5b] &middot; Cauchy's equation [5c] &middot; variation of parameters [5d]</td></tr>
+
+<tr><td><strong>Orthogonal trajectory of <span class="m">r = b sin&theta;</span> /
+<span class="m">r = a cos&theta;</span></strong></td><td class="mk">4</td><td>II</td><td class="slot">Q3(b)/Q6(b)</td>
+<td><span class="hits h2">2&times;/6</span></td><td>MAM24, P26</td>
+<td>Euler's formula [3a] &middot; cooling problem [3c] &middot; RK4 [3d]</td></tr>
+
+<tr><td><strong>Euler's method on <span class="m">dy/dx &minus; 2y = 3e<sup>x</sup></span></strong>
+<em>(MP: y(0)=0, x=0.2, h=0.1 &nbsp;|&nbsp; P26: y(1)=0, x=1.1, h=0.05)</em></td>
+<td class="mk">4</td><td>II</td><td class="slot">Q3(b)</td>
+<td><span class="hits h2">2&times;/6</span></td><td>MP, P26</td>
+<td>Taylor's series method [3c] &middot; coffee cooling [3d] &middot; RK4 formula [3a]</td></tr>
+
+<tr><td><strong>Geometrical interpretation of infinitely many solutions</strong>
+<em>(MP: <span class="m">2x+3y=5, x+1.5y=2.5</span> &nbsp;|&nbsp; M23: <span class="m">2x+y=3, 4x+2y=6</span>)</em></td>
+<td class="mk">2&ndash;4</td><td>V</td><td class="slot">Q10(a)/(b)</td>
+<td><span class="hits h2">2&times;/3</span></td><td>MP, M23</td>
+<td>Rayleigh's power method [10b] &middot; system of ODEs by matrix method [10d]</td></tr>
+</table>
+</div>
+
+<h2>4 &nbsp; TIER 2 &mdash; Lock on the topic. Values will change.</h2>
+
+<div class="tier t2">
+<div class="tier-h">TIER 2 &mdash; certain to appear, numbers will differ</div>
+<p class="tier-s">These techniques appear in <strong>every paper or nearly every paper</strong>, but with fresh
+data each time. Drill the <em>method</em> until the setup is automatic &mdash; the arithmetic is then routine.
+<strong>This is where the bulk of your marks live.</strong></p>
+
+<table>
+<tr><th style="width:27%">Topic</th><th style="width:6%">Mk</th><th style="width:6%">Unit</th>
+<th style="width:10%">Slot</th><th style="width:9%">Repeats</th><th>What changes / what to drill &middot; appears alongside</th></tr>
+
+<tr><td><strong>Runge-Kutta method, 4th order</strong></td><td class="mk">7</td><td>II</td>
+<td class="slot">Q3(d)/Q4(d)</td><td><span class="hits h4">6&times;/6</span></td>
+<td><strong>In every single paper.</strong> The ODE and <span class="m">h</span> change; <span class="m">h=0.2</span> in most.
+Drill the <span class="m">k&#8321;&hellip;k&#8324;</span> table. <em>With:</em> orthogonal trajectories, cooling, Euler's formula [3a].</td></tr>
+
+<tr><td><strong>Variation of parameters</strong></td><td class="mk">7</td><td>III</td>
+<td class="slot">Q5(c)/(d)</td><td><span class="hits h4">5&times;/5</span></td>
+<td>Every paper carrying Unit III. RHS is always a "hard" function &mdash;
+<span class="m">sec&sup3;x</span>, <span class="m">sec&sup2;x</span>, <span class="m">tan x</span>,
+<span class="m">e<sup>3x</sup>/x&sup2;</span>, <span class="m">cos(e<sup>&minus;x</sup>)</span>. Drill the Wronskian setup.
+<em>With:</em> <span class="m">1/(D+a)</span> proof [5b] + Cauchy [5c/d].</td></tr>
+
+<tr><td><strong>Modified Euler's method</strong>, <span class="m">h=0.2</span>, two iterations per stage</td>
+<td class="mk">7</td><td>II</td><td class="slot">Q4(c)</td><td><span class="hits h4">5&times;/6</span></td>
+<td><strong>4 of those 5 at exactly slot <span class="slot">4c</span></strong> &mdash; the tightest positional lock in Unit II.
+<em>With:</em> circuit DE [4a], bungee Euler [4b], self-orthogonal or cooling [4d].</td></tr>
+
+<tr><td><strong>Newton's law of cooling</strong> (word problem)</td><td class="mk">4&ndash;7</td><td>II</td>
+<td class="slot">Q3(b)/(c)/(d), Q4(d)</td><td><span class="hits h4">5&times;/6</span></td>
+<td>Coffee, a heated object, a cooling substance. Same ODE every time. <em>With:</em> Taylor's method, RK4, orthogonal trajectories.</td></tr>
+
+<tr><td><strong>Taylor's series method for an ODE</strong></td><td class="mk">4&ndash;7</td><td>II</td>
+<td class="slot">Q3(c)/Q4(b)</td><td><span class="hits h4">5&times;/6</span></td>
+<td>"Up to 3rd / 4th degree" &mdash; read which. <em>With:</em> Euler's method [3b], cooling [3d].</td></tr>
+
+<tr><td><strong>Newton's divided difference interpolation</strong></td><td class="mk">7</td><td>IV</td>
+<td class="slot">Q7(c)/(d), Q8(c)</td><td><span class="hits h4">5&times;/5</span></td>
+<td><strong>Every paper carrying Unit IV.</strong> Sometimes asks for the polynomial, sometimes a value.
+<em>With:</em> missing terms [8b], grouped frequency, Lagrange inverse [8a].</td></tr>
+
+<tr><td><strong>Maxima&ndash;minima of two variables</strong> (r-s-t test)</td><td class="mk">4&ndash;7</td><td>I</td>
+<td class="slot">Q1(d)/Q2(b)/(d)</td><td><span class="hits h4">5&times;/6</span></td>
+<td><span class="m">x&sup3;+y&sup3;&minus;3axy</span>, <span class="m">sin x sin y sin(x+y)</span>,
+<span class="m">x&sup3;+y&sup3;&minus;3x&minus;12y+20</span>, <span class="m">xy(1&minus;x&minus;y)</span>. <em>With:</em> expansion about a point [2c].</td></tr>
+
+<tr><td><strong>Taylor / Maclaurin single-variable expansion</strong></td><td class="mk">4&ndash;7</td><td>I</td>
+<td class="slot">Q1(b)/Q2(c)</td><td><span class="hits h4">5&times;/6</span></td>
+<td><span class="m">sin&#8315;&sup1;x</span>, <span class="m">tan&#8315;&sup1;x</span>, <span class="m">a<sup>x</sup></span>,
+<span class="m">tan x</span>, <span class="m">&radic;(1+sin 2x)</span>. <em>With:</em> N-R system [1c], Lagrange multipliers [1d].</td></tr>
+
+<tr><td><strong>Initial / boundary value problem</strong> (small)</td><td class="mk">4</td><td>III</td>
+<td class="slot">Q5(b)/Q6(b)/(d)</td><td><span class="hits h4">6&times;/6</span></td>
+<td>Always a constant-coefficient equation with 2 conditions. <em>With:</em> CF-from-roots [6a], Legendre [6c].</td></tr>
+
+<tr><td><strong>Orthogonal trajectories</strong> (Cartesian and polar)</td><td class="mk">2&ndash;7</td><td>II</td>
+<td class="slot">Q3(a)/(b)/(d), Q4(a)/(c)</td><td><span class="hits h4">6&times;/6</span></td>
+<td>Often <em>two</em> parts in one paper &mdash; a 2-mark "steps/define" plus a 7-mark problem.
+Learn the polar form too (<span class="m">dr/d&theta; &rarr; &minus;r&sup2;d&theta;/dr</span>).</td></tr>
+
+<tr><td><strong>Cauchy's linear differential equation</strong> <span class="m">(x&sup2;y&Prime;+&hellip;)</span></td>
+<td class="mk">7</td><td>III</td><td class="slot">Q5(c)/(d)</td><td><span class="hits h4">4&times;/6</span></td>
+<td>Substitution <span class="m">x = e<sup>z</sup></span>. <em>With:</em> <span class="m">1/(D+a)</span> proof [5b], variation of parameters [5c/d].</td></tr>
+
+<tr><td><strong>Legendre's linear differential equation</strong> <span class="m">((ax+b)&sup2;y&Prime;+&hellip;)</span></td>
+<td class="mk">4&ndash;7</td><td>III</td><td class="slot">Q6(c)/(d)</td><td><span class="hits h4">4&times;/6</span></td>
+<td>Seen as <span class="m">(3x+2)&sup2;</span>, <span class="m">(2x+1)&sup2;</span>, <span class="m">(2x+3)&sup2;</span>,
+<span class="m">(x+1)&sup2;</span>. <em>With:</em> define linear/non-linear DE [6a], IVP [6d].</td></tr>
+
+<tr><td><strong>Gauss-Seidel method</strong>, 2 iterations from a given start</td><td class="mk">4&ndash;7</td><td>V</td>
+<td class="slot">Q9(b)/Q10(b)/(c)</td><td><span class="hits h4">3&times;/3</span></td>
+<td>Clean sweep of Unit V. Start vector given as (0,0,0) or (1,0,0) or (1,1,1).
+<em>With:</em> system of ODEs [10d], Gauss elimination [10c], consistency [10a].</td></tr>
+
+<tr><td><strong>System of ODEs by matrix method</strong></td><td class="mk">7</td><td>V</td>
+<td class="slot">Q10(d)</td><td><span class="hits h4">3&times;/3</span></td>
+<td>&#127919; <strong>Slot <span class="slot">10d</span> in all three papers &mdash; always the very last question of the exam.</strong>
+Rabbit/wolf populations, a particle in a force field, a plain 2&times;2 system. Needs eigenvalues + eigenvectors.
+<em>With:</em> Gauss-Seidel [10b], Gauss elimination [10c].</td></tr>
+
+<tr><td><strong>Rayleigh's power method</strong>, initial vector <span class="m">[1,0,0]&#7488;</span> or <span class="m">[1,1,1]&#7488;</span></td>
+<td class="mk">4&ndash;7</td><td>V</td><td class="slot">Q9(c)/(d), Q10(b)</td><td><span class="hits h4">3&times;/3</span></td>
+<td>Iteration count varies (2 or 5). <em>With:</em> diagonalization [9c/d], define rank [9a].</td></tr>
+
+<tr><td><strong>Diagonalization / modal matrix</strong> (and hence <span class="m">A<sup>n</sup></span>)</td>
+<td class="mk">7</td><td>V</td><td class="slot">Q9(c)/(d)</td><td><span class="hits h4">3&times;/3</span></td>
+<td><strong>Always 7 marks.</strong> Sometimes the characteristic equation is handed to you.
+<em>With:</em> Rayleigh's power method [9d], rank/echelon definition [9a].</td></tr>
+
+<tr><td><strong>Grouped-frequency estimation</strong> (income band / age band / marks band)</td>
+<td class="mk">7</td><td>IV</td><td class="slot">Q7(c)/Q8(c)/(d)</td><td><span class="hits h3">3&times;/5</span></td>
+<td>The trick is building the <em>cumulative</em> frequency column first &mdash; not obvious under pressure. Drill it once.
+<em>With:</em> missing terms [8b], Lagrange inverse [8a].</td></tr>
+
+<tr><td><strong>Simpson's 3/8 rule</strong></td><td class="mk">7</td><td>IV</td><td class="slot">Q7(d)/Q8(d)</td>
+<td><span class="hits h3">3&times;/5</span></td>
+<td>"6 subintervals" / "7 equidistant ordinates". <em>With:</em> divided difference, missing terms.</td></tr>
+
+<tr><td><strong>Numerical differentiation from a table</strong> (<span class="m">y&prime;</span>, <span class="m">y&Prime;</span>)</td>
+<td class="mk">7</td><td>IV</td><td class="slot">Q7(d)/Q8(c)</td><td><span class="hits h3">4&times;/5</span></td>
+<td>Rate of cooling, <span class="m">f&Prime;(1.1)</span>, <span class="m">y&prime;(0)</span>. Pick forward or backward by where <span class="m">x</span> sits in the table.</td></tr>
+
+<tr><td><strong>Lagrange multipliers</strong> (constrained optimisation word problem)</td><td class="mk">7</td><td>I</td>
+<td class="slot">Q1(d)/Q2(d)</td><td><span class="hits h4">4&times;/6</span></td>
+<td>Hottest point on a sphere, open-top box, max/min distance to a sphere, divide 24 into three parts. Same method throughout.</td></tr>
+
+<tr><td><strong>Lagrange's interpolation</strong> (problem)</td><td class="mk">4&ndash;7</td><td>IV</td>
+<td class="slot">Q7(b)/(c), Q8(c)</td><td><span class="hits h3">3&times;/5</span></td>
+<td>Sometimes forward, sometimes <em>inverse</em>. <em>With:</em> divided difference, Simpson's rules.</td></tr>
+
+<tr><td><strong>Gauss elimination on an applied word problem</strong></td><td class="mk">7</td><td>V</td>
+<td class="slot">Q9(d)/Q10(c)</td><td><span class="hits h2">2&times;/3</span></td>
+<td>Electrical network currents; dietician / nutrition mix. Write the system from the description, then eliminate.</td></tr>
+
+<tr><td><strong>Complementary function from given roots of the A.E.</strong></td><td class="mk">2&ndash;4</td><td>III</td>
+<td class="slot">Q6(a)/(b), Q5(a)</td><td><span class="hits h3">3&times;/6</span></td>
+<td>Repeated, complex and real-distinct root cases. <em>With:</em> BVP [6b], Legendre [6c].</td></tr>
+
+<tr><td><strong>Trapezoidal rule</strong></td><td class="mk">4</td><td>IV</td><td class="slot">Q8(b)</td>
+<td><span class="hits h2">2&times;/5</span></td><td>Cheap insurance &mdash; the easiest of the three integration rules.
+P26 also asked for its <em>geometrical interpretation</em> (4 mk).</td></tr>
+
+<tr><td><strong><span class="m">&int;&#8320;&sup1; dx/(1+x&sup2;)</span></strong> &mdash; same integral, different rule each year</td>
+<td class="mk">4&ndash;7</td><td>IV</td><td class="slot">Q7(c)/Q8(b)/(d)</td><td><span class="hits h3">3&times;/5</span></td>
+<td>Simpson 1/3 with 7 ordinates (&rarr; approximate &pi;), Simpson 3/8 with 6 subintervals, trapezoidal with 4 strips.
+<strong>Know all three on this one integral.</strong></td></tr>
+</table>
+</div>
+
+<h2>5 &nbsp; TIER 3 &mdash; Probable. Seen once, or a live gap.</h2>
+
+<div class="tier t3">
+<div class="tier-h">TIER 3 &mdash; worth an hour, not a day</div>
+<p class="tier-s">Appeared once, or is on the syllabus and conspicuously <em>overdue</em>. Cover these only
+after Tiers 1 and 2 are solid.</p>
+
+<table>
+<tr><th style="width:34%">Item</th><th style="width:6%">Mk</th><th style="width:6%">Unit</th>
+<th style="width:10%">Slot</th><th style="width:9%">Repeats</th><th>Note</th></tr>
+
+<tr><td>Backward-difference <strong>table construction</strong> and reading <span class="m">&nabla;&sup2;y&#8323;</span> off it</td>
+<td class="mk">4</td><td>IV</td><td class="slot">Q7(b)</td><td><span class="hits">1&times;</span></td>
+<td>M23 only. Cheap to prepare &mdash; it is just careful bookkeeping.</td></tr>
+
+<tr><td><strong>Newton-Gregory forward / backward interpolation</strong> as the main 7-marker</td>
+<td class="mk">7</td><td>IV</td><td class="slot">Q7(c)</td><td><span class="hits h2">2&times;/5</span></td>
+<td><strong>Overdue.</strong> Sessions 19 of your portion, and the formula-statement version keeps appearing at [7a]
+while the full problem rarely does. A likely swap-in.</td></tr>
+
+<tr><td>Prove <span class="m">y&#8308; &minus; k&#8308;y = 0</span> has solution
+<span class="m">C&#8321;cos kx + C&#8322;sin kx + C&#8323;cosh kx + C&#8324;sinh kx</span></td>
+<td class="mk">4</td><td>III</td><td class="slot">Q6(b)</td><td><span class="hits">1&times;</span></td>
+<td>M23 only. Short and self-contained.</td></tr>
+
+<tr><td><strong>Consistency conditions on parameters</strong> <span class="m">a, b, c</span> for solvability</td>
+<td class="mk">7</td><td>V</td><td class="slot">Q10(c)</td><td><span class="hits">1&times;</span></td>
+<td>M23 only, but rank/consistency <em>definitions</em> appear constantly &mdash; the full problem is a natural escalation.</td></tr>
+
+<tr><td><strong>Rank of a matrix with an unknown</strong> (find <span class="m">x</span> so that rank = 2)</td>
+<td class="mk">4</td><td>V</td><td class="slot">Q9(b)</td><td><span class="hits">1&times;</span></td>
+<td>Model paper only &mdash; and the model paper has a strong record of landing in real exams.</td></tr>
+
+<tr><td>Radius of curvature via interpolation</td><td class="mk">7</td><td>IV</td><td class="slot">Q7(d)</td>
+<td><span class="hits">1&times;</span></td><td>M23 only. An interpolation problem wearing a calculus costume.</td></tr>
+
+<tr><td>Third-order constant-coefficient LDE, e.g.
+<span class="m">(D&sup3;&minus;3D&sup2;+3D&minus;1)y = 2<sup>x</sup>+x</span></td><td class="mk">7</td><td>III</td>
+<td class="slot">Q6(c)</td><td><span class="hits h2">2&times;/6</span></td>
+<td>Tests the repeated-root CF plus a P.I. for <span class="m">a<sup>x</sup></span> &mdash; an easily-missed standard case.</td></tr>
+
+<tr><td>LR / RC circuit &mdash; <em>derive and solve</em> for current or charge</td><td class="mk">7</td><td>II</td>
+<td class="slot">Q3(d)/Q4(d)</td><td><span class="hits h2">2&times;/6</span></td>
+<td>The 2-mark "write the circuit DE" is common; the full 7-mark solve is <strong>overdue</strong> in MAC21 proper.</td></tr>
+
+<tr><td><strong>Newton-Cotes quadrature formula</strong> (the general result)</td><td class="mk">2&ndash;4</td><td>IV</td>
+<td class="slot">Q7(a)/Q8(a)</td><td><span class="hits">0&times;</span></td>
+<td><strong>Never yet asked</strong>, but explicitly named in your syllabus (session 22) as the parent of Trapezoidal
+and Simpson. A plausible 2-marker.</td></tr>
+
+<tr><td><strong>Eigenvalue property proofs</strong> (e.g. &lambda; of A &rArr; 1/&lambda; of A&#8315;&sup1;)</td>
+<td class="mk">4</td><td>V</td><td class="slot">Q9(b)</td><td><span class="hits">1&times;</span></td>
+<td>M24 only. Two lines if you know it, zero if you don't.</td></tr>
+</table>
+</div>
+
+<h2>6 &nbsp; The 2-mark bank &mdash; 10 marks of pure recall</h2>
+
+<p>Every 2-mark part ever asked, by unit. You choose the easier of two each time, so knowing
+most of these makes all five 2-markers free.</p>
+
+<table>
+<tr><th style="width:7%">Unit</th><th>Definitions / statements asked (repeat count where &gt;1)</th></tr>
+<tr><td><strong>I</strong></td><td>Geometrical interpretation of Newton-Raphson <span class="hits h2">2&times;</span> &middot;
+Define algebraic &amp; transcendental equations <span class="hits h2">2&times;</span> &middot;
+State Maclaurin's series for one variable <span class="hits h2">2&times;</span> &middot;
+State Taylor's series for two variables <span class="hits h2">2&times;</span> &middot;
+State Taylor's series for one variable &middot; Define maxima and minima for two variables &middot;
+Explain N-R for a system of non-linear equations &middot; Can N-R solve <span class="m">xe&#8315;&#8339;=0</span> near <span class="m">x=2</span>? Justify</td></tr>
+<tr><td><strong>II</strong></td><td>Write Euler's formula <span class="hits h2">2&times;</span> &middot;
+Define orthogonal trajectories <span class="hits h2">2&times;</span> &middot;
+DE of closed L&ndash;C circuit without e.m.f. <span class="hits h2">2&times;</span> &middot;
+Write RK4 formula &middot; DE of closed R&ndash;C circuit with source E &middot;
+Steps for orthogonal trajectories of <span class="m">f(x,y,c)=0</span> &middot;
+Steps for orthogonal trajectories in <em>polar</em> form &middot; Two differences: analytical vs numerical methods</td></tr>
+<tr><td><strong>III</strong></td><td>Define linear and non-linear DE with example <span class="hits h3">3&times;</span> &middot;
+Steps for solving Cauchy's LDE <span class="hits h2">2&times;</span> &middot;
+Define boundary value problem <span class="hits h2">2&times;</span> &middot;
+Write the CF given the roots of the A.E. <span class="hits h2">2&times;</span> &middot;
+Define non-homogeneous 2nd-order LDE with example &middot; Steps for the method of variation of parameters</td></tr>
+<tr><td><strong>IV</strong></td><td>Express <span class="m">&Delta;&sup2;y<sub>n</sub></span> / <span class="m">&nabla;&sup2;y<sub>n</sub></span> in terms of y <span class="hits h2">2&times;</span> &middot;
+Lagrange's inverse interpolation formula <span class="hits h2">2&times;</span> &middot;
+State Simpson's 1/3 rule <span class="hits h2">2&times;</span> &middot;
+Formula for <span class="m">y&prime;</span>, <span class="m">y&Prime;</span> from Newton-Gregory forward <span class="hits h2">2&times;</span> &middot;
+Define forward and backward difference &middot; Compute <span class="m">&Delta;&sup2;y&#8322;</span>, <span class="m">&Delta;&sup3;y&#8321;</span> from data &middot;
+First-order divided difference of a given function</td></tr>
+<tr><td><strong>V</strong></td><td>Define rank of a matrix &middot; Define row echelon form &middot;
+Conditions for consistency / inconsistency of <span class="m">AX = B</span> &middot;
+Define modal and spectral matrix &middot; Is every square matrix diagonalizable? Justify &middot;
+Geometrical interpretation of infinitely many solutions <span class="hits h2">2&times;</span></td></tr>
+</table>
+
+<h2>7 &nbsp; Score projection</h2>
+
+<p>Answering <span class="slot">Q2 &middot; Q4 &middot; Q5 &middot; Q8 &middot; Q10</span> and knowing only what is on this sheet:</p>
+
+<table>
+<tr><th style="width:8%">Unit</th><th style="width:10%">Question</th><th>2 mk</th><th>4 mk</th><th>7 mk</th><th>7 mk</th><th style="width:9%">Expected</th></tr>
+<tr><td><strong>I</strong></td><td class="slot">Q2</td><td>Maclaurin statement <small>(T1)</small></td>
+<td><span class="m">xy(1&minus;x&minus;y)</span> max <small>(T1)</small></td>
+<td>Expand @ (1, &pi;/2) <small>(T1)</small></td><td>Box V=108 / N-R root <small>(T1)</small></td><td class="mk">16&ndash;20</td></tr>
+<tr><td><strong>II</strong></td><td class="slot">Q4</td><td>L&ndash;C circuit DE <small>(T1)</small></td>
+<td>Bungee Euler <small>(T1)</small></td><td>Modified Euler <small>(T2)</small></td>
+<td>Self-orthogonal / cooling <small>(T1)</small></td><td class="mk">15&ndash;20</td></tr>
+<tr><td><strong>III</strong></td><td class="slot">Q5</td><td>Steps: Cauchy's LDE <small>(T1)</small></td>
+<td><span class="m">1/(D+a)</span> proof <small>(T1)</small></td><td>Cauchy's equation <small>(T2)</small></td>
+<td>Variation of parameters <small>(T2)</small></td><td class="mk">17&ndash;20</td></tr>
+<tr><td><strong>IV</strong></td><td class="slot">Q8</td><td>Lagrange inverse formula <small>(T1)</small></td>
+<td>Missing terms <small>(T1)</small></td><td>Divided difference <small>(T2)</small></td>
+<td>Grouped frequency <small>(T2)</small></td><td class="mk">15&ndash;20</td></tr>
+<tr><td><strong>V</strong></td><td class="slot">Q10</td><td>Consistency / modal matrix <small>(T1)</small></td>
+<td>Gauss-Seidel <small>(T1)</small></td><td>Gauss elimination <small>(T2)</small></td>
+<td>System of ODEs, matrix method <small>(T2)</small></td><td class="mk">14&ndash;20</td></tr>
+</table>
+
+<div class="box win">
+<p class="big" style="margin:0 0 1.5mm">Realistic band: 70&ndash;85 marks.</p>
+<p style="margin:0">Tier 1 alone &mdash; the verbatim repeats &mdash; puts roughly <strong>45&ndash;55 marks</strong> on the table
+before you have solved anything new. Tier 2 carries you to the low 80s. The gap to 100 is the
+one unfamiliar 7-marker per unit that no prediction can eliminate.</p>
+</div>
+
+<div class="box warn">
+<strong>Two failure modes to avoid.</strong><br>
+<strong>1. Do not revise from the 2026 paper alone.</strong> It is a different scheme (25MAC21). It never
+tests Cauchy, Legendre, variation of parameters, Lagrange multipliers, maxima&ndash;minima, or <em>any</em>
+linear algebra &mdash; roughly 35 marks of your syllabus.<br>
+<strong>2. Do not skip Unit V because it is taught last.</strong> It is the smallest unit (~6 techniques),
+the most predictable in the whole paper, and "system of ODEs by matrix method" has been the final
+question of the exam in <strong>3 out of 3</strong> papers.
+</div>
+
+<div class="box">
+<strong>If you only get a few hours.</strong> In this order:<br>
+<strong>1.</strong> The 2-mark bank &mdash; section 6, one pass. 10 marks, pure recall.<br>
+<strong>2.</strong> <span class="m">1/(D+a)</span> proof + Cauchy + variation of parameters. 18 marks in Unit III, all three near-certain.<br>
+<strong>3.</strong> Unit V end to end &mdash; Gauss-Seidel, Rayleigh, diagonalization, system of ODEs by matrix method. ~6 techniques, 20 marks.<br>
+<strong>4.</strong> Modified Euler + RK4 + Newton's law of cooling. Most of Unit II.<br>
+<strong>5.</strong> Missing terms + divided difference + grouped frequency. Most of Unit IV.<br>
+<strong>6.</strong> Expand about (1, &pi;/2) + <span class="m">xy(1&minus;x&minus;y)</span> + the N-R system. Most of Unit I.
+</div>
+
+<p class="foot">
+Compiled from 6 question papers plus the official MAC21 course handbook and session-wise portion sheet.
+Repeat counts are stated out of the papers that carry each unit (I&ndash;III: 6 &middot; IV: 5 &middot; V: 3).
+Predictions are inferences from observed frequency and slot position &mdash; they are not guarantees,
+and the paper setter is free to ignore every one of them. Treat this as a priority ordering for
+revision, not a substitute for it.
+</p>
+
+</body></html>
