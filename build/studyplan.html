@@ -1,0 +1,233 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>MAC21 48-Hour Plan</title>
+<style>
+@page { size: A4; margin: 12mm 11mm 12mm 11mm; }
+* { box-sizing: border-box; }
+body { font-family: "DejaVu Sans","Segoe UI",Helvetica,Arial,sans-serif; font-size: 8.8pt;
+       line-height: 1.42; color: #14181d; margin: 0; }
+h1 { font-size: 20pt; margin: 0 0 1.5mm; letter-spacing: -.4px; }
+h2 { font-size: 12pt; margin: 6mm 0 2.5mm; padding: 2mm 3mm; background: #14181d; color: #fff; border-radius: 2px; }
+h3 { font-size: 10pt; margin: 4mm 0 1.5mm; padding-bottom: .8mm; border-bottom: 1.5px solid #14181d; }
+p { margin: 0 0 2mm; }
+table { width: 100%; border-collapse: collapse; margin: 0 0 3mm; font-size: 8pt; }
+th { background: #eceef1; text-align: left; padding: 1.4mm 2mm; border: .6px solid #9aa3ad;
+     font-weight: 700; font-size: 7.3pt; text-transform: uppercase; letter-spacing: .3px; }
+td { padding: 1.4mm 2mm; border: .6px solid #c2c8ce; vertical-align: top; }
+tr:nth-child(even) td { background: #f7f8f9; }
+tr { page-break-inside: avoid; }
+h2,h3 { page-break-after: avoid; }
+.box,.meta { page-break-inside: avoid; }
+code,.m { font-family: "DejaVu Sans Mono",monospace; font-size: 7.7pt; background:#eceef1; padding:0 1.2mm; border-radius:2px; }
+.slot { font-family:"DejaVu Sans Mono",monospace; font-weight:700; font-size:7.7pt; white-space:nowrap; }
+.lead { font-size: 9.3pt; color:#3d454e; margin-bottom: 3mm; }
+.box { border:1.4px solid #14181d; border-radius:3px; padding:2.8mm 3.2mm; margin:0 0 4mm; background:#f7f8f9; }
+.win { border-color:#16603a; background:#f3faf6; }
+.warn { border-color:#8a1420; background:#fdf5f5; }
+.cut { border-color:#8a5410; background:#fefaf3; }
+.time { font-family:"DejaVu Sans Mono",monospace; font-weight:700; white-space:nowrap; font-size:8pt; }
+.mk { font-weight:800; white-space:nowrap; }
+.tag { display:inline-block; background:#14181d; color:#fff; padding:.3mm 1.6mm; border-radius:2px;
+       font-weight:700; font-size:7pt; white-space:nowrap; }
+.g { background:#16603a; } .r { background:#8a1420; } .o { background:#8a5410; }
+.big { font-size:14pt; font-weight:800; }
+ul { margin:0 0 2mm; padding-left:4.5mm; } li { margin-bottom:.9mm; }
+.brk td { background:#e8eaed !important; font-style:italic; color:#4a525b; }
+.foot { margin-top:5mm; padding-top:2mm; border-top:.8px solid #c2c8ce; font-size:7.2pt; color:#6b737c; }
+</style></head><body>
+
+<h1>MAC21 &mdash; The 48-Hour Plan</h1>
+<p class="lead"><strong>Now:</strong> Sunday 12:00 &nbsp;&middot;&nbsp; <strong>Exam:</strong> Tuesday 09:30
+&nbsp;&middot;&nbsp; <strong>Real study time available:</strong> ~22 hours &nbsp;&middot;&nbsp;
+<strong>Target:</strong> 60&ndash;70 marks by the easiest route</p>
+
+<div class="box win">
+<p class="big" style="margin:0 0 1.5mm">The whole strategy in one line</p>
+<p style="margin:0 0 1.5mm">In each unit, answer <strong>a) + b) + ONE of the two 7-markers</strong>.
+That is <span class="m">2 + 4 + 7 = 13 marks per unit &times; 5 units = <strong>65 marks</strong></span>.</p>
+<p style="margin:0"><strong>You do not need both 7-markers.</strong> That halves the hardest part of the
+syllabus and is why this is achievable in two days. Anything you manage on the second 7-marker is
+bonus on top of 65.</p>
+</div>
+
+<h2>The 5 questions you are answering</h2>
+
+<table>
+<tr><th style="width:6%">Unit</th><th style="width:8%">Answer</th><th style="width:24%">a) &mdash; 2 mk</th>
+<th style="width:24%">b) &mdash; 4 mk</th><th>Your ONE 7-marker</th><th style="width:7%">Total</th></tr>
+<tr><td><strong>I</strong></td><td class="slot">Q2</td><td>State Maclaurin's / Taylor's series</td>
+<td><span class="m">xy(1&minus;x&minus;y)</span> max at <span class="m">(1/3,1/3)</span></td>
+<td>Expand <span class="m">xy+cos(xy)</span> about <span class="m">(1, &pi;/2)</span> <span class="tag r">4&times;</span></td><td class="mk">13</td></tr>
+<tr><td><strong>II</strong></td><td class="slot">Q4</td><td>DE of L&ndash;C circuit / define orthogonal trajectories</td>
+<td>Bungee Euler <em>or</em> Taylor's method <em>or</em> orthogonal trajectory</td>
+<td>Modified Euler's method <span class="tag r">5&times;</span> <em>(sits at <span class="slot">4c</span> in 4 of 5)</em></td><td class="mk">13</td></tr>
+<tr><td><strong>III</strong></td><td class="slot">Q5</td><td>Steps for solving Cauchy's LDE</td>
+<td>Prove <span class="m">1/(D+a)&middot;X</span> <span class="tag r">4&times;</span></td>
+<td>Cauchy's equation <span class="tag r">4&times;</span> <em>(easier than variation of parameters)</em></td><td class="mk">13</td></tr>
+<tr><td><strong>IV</strong></td><td class="slot">Q8</td><td>Lagrange's inverse interpolation formula</td>
+<td>Find the missing terms <span class="tag r">3&times;</span></td>
+<td>Newton's divided difference <span class="tag r">5&times;</span> <em>or</em> Simpson's 3/8</td><td class="mk">13</td></tr>
+<tr><td><strong>V</strong></td><td class="slot">Q10</td><td>Rank / echelon / consistency definition</td>
+<td>Gauss-Seidel, 2 iterations <span class="tag r">3&times;</span></td>
+<td>Gauss elimination word problem <em>(easier than system of ODEs)</em></td><td class="mk">13</td></tr>
+<tr><td colspan="5" style="text-align:right"><strong>Floor if every 7-marker lands</strong></td><td class="mk">65</td></tr>
+</table>
+
+<div class="box cut">
+<strong>What you are deliberately NOT studying.</strong> Every one of these lives in the question you are
+<em>not</em> answering. Touch them only if you finish everything else:<br>
+<strong>Legendre's equation</strong> (Q6) &middot; <strong>variation of parameters</strong> (the other 7 in Q5 &mdash;
+learn only if time) &middot; <strong>Rayleigh's power method</strong> (Q9) &middot;
+<strong>diagonalization / modal matrix</strong> (Q9) &middot; <strong>Lagrange multipliers</strong> (Q1) &middot;
+<strong>maxima&ndash;minima beyond <span class="m">xy(1&minus;x&minus;y)</span></strong> (Q1) &middot;
+<strong>radius of curvature, Newton-Cotes derivation, backward difference tables</strong>.<br>
+That is roughly 40% of the syllabus, cut on purpose.
+</div>
+
+<h2>SUNDAY &mdash; 12:00 to 23:00 &nbsp;<span style="font-weight:400;font-size:9pt">(~8.5 h study)</span></h2>
+<p>Today you bank <strong>Units III, IV and V</strong> &mdash; the three most predictable units, worth 39 marks.
+Do the hardest-to-fake unit while you are freshest.</p>
+
+<table>
+<tr><th style="width:13%">Time</th><th style="width:20%">Block</th><th>What exactly</th></tr>
+<tr><td class="time">12:00&ndash;13:00</td><td><strong>2-mark bank, pass 1</strong></td>
+<td>Section 6 of the prediction sheet. Write each definition out <em>by hand</em>, once. Do not just read.
+This is 10 marks and it is the cheapest hour of the whole weekend.</td></tr>
+<tr class="brk"><td class="time">13:00&ndash;13:45</td><td>Lunch</td><td>Away from the desk.</td></tr>
+<tr><td class="time">13:45&ndash;16:00</td><td><strong>UNIT III</strong> <span class="tag g">13 mk</span></td>
+<td>The single biggest win in the paper.<br>
+&bull; Memorise the <span class="m">1/(D+a)</span> proof cold &mdash; it is 4 marks, appeared <strong>4&times;</strong>, and never changes.<br>
+&bull; Cauchy's equation: the substitution <span class="m">x = e<sup>z</sup></span>, then it is a constant-coefficient problem.<br>
+&bull; Work M23 <span class="slot">5c</span>, M24 <span class="slot">5d</span>, MAM24 <span class="slot">5d</span> &mdash; three Cauchy problems.<br>
+&bull; Write the "steps for solving Cauchy's LDE" answer once.</td></tr>
+<tr class="brk"><td class="time">16:00&ndash;16:20</td><td>Break</td><td>Walk. No screen.</td></tr>
+<tr><td class="time">16:20&ndash;18:30</td><td><strong>UNIT V</strong> <span class="tag g">13 mk</span></td>
+<td>Smallest unit in the paper.<br>
+&bull; Gauss-Seidel &mdash; do the MP/P26 system (<span class="m">x+8y+2z=&minus;4</span> &hellip;), it appeared <strong>twice identically</strong>.<br>
+&bull; Then M23 <span class="slot">9b</span> and M24 <span class="slot">10b</span>. Three reps and it is automatic.<br>
+&bull; Gauss elimination: M23's electrical network and M24's dietician problem.<br>
+&bull; The five Unit V definitions (rank, echelon, consistency, modal &amp; spectral, "is every matrix diagonalizable").</td></tr>
+<tr class="brk"><td class="time">18:30&ndash;19:30</td><td>Dinner</td><td>Proper meal.</td></tr>
+<tr><td class="time">19:30&ndash;21:30</td><td><strong>UNIT IV</strong> <span class="tag g">13 mk</span></td>
+<td>The most mechanical unit &mdash; good for a tired brain.<br>
+&bull; Missing terms &mdash; do the <span class="m">45&hellip;65 / 3.0, &ndash;, 2.0, &ndash;, &minus;2.4</span> table, it appeared <strong>identically twice</strong>.<br>
+&bull; Newton's divided difference &mdash; the <span class="m">(2,4)(4,56)(9,711)(10,980)</span> cubic appeared <strong>twice verbatim</strong>. Do it.<br>
+&bull; Simpson's 3/8 on <span class="m">&int;&#8320;&sup1;dx/(1+x&sup2;)</span> as your backup 7-marker.<br>
+&bull; Lagrange's inverse interpolation formula &mdash; write it out.</td></tr>
+<tr><td class="time">21:30&ndash;22:30</td><td><strong>Consolidate</strong></td>
+<td>Close the notes. From memory: the <span class="m">1/(D+a)</span> proof, one Cauchy problem, one Gauss-Seidel.
+Whatever you cannot do, mark it and fix it first thing tomorrow.</td></tr>
+<tr class="brk"><td class="time">22:30&ndash;23:00</td><td>Wind down</td><td>No maths. Sleep by 23:00.</td></tr>
+</table>
+
+<div class="box"><strong>End of Sunday you should own:</strong> Units III, IV, V a+b+one 7 &mdash;
+<strong>39 marks</strong> &mdash; plus most of the 2-mark bank.</div>
+
+<h2>MONDAY &mdash; 07:00 to 23:00 &nbsp;<span style="font-weight:400;font-size:9pt">(~11.5 h study)</span></h2>
+<p>Units I and II in the morning, a timed mock at midday, repairs and bonus marks in the evening.</p>
+
+<table>
+<tr><th style="width:13%">Time</th><th style="width:20%">Block</th><th>What exactly</th></tr>
+<tr class="brk"><td class="time">07:00&ndash;07:30</td><td>Wake, breakfast</td><td>&mdash;</td></tr>
+<tr><td class="time">07:30&ndash;09:45</td><td><strong>UNIT II</strong> <span class="tag g">13 mk</span></td>
+<td>Learn the four numerical methods <em>as one family</em> &mdash; they are variations of a single idea, and doing
+them together is far faster than one at a time.<br>
+&bull; Taylor's series method &rarr; Euler's &rarr; <strong>Modified Euler's</strong> &rarr; RK4. Same skeleton: tabulate, iterate, 4 decimals.<br>
+&bull; <strong>Modified Euler is your 7-marker</strong> (slot <span class="slot">4c</span>, 4 of 5 papers). Do three of them.<br>
+&bull; Newton's law of cooling &mdash; 10 minutes to learn, appeared <strong>5&times;</strong>. Do the coffee problem.<br>
+&bull; Orthogonal trajectories, Cartesian and polar. The circuit-DE 2-marker.</td></tr>
+<tr class="brk"><td class="time">09:45&ndash;10:00</td><td>Break</td><td>&mdash;</td></tr>
+<tr><td class="time">10:00&ndash;12:00</td><td><strong>UNIT I</strong> <span class="tag g">13 mk</span></td>
+<td>&bull; <strong>Expand about <span class="m">(1, &pi;/2)</span></strong> &mdash; appeared <strong>4&times;</strong>, the point never changes.
+Do all three variants: <span class="m">xy+cos(xy)</span>, <span class="m">xy+sin(xy)</span>, <span class="m">xy&sup2;+cos(xy)</span>.<br>
+&bull; <span class="m">xy(1&minus;x&minus;y)</span> maximum at <span class="m">(1/3,1/3)</span> &mdash; appeared <strong>3&times;</strong>. Learn the r-s-t test on it.<br>
+&bull; The Newton-Raphson system <span class="m">x&sup2;+y&sup2;=x, x&sup2;&minus;y&sup2;=y</span> from <span class="m">(0.8, 0.4)</span> &mdash;
+appeared <strong>4&times;</strong>. It is in Q1, but learn it: it is your escape hatch if Q2 looks bad.<br>
+&bull; The Unit I statements: Maclaurin one variable, Taylor two variables.</td></tr>
+<tr class="brk"><td class="time">12:00&ndash;13:00</td><td>Lunch</td><td>&mdash;</td></tr>
+<tr><td class="time">13:00&ndash;15:00</td><td><strong>TIMED MOCK</strong> <span class="tag o">critical</span></td>
+<td>Sit the <strong>Model Paper</strong>. Answer <span class="slot">Q2 &middot; Q4 &middot; Q5 &middot; Q8 &middot; Q10</span>,
+a + b + one 7-marker each. Clock it: <strong>2 hours</strong>. Closed book, no phone.<br>
+This is the most important block of the two days &mdash; it converts "I know it" into "I can write it under time".</td></tr>
+<tr class="brk"><td class="time">15:00&ndash;15:30</td><td>Break</td><td>Mark it honestly first, then rest.</td></tr>
+<tr><td class="time">15:30&ndash;17:30</td><td><strong>Repair</strong></td>
+<td>Whatever you dropped in the mock, redo &mdash; the actual question, start to finish, not just "review the method".
+Anything you got right, do not touch again.</td></tr>
+<tr class="brk"><td class="time">17:30&ndash;18:30</td><td>Dinner</td><td>&mdash;</td></tr>
+<tr><td class="time">18:30&ndash;20:30</td><td><strong>BONUS 7-markers</strong> <span class="tag o">65 &rarr; 80</span></td>
+<td>Only now, with the floor secured, add the <em>second</em> 7-marker in each question:<br>
+&bull; <strong>Variation of parameters</strong> (Unit III, <span class="slot">5c/5d</span>) &mdash; appeared <strong>5&times;/5</strong>. Highest-value bonus.<br>
+&bull; <strong>System of ODEs by matrix method</strong> (Unit V, <span class="slot">10d</span>) &mdash; <strong>3&times;/3</strong>, always the final question.<br>
+&bull; <strong>Grouped-frequency estimation</strong> (Unit IV) &mdash; learn the cumulative-frequency setup.<br>
+&bull; <strong>RK4</strong> (Unit II) &mdash; <strong>6&times;/6</strong>, appears in every paper.</td></tr>
+<tr><td class="time">20:30&ndash;22:00</td><td><strong>2-mark bank, pass 2</strong></td>
+<td>Write out all five units' definitions from memory. Then every formula you need:
+N-R, Modified Euler, RK4, Newton-Gregory, Lagrange, Simpson's 1/3 and 3/8, Gauss-Seidel, Cauchy substitution.
+One sheet, by hand.</td></tr>
+<tr class="brk"><td class="time">22:00&ndash;23:00</td><td>Wind down</td><td><strong>Sleep by 23:00.</strong> Non-negotiable &mdash; see below.</td></tr>
+</table>
+
+<h2>TUESDAY &mdash; 06:00 to 09:30</h2>
+
+<table>
+<tr><th style="width:13%">Time</th><th style="width:20%">Block</th><th>What exactly</th></tr>
+<tr class="brk"><td class="time">06:00&ndash;06:40</td><td>Wake, breakfast</td><td>Eat properly. Do not skip it.</td></tr>
+<tr><td class="time">06:40&ndash;07:40</td><td><strong>2-mark bank, final</strong></td>
+<td>All 5 units' definitions + your formula sheet, from memory. This is 10 marks and it is the last thing
+that should still be wobbling.</td></tr>
+<tr><td class="time">07:40&ndash;08:30</td><td><strong>Setups only</strong></td>
+<td>For each of your five 7-markers, write only the <em>first three lines</em> &mdash; the setup, not the full solve.
+<span class="m">1/(D+a)</span> proof &middot; Cauchy substitution &middot; Modified Euler table &middot; divided-difference table &middot;
+Gauss-Seidel rearrangement. Ten minutes each.</td></tr>
+<tr><td class="time">08:30&ndash;08:50</td><td><strong>Skim</strong></td>
+<td>Tier 1 table of the prediction sheet. Read, do not solve.</td></tr>
+<tr class="brk"><td class="time">08:50</td><td><strong>STOP</strong></td>
+<td>Close everything. Travel. <strong>Learn nothing new after this point</strong> &mdash; it displaces what is
+already in place and costs more than it adds.</td></tr>
+</table>
+
+<h2>In the exam hall &mdash; 09:30 to 12:30</h2>
+
+<table>
+<tr><th style="width:13%">Minutes</th><th>Do this</th></tr>
+<tr><td class="time">0&ndash;5</td><td><strong>Read all ten questions before writing anything.</strong> In each unit compare the two options
+and commit. Write your five choices on the top of the answer sheet so you do not drift.</td></tr>
+<tr><td class="time">5&ndash;20</td><td><strong>All five 2-markers first.</strong> 10 marks in 15 minutes, while you are calm.
+Nothing else in the paper has that rate of return.</td></tr>
+<tr><td class="time">20&ndash;50</td><td><strong>All five 4-markers.</strong> Another 20 marks. You are now at 30 with 100 minutes left.</td></tr>
+<tr><td class="time">50&ndash;170</td><td><strong>The 7-markers &mdash; easiest first.</strong> 24 minutes each &times; 5 = 120.
+Do your strongest unit first to build momentum. If one stalls past 25 minutes, leave it and move on;
+come back only if there is time.</td></tr>
+<tr><td class="time">170&ndash;180</td><td><strong>Sweep.</strong> Check every question is numbered and lettered correctly.
+Attempt the second 7-marker anywhere you have a spare minute &mdash; partial marks are still marks.</td></tr>
+</table>
+
+<div class="box win">
+<strong>Show every step.</strong> These are method-marked papers. A Gauss-Seidel table with an arithmetic slip
+in the last row still scores most of the 4. A correct final answer with no working does not.
+<strong>Never leave a part blank</strong> &mdash; write the formula and the setup even if you cannot finish;
+that is 2&ndash;3 marks on a 7-marker for ninety seconds of work.
+</div>
+
+<div class="box warn">
+<strong>Sleep 7 hours both nights.</strong> This is the highest-leverage instruction on the page.
+Studying until 2am costs you more in recall and arithmetic accuracy than the extra hours add &mdash;
+and this paper is almost entirely arithmetic accuracy. If you are behind on Monday night,
+cut the bonus 7-markers, not the sleep.
+</div>
+
+<div class="box">
+<strong>If you fall behind &mdash; the order to sacrifice things:</strong><br>
+<strong>1.</strong> Bonus 7-markers (Monday evening) &mdash; drop entirely, you still have 65.<br>
+<strong>2.</strong> Unit I depth &mdash; keep only "expand about (1, &pi;/2)" and <span class="m">xy(1&minus;x&minus;y)</span>.<br>
+<strong>3.</strong> Simpson's 3/8 backup in Unit IV &mdash; divided difference alone is enough.<br>
+<strong>Never sacrifice:</strong> the 2-mark bank, the <span class="m">1/(D+a)</span> proof, Gauss-Seidel,
+missing terms, Modified Euler. Those five are ~25 marks for maybe four hours of work.
+</div>
+
+<p class="foot">
+Built from the MAC21 prediction sheet: 6 papers analysed, repeat counts stated out of the papers carrying each unit.
+Question-choice recommendations reflect observed slot frequency, not certainty &mdash; always read both options
+before committing. Timings assume you start at Sunday 12:00 and are asleep by 23:00 both nights.
+</p>
+
+</body></html>
