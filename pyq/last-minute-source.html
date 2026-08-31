@@ -16,6 +16,8 @@ code,.m{font-family:"DejaVu Sans Mono",monospace;font-size:7.2pt;background:#ece
 .ans{font-weight:800;background:#c9edd9;padding:.2mm 1.3mm;border-radius:2px;white-space:nowrap}
 .hit{display:inline-block;background:#8a1420;color:#fff;padding:.2mm 1.3mm;border-radius:2px;font-weight:700;font-size:6.8pt;white-space:nowrap}
 .h3c{background:#a8481a}.h2c{background:#7a6210}
+.ex{display:inline-block;background:#16603a;color:#fff;padding:.2mm 1.3mm;border-radius:2px;font-weight:700;font-size:6.5pt;white-space:nowrap}
+.tp{display:inline-block;background:#4a525b;color:#fff;padding:.2mm 1.3mm;border-radius:2px;font-weight:700;font-size:6.5pt;white-space:nowrap}
 .box{border:1.3px solid #14181d;border-radius:3px;padding:2mm 2.6mm;margin:0 0 2.5mm;background:#f7f8f9;page-break-inside:avoid}
 .warn{border-color:#8a1420;background:#fdf5f5}.win{border-color:#16603a;background:#f3faf6}
 .lead{font-size:8.8pt;color:#3d454e;margin-bottom:2.5mm}
@@ -30,39 +32,53 @@ ul{margin:0 0 1.5mm;padding-left:4mm}li{margin-bottom:.6mm}
 Every value below was computed and checked.</p>
 
 <div class="box warn" style="padding:1.8mm 2.4mm">
-<strong>Read the repeat counts as evidence, not promises.</strong> <span class="hit">4&times;/6</span> means it appeared in
-4 of the 6 papers carrying that unit (Units I&ndash;III: 6 papers &middot; IV: 5 &middot; V: 3).
-Nothing is guaranteed &mdash; but if you only have time for one page, this is the page.
+<strong>Two different kinds of repeat &mdash; do not confuse them.</strong><br>
+<span class="ex">EXACT n&times;</span> &nbsp;the <em>same question with the same numbers</em> appeared n times.
+The answer in the last column is the real answer. <strong>Memorise it.</strong><br>
+<span class="tp">TOPIC n&times;</span> &nbsp;the same <em>technique</em> appeared n times, but with <strong>different
+numbers every time</strong>. The answer shown is from one specific paper &mdash; it is there as a worked example,
+<strong>not</strong> as something to reproduce. Learn the method.<br>
+The red count (<span class="hit">4&times;/6</span>) is out of the papers carrying that unit
+(Units I&ndash;III: 6 papers &middot; IV: 5 &middot; V: 3). Nothing is guaranteed &mdash; but if you read one page, read this one.
 </div>
 
 <h2>UNIT I &nbsp;&mdash;&nbsp; Q1 or Q2</h2>
 <table>
 <tr><th style="width:29%">Question</th><th style="width:8%">Section</th><th style="width:5%">Mk</th><th style="width:8%">Seen</th><th>Answer / what to write</th></tr>
 <tr><td><strong>Expand <span class="m">xy + cos(xy)</span> about <span class="m">(1, &pi;/2)</span></strong>, 2nd degree</td>
-<td><span class="slot">Q2(c)</span></td><td>7</td><td><span class="hit">4&times;/6</span></td>
+<td><span class="slot">Q2(c)</span></td><td>7</td><td><span class="hit">4&times;/6</span><br><span class="ex">EXACT 2&times;</span></td>
 <td><span class="ans">Answer = &pi;/2</span> &mdash; <strong>every derivative vanishes at that point.</strong> Show the table of
 f, f&#8339;, f&#7527;, f&#8339;&#8339;, f&#8339;&#7527;, f&#7527;&#7527; all equal 0, then state f &asymp; &pi;/2. Do not panic and hunt for an error.<br>
-<em>sin variant:</em> f=1+&pi;/2, f&#8339;=&pi;/2, f&#7527;=1, f&#8339;&#8339;=&minus;&pi;&sup2;/4, f&#8339;&#7527;=1&minus;&pi;/2, f&#7527;&#7527;=&minus;1</td></tr>
+<em><span class="m">xy+cos(xy)</span> is exact in 2 papers; 2 more use a variant &mdash; but
+<strong>the point (1, &pi;/2) never changes.</strong></em><br>
+<em>sin variant:</em> f=1+&pi;/2, f&#8339;=&pi;/2, f&#7527;=1, f&#8339;&#8339;=&minus;&pi;&sup2;/4, f&#8339;&#7527;=1&minus;&pi;/2, f&#7527;&#7527;=&minus;1<br>
+<em>xy&sup2; variant:</em> f=&pi;&sup2;/4, f&#8339;=&pi;(&pi;&minus;2)/4, f&#7527;=&pi;&minus;1, f&#8339;&#8339;=0, f&#8339;&#7527;=&pi;&minus;1, f&#7527;&#7527;=2</td></tr>
 <tr><td><strong>Newton-Raphson system</strong> <span class="m">x&sup2;+y&sup2;=x</span>, <span class="m">x&sup2;&minus;y&sup2;=y</span>, from <span class="m">(0.8, 0.4)</span>, 2 iterations</td>
-<td><span class="slot">Q1(c)</span></td><td>7</td><td><span class="hit">4&times;/6</span></td>
+<td><span class="slot">Q1(c)</span></td><td>7</td><td><span class="hit">4&times;/6</span><br><span class="tp">START VARIES</span></td>
 <td><span class="m">J = [[2x&minus;1, 2y],[2x, &minus;2y&minus;1]]</span><br>
-It1 &rarr; <span class="m">x=0.772881, y=0.420339</span><br>
-It2 &rarr; <span class="ans">x = 0.771846, y = 0.419644</span><br>
-<em>f = 0 at the start point &mdash; that is not an error, g &ne; 0.</em></td></tr>
+<strong>The equations are identical every time &mdash; the starting point is NOT.</strong> All four answers:<br>
+<span class="m">(0.8, 0.4)</span> 2 iter &rarr; <span class="ans">0.771846, 0.419644</span><br>
+<span class="m">(0.8, 0.3)</span> 2 iter &rarr; <span class="ans">0.772041, 0.419921</span><br>
+<span class="m">(0.8, 0.4)</span> 1 iter &rarr; <span class="ans">0.772881, 0.420339</span><br>
+<span class="m">(1.0, 0.5)</span> 2 iter &rarr; <span class="ans">0.773720, 0.420557</span><br>
+<em>Read the start point off the paper. f = 0 at (0.8,0.4) is not an error &mdash; g &ne; 0.</em></td></tr>
 <tr><td>Show <span class="m">xy(1&minus;x&minus;y)</span> is max at <span class="m">(1/3, 1/3)</span></td>
-<td><span class="slot">Q2(b)</span></td><td>4</td><td><span class="hit h3c">3&times;/6</span></td>
+<td><span class="slot">Q2(b)</span></td><td>4</td><td><span class="hit h3c">3&times;/6</span><br><span class="ex">EXACT 3&times;</span></td>
 <td>r-s-t test. At (1/3,1/3): <span class="m">rt&minus;s&sup2; &gt; 0</span> and <span class="m">r &lt; 0</span> &rarr; <span class="ans">maximum</span></td></tr>
 <tr><td>Open-top box, volume <span class="m">108 ft&sup3;</span>, minimum surface area</td>
-<td><span class="slot">Q1(d)/Q2(d)</span></td><td>7</td><td><span class="hit h2c">2&times;/6</span></td>
+<td><span class="slot">Q1(d)/Q2(d)</span></td><td>7</td><td><span class="hit h2c">2&times;/6</span><br><span class="ex">EXACT 2&times;</span></td>
 <td>Minimise <span class="m">xy+2xz+2yz</span> s.t. <span class="m">xyz=108</span> &rarr; <span class="ans">x=6, y=6, z=3, S=108</span><br>
 <em>Open top = ONE xy face, not two.</em></td></tr>
 <tr><td>Negative root of <span class="m">xe&#8339; &minus; sin x = 0</span>, 3 decimals</td>
-<td><span class="slot">Q2(b)/(c)</span></td><td>4&ndash;7</td><td><span class="hit h2c">2&times;/6</span></td>
+<td><span class="slot">Q2(b)/(c)</span></td><td>4&ndash;7</td><td><span class="hit h2c">2&times;/6</span><br><span class="ex">EXACT 2&times;</span></td>
 <td><strong>Bracket first:</strong> f(&minus;2.9)=+0.08, f(&minus;3.0)=&minus;0.008 &rarr; start at &minus;3<br>
 <span class="ans">root = &minus;2.991</span> &nbsp;<em>x=0 is also a root &mdash; starting near 0 collapses to it and fails.</em></td></tr>
-<tr><td>Hottest point on unit sphere, <span class="m">T = 400xyz&sup2;</span></td>
-<td><span class="slot">Q1(d)</span></td><td>7</td><td><span class="hit h2c">2&times;/6</span></td>
-<td>Lagrange &rarr; <span class="m">x&sup2;=y&sup2;=1/4</span>, <span class="m">z&sup2;=1/2</span> &rarr; <span class="ans">T = 50</span></td></tr>
+<tr><td>Lagrange multipliers &mdash; constrained optimisation word problem</td>
+<td><span class="slot">Q1(d)/Q2(d)</span></td><td>7</td><td><span class="hit h3c">4&times;/6</span><br><span class="tp">TOPIC</span></td>
+<td><strong>A different problem every time</strong> &mdash; hottest point on a sphere, open-top box, max/min distance to
+a sphere, divide 24 into three parts. Same method: <span class="m">F = f &minus; &lambda;g</span>, solve
+<span class="m">F&#8339;=F&#7527;=F&#7526;=0</span> with <span class="m">g=0</span>, divide equations to kill &lambda; early.<br>
+<em>Sphere example: <span class="m">x&sup2;=y&sup2;=1/4, z&sup2;=1/2</span> &rarr; T = 50</em></td></tr>
 <tr><td colspan="5"><strong>2-markers (pick the easier of the two):</strong> geometrical interpretation of Newton-Raphson &middot;
 define algebraic &amp; transcendental equations &middot; state Maclaurin's series (one variable) &middot;
 state Taylor's series (two variables) &middot; define maxima and minima of two variables</td></tr>
@@ -71,31 +87,33 @@ state Taylor's series (two variables) &middot; define maxima and minima of two v
 <h2>UNIT II &nbsp;&mdash;&nbsp; Q3 or Q4</h2>
 <table>
 <tr><th style="width:29%">Question</th><th style="width:8%">Section</th><th style="width:5%">Mk</th><th style="width:8%">Seen</th><th>Answer / what to write</th></tr>
-<tr><td><strong>Runge-Kutta 4th order</strong></td><td><span class="slot">Q3(d)/Q4(d)</span></td><td>7</td><td><span class="hit">6&times;/6</span></td>
+<tr><td><strong>Runge-Kutta 4th order</strong></td><td><span class="slot">Q3(d)/Q4(d)</span></td><td>7</td><td><span class="hit">6&times;/6</span><br><span class="tp">TOPIC</span></td>
 <td><strong>In every paper.</strong> <span class="m">k&#8321;=hf(x,y)</span>, <span class="m">k&#8322;=hf(x+h/2, y+k&#8321;/2)</span>,
 <span class="m">k&#8323;=hf(x+h/2, y+k&#8322;/2)</span>, <span class="m">k&#8324;=hf(x+h, y+k&#8323;)</span>,
 <span class="m">&Delta;y=(k&#8321;+2k&#8322;+2k&#8323;+k&#8324;)/6</span><br>
 <em>P26 example:</em> <span class="m">y&prime;=y&minus;x&sup2;, y(2)=5, h=0.1</span> &rarr; <span class="ans">y(2.1)=5.084146</span></td></tr>
-<tr><td><strong>Modified Euler's method</strong>, 2 corrector iterations</td><td><span class="slot">Q4(c)</span></td><td>7</td><td><span class="hit">5&times;/6</span></td>
+<tr><td><strong>Modified Euler's method</strong>, 2 corrector iterations</td><td><span class="slot">Q4(c)</span></td><td>7</td><td><span class="hit">5&times;/6</span><br><span class="tp">TOPIC</span></td>
 <td><strong>Sits at 4(c) in 4 of 5 papers.</strong> Predictor <span class="m">y+hf</span>, then
 <span class="m">y&#8345; + (h/2)[f(x&#8345;,y&#8345;) + f(x&#8331;&#8321;, y&#7503;)]</span> repeatedly.<br>
 <em>P26:</em> <span class="m">y&prime;=&minus;y/(1+x), y(3)=2, h=0.2</span> &rarr; <span class="ans">y(3.2)=1.9047</span></td></tr>
 <tr><td><strong>Newton's law of cooling</strong> &mdash; coffee 92&deg;C, room 24&deg;C, 80&deg;C in 1 min, when 65&deg;C?</td>
-<td><span class="slot">Q3(d)/Q4(d)</span></td><td>7</td><td><span class="hit">5&times;/6</span></td>
+<td><span class="slot">Q3(d)/Q4(d)</span></td><td>7</td><td><span class="hit">5&times;/6</span> topic<br><span class="ex">EXACT 2&times;</span></td>
 <td><span class="m">T = 24 + 68e&#8315;&#7503;&#7511;</span>; <span class="m">k = ln(17/14) = 0.194156</span><br>
-<span class="ans">t = 2.606 min</span> &nbsp;<em>(M24 variant: 90/24/75/60 &mdash; same working)</em></td></tr>
+<span class="ans">t = 2.606 min</span><br>
+<em>92/24/80/65 is exact in 2 papers. The other three coolings differ: M24 uses 90/24/75/60, M23 an object
+300&rarr;250&deg;F, MAM24 a substance 100&rarr;70&deg;C. Same working throughout.</em></td></tr>
 <tr><td><strong>Taylor's series method</strong> <span class="m">dy/dt = e&#8315;&sup2;&#7511; &minus; 2y</span>, <span class="m">y(0)=0.1</span>, 4th degree</td>
-<td><span class="slot">Q3(c)</span></td><td>7</td><td><span class="hit h2c">2&times; verbatim</span></td>
+<td><span class="slot">Q3(c)</span></td><td>7</td><td><span class="hit h2c">2&times;/6</span><br><span class="ex">EXACT 2&times;</span></td>
 <td><span class="m">y&prime;=0.8, y&Prime;=&minus;3.6, y&prime;&Prime;=11.2, y&#8305;&#7515;=&minus;30.4</span><br>
 <span class="ans">y(0.1) = 0.163740</span></td></tr>
 <tr><td>Show <span class="m">x&sup2;/(a&sup2;+&lambda;) + y&sup2;/(b&sup2;+&lambda;) = 1</span> is self-orthogonal</td>
-<td><span class="slot">Q4(c)/(d)</span></td><td>7</td><td><span class="hit h2c">2&times;/6</span></td>
+<td><span class="slot">Q4(c)/(d)</span></td><td>7</td><td><span class="hit h2c">2&times;/6</span><br><span class="ex">EXACT 2&times;</span></td>
 <td>Eliminate <span class="m">&lambda;</span>, then show the DE is <strong>unchanged</strong> when
 <span class="m">y&prime; &rarr; &minus;1/y&prime;</span>. <span class="ans">That invariance IS the proof</span> &mdash; do not solve for &lambda;.</td></tr>
 <tr><td>Bungee jumper, <span class="m">m=68.1</span>, <span class="m">c=0.25</span>, Euler, 1-second steps</td>
-<td><span class="slot">Q4(b)</span></td><td>4</td><td><span class="hit h2c">2&times;/6</span></td>
+<td><span class="slot">Q4(b)</span></td><td>4</td><td><span class="hit h2c">2&times;/6</span><br><span class="ex">EXACT 2&times;</span></td>
 <td><span class="m">c/m = 0.003671</span>; v: 0 &rarr; 9.80 &rarr; 19.25 &rarr; <span class="ans">27.69 m/s</span></td></tr>
-<tr><td>Orthogonal trajectories (Cartesian or polar)</td><td><span class="slot">Q3(b)/(d)</span></td><td>4&ndash;7</td><td><span class="hit">6&times;/6</span></td>
+<tr><td>Orthogonal trajectories (Cartesian or polar)</td><td><span class="slot">Q3(b)/(d)</span></td><td>4&ndash;7</td><td><span class="hit">6&times;/6</span><br><span class="tp">TOPIC</span></td>
 <td><strong>Eliminate the parameter FIRST</strong>, then swap <span class="m">y&prime; &rarr; &minus;1/y&prime;</span>
 (polar: <span class="m">dr/d&theta; &rarr; &minus;r&sup2;d&theta;/dr</span>), then solve.</td></tr>
 <tr><td colspan="5"><strong>2-markers:</strong> DE of closed L&ndash;C circuit without e.m.f. <span class="m">L q&Prime; + q/C = 0</span> &middot;
@@ -107,28 +125,28 @@ write RK4 formula &middot; two differences between analytical and numerical meth
 <table>
 <tr><th style="width:29%">Question</th><th style="width:8%">Section</th><th style="width:5%">Mk</th><th style="width:8%">Seen</th><th>Answer / what to write</th></tr>
 <tr><td><strong>Prove <span class="m">[1/(D+a)]X = e&#8315;&#7491;&#8339;&int;Xe&#7491;&#8339;dx</span></strong></td>
-<td><span class="slot">Q5(b)</span></td><td>4</td><td><span class="hit">4&times;/6</span></td>
+<td><span class="slot">Q5(b)</span></td><td>4</td><td><span class="hit">4&times;/6</span><br><span class="ex">EXACT 4&times;</span></td>
 <td><strong>Memorise this outright &mdash; it never changes.</strong> Let <span class="m">y = [1/(D+a)]X</span>, so
 <span class="m">(D+a)y = X</span>, i.e. <span class="m">y&prime; + ay = X</span>. Integrating factor
 <span class="m">e&#7491;&#8339;</span> gives <span class="m">(ye&#7491;&#8339;)&prime; = Xe&#7491;&#8339;</span>, so
 <span class="ans">y = e&#8315;&#7491;&#8339;&int;Xe&#7491;&#8339;dx</span></td></tr>
-<tr><td><strong>Variation of parameters</strong></td><td><span class="slot">Q5(c)/(d)</span></td><td>7</td><td><span class="hit">5&times;/5</span></td>
+<tr><td><strong>Variation of parameters</strong></td><td><span class="slot">Q5(c)/(d)</span></td><td>7</td><td><span class="hit">5&times;/5</span><br><span class="tp">TOPIC</span></td>
 <td><strong>In every paper carrying this unit.</strong> <span class="m">W = y&#8321;y&#8322;&prime; &minus; y&#8322;y&#8321;&prime;</span>;
 <span class="m">y&#7527; = &minus;y&#8321;&int;(y&#8322;R/W) + y&#8322;&int;(y&#8321;R/W)</span><br>
 <em>Standard form first &mdash; coefficient of y&Prime; must be 1.</em> RHS is always awkward
 (<span class="m">sec&sup3;x, tan x, e&sup3;&#8339;/x&sup2;</span>) &mdash; that is the signal.</td></tr>
 <tr><td><strong>Cauchy's equation</strong> <span class="m">x&sup2;y&Prime; + &hellip;</span></td>
-<td><span class="slot">Q5(c)/(d)</span></td><td>7</td><td><span class="hit">4&times;/6</span></td>
+<td><span class="slot">Q5(c)/(d)</span></td><td>7</td><td><span class="hit">4&times;/6</span><br><span class="tp">TOPIC</span></td>
 <td>Put <span class="m">x = e&#7611;</span>: <span class="m">xy&prime; = Dy</span>,
 <span class="ans">x&sup2;y&Prime; = D(D&minus;1)y</span>, <span class="m">x&sup3;y&prime;&Prime; = D(D&minus;1)(D&minus;2)y</span>.
 Solve as constant-coefficient in z, then put <span class="m">z = log x</span>.<br>
 <em>The <span class="m">&minus;D</span> is the most-missed detail in the unit.</em></td></tr>
 <tr><td><strong>Legendre's equation</strong> <span class="m">(ax+b)&sup2;y&Prime; + &hellip;</span></td>
-<td><span class="slot">Q6(c)/(d)</span></td><td>4&ndash;7</td><td><span class="hit">4&times;/6</span></td>
+<td><span class="slot">Q6(c)/(d)</span></td><td>4&ndash;7</td><td><span class="hit">4&times;/6</span><br><span class="tp">TOPIC</span></td>
 <td>Same as Cauchy with <span class="m">ax+b = e&#7611;</span> and extra factors:
 <span class="m">(ax+b)y&prime; = aDy</span>, <span class="ans">(ax+b)&sup2;y&Prime; = a&sup2;D(D&minus;1)y</span><br>
 <em>Forgetting <span class="m">a&sup2;</span> wrecks every root.</em></td></tr>
-<tr><td>CF + P.I. for constant coefficients</td><td><span class="slot">Q5(c)/Q6(c)/(d)</span></td><td>7</td><td><span class="hit">6&times;/6</span></td>
+<tr><td>CF + P.I. for constant coefficients</td><td><span class="slot">Q5(c)/Q6(c)/(d)</span></td><td>7</td><td><span class="hit">6&times;/6</span><br><span class="tp">TOPIC</span></td>
 <td>Repeated root <span class="m">m</span> (k times) &rarr; <span class="m">(C&#8321;+C&#8322;x+&hellip;)e&#7504;&#8339;</span>;
 complex <span class="m">&alpha;&plusmn;i&beta;</span> &rarr; <span class="m">e&#7482;&#8339;(C&#8321;cos&beta;x + C&#8322;sin&beta;x)</span><br>
 P.I.: <span class="m">e&#7491;&#8339;&rarr;1/f(a)</span> &middot; <span class="m">sin/cos &rarr; D&sup2;&rarr;&minus;a&sup2;</span> &middot;
@@ -143,29 +161,31 @@ define non-homogeneous 2nd-order LDE</td></tr>
 <table>
 <tr><th style="width:29%">Question</th><th style="width:8%">Section</th><th style="width:5%">Mk</th><th style="width:8%">Seen</th><th>Answer / what to write</th></tr>
 <tr><td><strong>Newton's divided difference</strong> &mdash; cubic through <span class="m">(2,4)(4,56)(9,711)(10,980)</span>, find <span class="m">y(1.5)</span></td>
-<td><span class="slot">Q7(d)/Q8(c)</span></td><td>7</td><td><span class="hit">5&times;/5</span></td>
+<td><span class="slot">Q7(d)/Q8(c)</span></td><td>7</td><td><span class="hit">5&times;/5</span> topic<br><span class="ex">EXACT 2&times;</span></td>
 <td>Differences: 1st <span class="m">26, 131, 269</span>; 2nd <span class="m">15, 23</span>; 3rd <span class="m">1</span><br>
 <span class="ans">P(x) = x&sup3; &minus; 2x</span> &nbsp;&nbsp; <span class="ans">y(1.5) = 0.375</span><br>
-<em>If your expansion has stray x&sup2; or constant terms, you slipped.</em></td></tr>
+<em>Divided difference as a technique is in all 5 papers; <strong>this exact data set is in 2</strong>.
+If your expansion has stray x&sup2; or constant terms, you slipped.</em></td></tr>
 <tr><td><strong>Missing terms</strong> &mdash; <span class="m">x = 45,50,55,60,65</span>; <span class="m">y = 3.0, &ndash;, 2.0, &ndash;, &minus;2.4</span></td>
-<td><span class="slot">Q8(b)</span></td><td>4</td><td><span class="hit h3c">3&times;/5</span></td>
+<td><span class="slot">Q8(b)</span></td><td>4</td><td><span class="hit h3c">3&times;/5</span> topic<br><span class="ex">EXACT 2&times;</span></td>
 <td>3 known values &rarr; quadratic &rarr; set <strong>both</strong> 3rd differences to zero:<br>
 <span class="m">3a+b&minus;9=0</span> and <span class="m">&minus;a&minus;3b+3.6=0</span> &rarr;
 <span class="ans">y(50)=2.925, y(60)=0.225</span><br>
-<em>Check: 2nd differences all &minus;0.85. One equation is not enough.</em></td></tr>
+<em>Check: 2nd differences all &minus;0.85. One equation is not enough.
+<strong>This exact table is in 2 papers</strong>; M24 asked the same question with different data.</em></td></tr>
 <tr><td><strong>Grouped-frequency estimation</strong> (income band / age band / marks band)</td>
-<td><span class="slot">Q7(c)/Q8(c)</span></td><td>7</td><td><span class="hit h3c">3&times;/5</span></td>
+<td><span class="slot">Q7(c)/Q8(c)</span></td><td>7</td><td><span class="hit h3c">3&times;/5</span><br><span class="tp">TOPIC</span></td>
 <td><strong>Build the CUMULATIVE ("less than") column first</strong> &mdash; that is the whole trick.
 Interpolate on the cumulative values, then <strong>subtract</strong> to get the band count.<br>
 <em>P26: marks 70&ndash;75 &rarr; y(75)=172.80, minus 159 &rarr; <span class="ans">&asymp; 14 students</span></em></td></tr>
 <tr><td><strong>Simpson / trapezoidal on <span class="m">&int;&#8320;&sup1; dx/(1+x&sup2;)</span></strong></td>
-<td><span class="slot">Q7(d)/Q8(b)/(d)</span></td><td>4&ndash;7</td><td><span class="hit h3c">3&times;/5</span></td>
+<td><span class="slot">Q7(d)/Q8(b)/(d)</span></td><td>4&ndash;7</td><td><span class="hit h3c">3&times;/5</span><br><span class="ex">SAME INTEGRAL</span></td>
 <td>Exact <span class="m">= &pi;/4 = 0.785398</span>. Ordinates at <span class="m">h=1/6</span>:
 <span class="m">1, 0.972973, 0.9, 0.8, 0.692308, 0.590164, 0.5</span><br>
 Trapezoidal (4 strips) <span class="ans">0.782794</span> &middot; Simpson 1/3 <span class="ans">0.785398</span> &middot;
 Simpson 3/8 <span class="ans">0.785396</span> &rarr; <span class="m">&times;4</span> gives <span class="ans">&pi; = 3.141592</span><br>
 <em>"Seven ordinates" = 6 intervals. 1/3 needs even n; 3/8 needs n divisible by 3.</em></td></tr>
-<tr><td>Lagrange interpolation (or inverse)</td><td><span class="slot">Q7(b)/(c)</span></td><td>4&ndash;7</td><td><span class="hit h3c">3&times;/5</span></td>
+<tr><td>Lagrange interpolation (or inverse)</td><td><span class="slot">Q7(b)/(c)</span></td><td>4&ndash;7</td><td><span class="hit h3c">3&times;/5</span><br><span class="tp">TOPIC</span></td>
 <td><span class="m">y = &Sigma; y&#7522; &Pi;&#11388;&ne;&#7522;(x&minus;x&#11388;)/(x&#7522;&minus;x&#11388;)</span>. Inverse = swap x and y roles.<br>
 <em>Example: (&minus;1,9)(0,5)(2,3) &rarr; <span class="ans">P(x)=x&sup2;&minus;3x+5</span>, f(1)=3</em></td></tr>
 <tr><td colspan="5"><strong>2-markers:</strong> Lagrange's inverse interpolation formula <span class="slot">Q8(a)</span> &middot;
@@ -177,32 +197,34 @@ define forward and backward difference</td></tr>
 <h2>UNIT V &nbsp;&mdash;&nbsp; Q9 or Q10 &nbsp;<span style="font-weight:400;font-size:8.5pt">&mdash; only 3 papers exist, so 3&times; = a clean sweep</span></h2>
 <table>
 <tr><th style="width:29%">Question</th><th style="width:8%">Section</th><th style="width:5%">Mk</th><th style="width:8%">Seen</th><th>Answer / what to write</th></tr>
-<tr><td><strong>System of ODEs by matrix method</strong></td><td><span class="slot">Q10(d)</span></td><td>7</td><td><span class="hit">3&times;/3</span></td>
+<tr><td><strong>System of ODEs by matrix method</strong></td><td><span class="slot">Q10(d)</span></td><td>7</td><td><span class="hit">3&times;/3</span><br><span class="tp">TOPIC</span></td>
 <td><strong>The final question of the exam in all three papers.</strong> Eigenvalues of A &rarr; eigenvectors &rarr;
 <span class="m">X = c&#8321;V&#8321;e&#7473;&sup1;&#7511; + c&#8322;V&#8322;e&#7473;&sup2;&#7511;</span> &rarr; apply initial conditions.<br>
 <em>Rabbit/wolf: <span class="m">&lambda;=2,3</span>; <span class="ans">r = 360e&sup2;&#7511; &minus; 120e&sup3;&#7511;</span>,
 <span class="ans">w = 360e&sup2;&#7511; &minus; 60e&sup3;&#7511;</span></em></td></tr>
 <tr><td><strong>Gauss-Seidel</strong> &mdash; <span class="m">x+8y+2z=&minus;4</span>; <span class="m">10x+2y+z=59</span>; <span class="m">2x&minus;y+20z=74</span></td>
-<td><span class="slot">Q10(b)/(c)</span></td><td>4&ndash;7</td><td><span class="hit">3&times;/3</span></td>
+<td><span class="slot">Q10(b)/(c)</span></td><td>4&ndash;7</td><td><span class="hit">3&times;/3</span> topic<br><span class="ex">EXACT 2&times;</span></td>
 <td><strong>REORDER FIRST</strong> &mdash; as printed it is not diagonally dominant. Put the 10x row first, then the
 8y row, then the 20z row.<br>
 It1 <span class="m">(5.9, &minus;1.2375, 3.048125)</span> &middot; It2 <span class="m">(5.842688, &minus;1.992367, 3.016113)</span><br>
-Converges to <span class="ans">x=6, y=&minus;2, z=3</span></td></tr>
-<tr><td><strong>Diagonalization</strong> and hence <span class="m">A&#8319;</span></td><td><span class="slot">Q9(c)/(d)</span></td><td>7</td><td><span class="hit">3&times;/3</span></td>
+Converges to <span class="ans">x=6, y=&minus;2, z=3</span><br>
+<em>This exact system appears in the model paper and the 2026 paper. M23 and M24 used different systems &mdash;
+so drill the method, and take the answer as a bonus if the numbers match.</em></td></tr>
+<tr><td><strong>Diagonalization</strong> and hence <span class="m">A&#8319;</span></td><td><span class="slot">Q9(c)/(d)</span></td><td>7</td><td><span class="hit">3&times;/3</span><br><span class="tp">TOPIC</span></td>
 <td><span class="m">P</span> = eigenvectors as columns, <span class="m">D</span> = eigenvalues in the <strong>same order</strong>;
 <span class="m">A&#8319; = PD&#8319;P&#8315;&sup1;</span><br>
 <em><span class="m">A=[[1,&minus;1],[2,4]]</span>: <span class="m">&lambda;=2,3</span>, <span class="m">P=[[&minus;1,&minus;1],[1,2]]</span>,
 <span class="ans">A&#8312; = [[&minus;6049,&minus;6305],[12610,12866]]</span></em></td></tr>
-<tr><td><strong>Rayleigh's power method</strong></td><td><span class="slot">Q9(c)/(d)</span></td><td>4&ndash;7</td><td><span class="hit">3&times;/3</span></td>
+<tr><td><strong>Rayleigh's power method</strong></td><td><span class="slot">Q9(c)/(d)</span></td><td>4&ndash;7</td><td><span class="hit">3&times;/3</span><br><span class="tp">TOPIC</span></td>
 <td><span class="m">Y = AX</span>, factor out the largest component, repeat.<br>
 <strong>TRAP:</strong> on <span class="m">[[2,&minus;1,0],[&minus;1,2,&minus;1],[0,&minus;1,2]]</span> from
 <span class="m">[1,1,1]&#7488;</span> the first iterates go <span class="m">1, 2, &minus;4</span> &mdash; wild.
 It needs ~10 iterations to reach <span class="ans">&lambda; = 2+&radic;2 = 3.4142</span>.
 If it is still jumping, keep going and say so.</td></tr>
-<tr><td>Gauss elimination word problem (dietician / electrical network)</td><td><span class="slot">Q9(d)/Q10(c)</span></td><td>7</td><td><span class="hit h2c">2&times;/3</span></td>
+<tr><td>Gauss elimination word problem (dietician / electrical network)</td><td><span class="slot">Q9(d)/Q10(c)</span></td><td>7</td><td><span class="hit h2c">2&times;/3</span><br><span class="tp">TOPIC</span></td>
 <td>Write the system from the table by <strong>row</strong> (one nutrient = one equation), then row-reduce.<br>
 <em>Dietician: <span class="ans">x=0.625, y=3.125, z=5 grams</span></em></td></tr>
-<tr><td>Rank / consistency of <span class="m">AX=B</span></td><td><span class="slot">Q9(b)/Q10(c)</span></td><td>4&ndash;7</td><td><span class="hit h2c">2&times;/3</span></td>
+<tr><td>Rank / consistency of <span class="m">AX=B</span></td><td><span class="slot">Q9(b)/Q10(c)</span></td><td>4&ndash;7</td><td><span class="hit h2c">2&times;/3</span><br><span class="tp">TOPIC</span></td>
 <td><span class="m">rank(A)&ne;rank(A|B)</span> &rarr; inconsistent &middot; <span class="m">=n</span> &rarr; unique &middot;
 <span class="m">=r&lt;n</span> &rarr; <span class="m">n&minus;r</span> free parameters.<br>
 <em>For <span class="m">x+2y&minus;z=a; 2x+y+z=b; x&minus;y+2z=c</span> the condition is <span class="ans">b = a+c</span></em></td></tr>
