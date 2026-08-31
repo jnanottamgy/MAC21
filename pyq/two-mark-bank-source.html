@@ -1,0 +1,373 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>MAC21 2-Mark Bank</title>
+<style>
+@page{size:A4;margin:9mm 8mm 9mm 8mm}
+*{box-sizing:border-box}
+body{font-family:"DejaVu Sans","Segoe UI",Helvetica,Arial,sans-serif;font-size:8.2pt;line-height:1.33;color:#14181d;margin:0}
+h1{font-size:18pt;margin:0 0 1.5mm;letter-spacing:-.4px}
+h2{font-size:11.5pt;margin:4.5mm 0 2mm;padding:1.8mm 2.8mm;background:#14181d;color:#fff;border-radius:2px}
+p{margin:0 0 1.5mm}
+table{width:100%;border-collapse:collapse;margin:0 0 2.2mm;font-size:7.8pt}
+th{background:#eceef1;text-align:left;padding:1.1mm 1.5mm;border:.6px solid #9aa3ad;font-weight:700;font-size:7pt;text-transform:uppercase}
+td{padding:1.2mm 1.6mm;border:.6px solid #c2c8ce;vertical-align:top}
+tr:nth-child(even) td{background:#f7f8f9}
+tr{page-break-inside:avoid} h2{page-break-after:avoid}
+code,.m{font-family:"DejaVu Sans Mono",monospace;font-size:7.5pt;background:#eceef1;padding:0 1mm;border-radius:2px}
+.n{font-family:"DejaVu Sans Mono",monospace;font-weight:700;font-size:7.3pt;color:#5a636d}
+.seen{display:inline-block;background:#8a1420;color:#fff;padding:.2mm 1.2mm;border-radius:2px;font-weight:700;font-size:6.6pt;white-space:nowrap}
+.s2{background:#a8481a}.s1{background:#7a6210}
+.new{display:inline-block;background:#4a525b;color:#fff;padding:.2mm 1.2mm;border-radius:2px;font-weight:700;font-size:6.6pt;white-space:nowrap}
+.box{border:1.3px solid #14181d;border-radius:3px;padding:2mm 2.6mm;margin:0 0 2.8mm;background:#f7f8f9;page-break-inside:avoid}
+.win{border-color:#16603a;background:#f3faf6}
+.lead{font-size:8.9pt;color:#3d454e;margin-bottom:2.5mm}
+.big{font-size:12.5pt;font-weight:800}
+.foot{margin-top:3mm;padding-top:1.5mm;border-top:.8px solid #c2c8ce;font-size:7pt;color:#6b737c}
+</style></head><body>
+
+<h1>MAC21 &mdash; The Complete 2-Mark Bank</h1>
+<p class="lead"><strong>Every 2-mark question that has been asked, plus every one the syllabus can support.</strong>
+76 questions with model answers. You face five 2-markers and choose the easier of two in each unit &mdash;
+know most of this and all <strong>10 marks are free</strong>.</p>
+
+<div class="box win" style="padding:1.8mm 2.4mm">
+<span class="seen">4&times;</span> = times it has actually appeared across the 6 papers &nbsp;&middot;&nbsp;
+<span class="new">LIKELY</span> = not yet asked, but squarely on the syllabus and answerable in two lines.<br>
+<strong>Part (a) is a definition, a formula to state, or "write the steps" &mdash; never a calculation</strong>
+(the two exceptions are marked). Answers below are exam-length: write roughly this much, no more.
+</div>
+
+<h2>UNIT I &nbsp;&mdash;&nbsp; Series Expansion, Newton-Raphson, Maxima&ndash;Minima</h2>
+<table>
+<tr><th style="width:3%">#</th><th style="width:30%">Question</th><th>Answer</th><th style="width:8%">Seen</th></tr>
+
+<tr><td class="n">1</td><td>Write <strong>Taylor's series</strong> for a function of one variable</td>
+<td><span class="m">f(x) = f(a) + (x&minus;a)f&prime;(a)/1! + (x&minus;a)&sup2;f&Prime;(a)/2! + &hellip; + (x&minus;a)&#8319;f&#8319;(a)/n! + &hellip;</span> &nbsp;(about the point <span class="m">x = a</span>)</td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">2</td><td>Write <strong>Maclaurin's series</strong> for a function of one variable</td>
+<td><span class="m">f(x) = f(0) + x f&prime;(0)/1! + x&sup2;f&Prime;(0)/2! + x&sup3;f&prime;&Prime;(0)/3! + &hellip;</span> &nbsp;(Taylor's series about <span class="m">x = 0</span>)</td><td><span class="s2">2&times;</span></td></tr>
+
+<tr><td class="n">3</td><td>State <strong>Taylor's series for two variables</strong></td>
+<td><span class="m">f(x,y) = f(a,b) + [h f&#8339; + k f&#7527;] + (1/2!)[h&sup2;f&#8339;&#8339; + 2hk f&#8339;&#7527; + k&sup2;f&#7527;&#7527;] + &hellip;</span><br>
+where <span class="m">h = x&minus;a</span>, <span class="m">k = y&minus;b</span>, all derivatives evaluated at <span class="m">(a,b)</span>.</td><td><span class="s2">2&times;</span></td></tr>
+
+<tr><td class="n">4</td><td>State <strong>Maclaurin's series for two variables</strong></td>
+<td>Same as above with <span class="m">a = b = 0</span>:
+<span class="m">f(x,y) = f(0,0) + [x f&#8339; + y f&#7527;] + (1/2!)[x&sup2;f&#8339;&#8339; + 2xy f&#8339;&#7527; + y&sup2;f&#7527;&#7527;] + &hellip;</span>, derivatives at <span class="m">(0,0)</span>.</td><td><span class="new">LIKELY</span></td></tr>
+
+<tr><td class="n">5</td><td><strong>Define algebraic and transcendental equations</strong>, with an example each</td>
+<td><strong>Algebraic:</strong> contains only algebraic terms &mdash; powers of x. e.g. <span class="m">x&sup3; &minus; x&sup2; + 9 = 0</span>.<br>
+<strong>Transcendental:</strong> contains exponential, logarithmic or trigonometric terms.
+e.g. <span class="m">x e&#8339; &minus; 9 = 0</span>, <span class="m">x sin x + log x = 0</span>.</td><td><span class="s2">2&times;</span></td></tr>
+
+<tr><td class="n">6</td><td>Write the <strong>Newton-Raphson iteration formula</strong></td>
+<td><span class="m">x&#8345;&#8330;&#8321; = x&#8345; &minus; f(x&#8345;)/f&prime;(x&#8345;)</span>, &nbsp;<span class="m">n = 0, 1, 2, &hellip;</span></td><td><span class="new">LIKELY</span></td></tr>
+
+<tr><td class="n">7</td><td><strong>Geometrical interpretation of Newton-Raphson</strong></td>
+<td>Draw the tangent to <span class="m">y = f(x)</span> at the point <span class="m">(x&#8345;, f(x&#8345;))</span>.
+The point where that tangent cuts the x-axis is the next approximation <span class="m">x&#8345;&#8330;&#8321;</span>.
+Repeating drives the point towards the root.</td><td><span class="s2">2&times;</span></td></tr>
+
+<tr><td class="n">8</td><td><strong>Explain N-R for a system</strong> of non-linear simultaneous equations</td>
+<td>For <span class="m">f(x,y)=0</span>, <span class="m">g(x,y)=0</span>: at <span class="m">(x&#8320;,y&#8320;)</span> solve the linear pair<br>
+<span class="m">&minus;f = h f&#8339; + k f&#7527;</span>, &nbsp;<span class="m">&minus;g = h g&#8339; + k g&#7527;</span><br>
+for the corrections <span class="m">h, k</span>; then <span class="m">x&#8321; = x&#8320;+h</span>, <span class="m">y&#8321; = y&#8320;+k</span>. Repeat.</td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">9</td><td>Can N-R find a root of <span class="m">x e&#8315;&#8339; = 0</span> near <span class="m">x = 2</span>? Justify</td>
+<td><strong>No.</strong> <span class="m">f(x) = x e&#8315;&#8339;</span> has <span class="m">f&prime;(x) = e&#8315;&#8339;(1&minus;x)</span>, which is <strong>zero at <span class="m">x = 1</span></strong> and very small near <span class="m">x = 2</span>. The iteration divides by <span class="m">f&prime;</span>, so it diverges. N-R fails when <span class="m">f&prime;</span> is zero or near zero at the starting point.</td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">10</td><td>State the <strong>intermediate value property</strong> (how to locate a root)</td>
+<td>If <span class="m">f</span> is continuous on <span class="m">[a,b]</span> and <span class="m">f(a)</span>, <span class="m">f(b)</span> have <strong>opposite signs</strong>, then <span class="m">f(x)=0</span> has at least one real root <span class="m">c</span> in <span class="m">(a,b)</span>.</td><td><span class="new">LIKELY</span></td></tr>
+
+<tr><td class="n">11</td><td><strong>Define maxima and minima</strong> for a function of two variables</td>
+<td><span class="m">f(a,b)</span> is a <strong>maximum</strong> if <span class="m">f(a+h, b+k) &lt; f(a,b)</span> for all small <span class="m">h,k</span>; a <strong>minimum</strong> if <span class="m">f(a+h,b+k) &gt; f(a,b)</span>. Both are <em>local</em> (relative) extrema.</td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">12</td><td>State the <strong>working rule (r-s-t test)</strong> for extrema of <span class="m">f(x,y)</span></td>
+<td>Solve <span class="m">f&#8339;=0, f&#7527;=0</span> for stationary points. Put <span class="m">r=f&#8339;&#8339;</span>, <span class="m">s=f&#8339;&#7527;</span>, <span class="m">t=f&#7527;&#7527;</span>.<br>
+<span class="m">rt&minus;s&sup2;&gt;0, r&lt;0</span> &rarr; maximum &middot; <span class="m">rt&minus;s&sup2;&gt;0, r&gt;0</span> &rarr; minimum &middot;
+<span class="m">rt&minus;s&sup2;&lt;0</span> &rarr; saddle point &middot; <span class="m">rt&minus;s&sup2;=0</span> &rarr; test fails.</td><td><span class="new">LIKELY</span></td></tr>
+
+<tr><td class="n">13</td><td><strong>Define a saddle point</strong></td>
+<td>A stationary point that is neither a maximum nor a minimum &mdash; the function increases along one direction and decreases along another. Occurs when <span class="m">rt &minus; s&sup2; &lt; 0</span>.</td><td><span class="new">LIKELY</span></td></tr>
+
+<tr><td class="n">14</td><td>State <strong>Lagrange's method of undetermined multipliers</strong></td>
+<td>To find extrema of <span class="m">u(x,y,z)</span> subject to <span class="m">&phi;(x,y,z) = 0</span>, form
+<span class="m">F = u + &lambda;&phi;</span> and solve <span class="m">F&#8339; = 0</span>, <span class="m">F&#7527; = 0</span>, <span class="m">F&#7526; = 0</span> together with <span class="m">&phi; = 0</span>.
+<span class="m">&lambda;</span> is the undetermined multiplier.</td><td><span class="new">LIKELY</span></td></tr>
+
+<tr><td class="n">15</td><td>Write <strong>two differences between analytical and numerical methods</strong></td>
+<td><strong>Analytical:</strong> gives an exact closed-form solution; applies only to a limited class of equations.<br>
+<strong>Numerical:</strong> gives an approximate solution to a stated accuracy; applies to almost any equation, and is iterative/computational.</td><td><span class="seen">1&times;</span></td></tr>
+</table>
+
+<h2>UNIT II &nbsp;&mdash;&nbsp; First Order ODEs, Applications, Numerical Solution</h2>
+<table>
+<tr><th style="width:3%">#</th><th style="width:30%">Question</th><th>Answer</th><th style="width:8%">Seen</th></tr>
+
+<tr><td class="n">16</td><td><strong>Define orthogonal trajectories</strong></td>
+<td>Two families of curves such that <strong>every</strong> member of one family cuts <strong>every</strong> member of the other at right angles. Each family is the orthogonal trajectory of the other.</td><td><span class="s2">2&times;</span></td></tr>
+
+<tr><td class="n">17</td><td><strong>Steps to find orthogonal trajectories</strong> of <span class="m">f(x,y,c)=0</span> (Cartesian)</td>
+<td>1. Differentiate w.r.t. <span class="m">x</span> and <strong>eliminate the parameter c</strong> to get the family's DE.<br>
+2. Replace <span class="m">dy/dx</span> by <span class="m">&minus;dx/dy</span>.<br>
+3. Solve the resulting DE &mdash; that is the orthogonal family.</td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">18</td><td><strong>Steps for orthogonal trajectories in polar form</strong></td>
+<td>1. Differentiate <span class="m">f(r,&theta;,c)=0</span> w.r.t. <span class="m">&theta;</span> and eliminate <span class="m">c</span>.<br>
+2. Replace <span class="m">dr/d&theta;</span> by <span class="m">&minus;r&sup2;(d&theta;/dr)</span>.<br>
+3. Solve the resulting DE.</td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">19</td><td>Write the <strong>integrating factor</strong> for a linear first-order DE</td>
+<td>For <span class="m">dy/dx + P(x)&middot;y = Q(x)</span>: &nbsp;<span class="m">I.F. = e&#8747;&#7295;&#7496;&#7492;</span>, and the solution is
+<span class="m">y&middot;(I.F.) = &int; Q&middot;(I.F.) dx + c</span>.</td><td><span class="new">LIKELY</span></td></tr>
+
+<tr><td class="n">20</td><td>Write the <strong>DE of an L&ndash;R circuit</strong></td>
+<td><span class="m">L (di/dt) + R i = E</span> &nbsp;&rarr;&nbsp; <span class="m">di/dt + (R/L) i = E/L</span></td><td><span class="new">LIKELY</span></td></tr>
+
+<tr><td class="n">21</td><td>Write the <strong>DE of an R&ndash;C circuit</strong> with source <span class="m">E</span></td>
+<td><span class="m">R (dq/dt) + q/C = E</span> &nbsp;&rarr;&nbsp; <span class="m">dq/dt + q/(CR) = E/R</span>, &nbsp;with <span class="m">i = dq/dt</span>.</td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">22</td><td>Write the <strong>DE of a closed L&ndash;C circuit in series, no applied e.m.f.</strong></td>
+<td><span class="m">L (d&sup2;q/dt&sup2;) + q/C = 0</span> &nbsp;(no resistance, no source &mdash; simple harmonic)</td><td><span class="s2">2&times;</span></td></tr>
+
+<tr><td class="n">23</td><td>Write the <strong>DE of an L&ndash;C&ndash;R circuit</strong></td>
+<td><span class="m">L (di/dt) + R i + q/C = E</span> &nbsp;&rarr;&nbsp; <span class="m">di/dt + (R/L) i + q/(LC) = E/L</span></td><td><span class="new">LIKELY</span></td></tr>
+
+<tr><td class="n">24</td><td>State <strong>Newton's law of cooling</strong></td>
+<td>The rate of change of temperature of a body is proportional to the difference between its temperature and that of the surrounding medium:
+<span class="m">dT/dt = &minus;k(T &minus; T&#8320;)</span>, giving <span class="m">T = T&#8320; + (T&#8321; &minus; T&#8320;)e&#8315;&#7503;&#7511;</span>.</td><td><span class="new">LIKELY</span></td></tr>
+
+<tr><td class="n">25</td><td>Write <strong>Euler's formula</strong> to solve a first order, first degree ODE</td>
+<td>For <span class="m">dy/dx = f(x,y)</span>, <span class="m">y(x&#8320;) = y&#8320;</span>:
+&nbsp;<span class="m">y&#8345;&#8330;&#8321; = y&#8345; + h&middot;f(x&#8345;, y&#8345;)</span>, &nbsp;<span class="m">h</span> = step length.</td><td><span class="s2">2&times;</span></td></tr>
+
+<tr><td class="n">26</td><td>Write the <strong>modified Euler formula</strong></td>
+<td>Predictor: <span class="m">y&#8345;&#8330;&#8321;&#8317;&#8304;&#8318; = y&#8345; + h f(x&#8345;, y&#8345;)</span><br>
+Corrector: <span class="m">y&#8345;&#8330;&#8321;&#8317;&#7503;&#8314;&sup1;&#8318; = y&#8345; + (h/2)[f(x&#8345;,y&#8345;) + f(x&#8345;&#8330;&#8321;, y&#8345;&#8330;&#8321;&#8317;&#7503;&#8318;)]</span>, iterated until it settles.</td><td><span class="new">LIKELY</span></td></tr>
+
+<tr><td class="n">27</td><td>Write the <strong>Runge-Kutta formula of fourth order</strong></td>
+<td><span class="m">k&#8321; = h f(x&#8320;, y&#8320;)</span> &middot; <span class="m">k&#8322; = h f(x&#8320;+h/2, y&#8320;+k&#8321;/2)</span> &middot;
+<span class="m">k&#8323; = h f(x&#8320;+h/2, y&#8320;+k&#8322;/2)</span> &middot; <span class="m">k&#8324; = h f(x&#8320;+h, y&#8320;+k&#8323;)</span><br>
+<span class="m">y&#8321; = y&#8320; + (1/6)(k&#8321; + 2k&#8322; + 2k&#8323; + k&#8324;)</span></td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">28</td><td>Write the <strong>Taylor's series method</strong> formula for an ODE</td>
+<td><span class="m">y(x) = y&#8320; + (x&minus;x&#8320;)y&prime;&#8320;/1! + (x&minus;x&#8320;)&sup2;y&Prime;&#8320;/2! + (x&minus;x&#8320;)&sup3;y&prime;&Prime;&#8320;/3! + &hellip;</span><br>
+Derivatives are found by repeatedly differentiating <span class="m">y&prime; = f(x,y)</span> and evaluating at <span class="m">(x&#8320;, y&#8320;)</span>.</td><td><span class="new">LIKELY</span></td></tr>
+</table>
+
+<h2>UNIT III &nbsp;&mdash;&nbsp; Linear Differential Equations of Higher Order</h2>
+<table>
+<tr><th style="width:3%">#</th><th style="width:30%">Question</th><th>Answer</th><th style="width:8%">Seen</th></tr>
+
+<tr><td class="n">29</td><td><strong>Define linear and non-linear differential equations</strong>, with examples</td>
+<td><strong>Linear:</strong> the dependent variable and all its derivatives occur only in the first degree, and no products of them appear. e.g. <span class="m">y&Prime; + 3y&prime; + 2y = e&#8339;</span>.<br>
+<strong>Non-linear:</strong> any other &mdash; a power, product, or non-linear function of <span class="m">y</span> or its derivatives. e.g. <span class="m">y&Prime; + y&sup2; = 0</span> or <span class="m">y y&prime; = x</span>.</td><td><span class="seen">3&times;</span></td></tr>
+
+<tr><td class="n">30</td><td><strong>Define a non-homogeneous LDE of second order</strong>, with an example</td>
+<td>A second-order linear DE whose right-hand side is not zero: <span class="m">a&#8320;y&Prime; + a&#8321;y&prime; + a&#8322;y = &phi;(x)</span> with <span class="m">&phi;(x) &ne; 0</span>. e.g. <span class="m">y&Prime; + 4y&prime; + 4y = e&sup2;&#8339;</span>. (If <span class="m">&phi;(x) = 0</span> it is homogeneous.)</td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">31</td><td><strong>Define complementary function and particular integral</strong></td>
+<td><strong>C.F.</strong> = the general solution of the homogeneous equation <span class="m">f(D)y = 0</span>, carrying the arbitrary constants.<br>
+<strong>P.I.</strong> = any one solution of <span class="m">f(D)y = &phi;(x)</span>, given by <span class="m">(1/f(D))&phi;(x)</span>. Complete solution <span class="m">y = C.F. + P.I.</span></td><td><span class="new">LIKELY</span></td></tr>
+
+<tr><td class="n">32</td><td>Write the <strong>C.F. if the roots of the A.E. are</strong> <span class="m">&minus;3&plusmn;i, 2, 2, 2</span></td>
+<td><span class="m">y&#7580; = e&#8315;&sup3;&#8339;(C&#8321;cos x + C&#8322;sin x) + (C&#8323; + C&#8324;x + C&#8325;x&sup2;)e&sup2;&#8339;</span></td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">33</td><td>Write the <strong>C.F. of a 4th-order LDE</strong> if two roots are imaginary and two are real and distinct</td>
+<td>Roots <span class="m">&alpha;&plusmn;i&beta;</span>, <span class="m">m&#8321;</span>, <span class="m">m&#8322;</span>:<br>
+<span class="m">y&#7580; = e&#7482;&#8339;(C&#8321;cos &beta;x + C&#8322;sin &beta;x) + C&#8323;e&#7504;&sup1;&#8339; + C&#8324;e&#7504;&sup2;&#8339;</span></td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">34</td><td><strong>Rules for the C.F.</strong> from the roots (general)</td>
+<td>Real distinct <span class="m">m&#8321;,m&#8322;</span> &rarr; <span class="m">C&#8321;e&#7504;&sup1;&#8339;+C&#8322;e&#7504;&sup2;&#8339;</span> &middot;
+repeated <span class="m">m</span> (k times) &rarr; <span class="m">(C&#8321;+C&#8322;x+&hellip;+C&#7503;x&#7503;&#8315;&sup1;)e&#7504;&#8339;</span> &middot;
+complex <span class="m">&alpha;&plusmn;i&beta;</span> &rarr; <span class="m">e&#7482;&#8339;(C&#8321;cos&beta;x + C&#8322;sin&beta;x)</span>.</td><td><span class="new">LIKELY</span></td></tr>
+
+<tr><td class="n">35</td><td>Write the <strong>steps for solving Cauchy's LDE</strong></td>
+<td>1. Put <span class="m">x = e&#7611;</span>, i.e. <span class="m">z = log x</span>; write <span class="m">D = d/dz</span>.<br>
+2. Use <span class="m">x y&prime; = Dy</span>, <span class="m">x&sup2;y&Prime; = D(D&minus;1)y</span>, <span class="m">x&sup3;y&prime;&Prime; = D(D&minus;1)(D&minus;2)y</span>.<br>
+3. The equation becomes constant-coefficient in <span class="m">z</span> &mdash; find C.F. and P.I.<br>
+4. Substitute back <span class="m">z = log x</span>.</td><td><span class="s2">2&times;</span></td></tr>
+
+<tr><td class="n">36</td><td>Write the <strong>steps for solving Legendre's LDE</strong></td>
+<td>Same as Cauchy's, but put <span class="m">ax + b = e&#7611;</span> and use<br>
+<span class="m">(ax+b)y&prime; = aDy</span>, <span class="m">(ax+b)&sup2;y&Prime; = a&sup2;D(D&minus;1)y</span>, <span class="m">(ax+b)&sup3;y&prime;&Prime; = a&sup3;D(D&minus;1)(D&minus;2)y</span>.<br>
+<em>Cauchy's is the special case <span class="m">a=1, b=0</span>.</em></td><td><span class="new">LIKELY</span></td></tr>
+
+<tr><td class="n">37</td><td>Write the <strong>steps for the method of variation of parameters</strong></td>
+<td>1. Put the equation in standard form <span class="m">y&Prime; + Py&prime; + Qy = R</span> and find the C.F. <span class="m">C&#8321;y&#8321; + C&#8322;y&#8322;</span>.<br>
+2. Compute the Wronskian <span class="m">W = y&#8321;y&#8322;&prime; &minus; y&#8322;y&#8321;&prime;</span>.<br>
+3. <span class="m">y&#7527; = &minus;y&#8321;&int;(y&#8322;R/W)dx + y&#8322;&int;(y&#8321;R/W)dx</span>.&nbsp; 4. <span class="m">y = C.F. + y&#7527;</span>.</td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">38</td><td><strong>Define an initial value problem</strong></td>
+<td>A DE together with conditions on the unknown function and its derivatives all specified at <strong>one and the same</strong> value of the independent variable. e.g. <span class="m">y&Prime;+2y&prime;+y=0</span>, <span class="m">y(0)=1</span>, <span class="m">y&prime;(0)=2</span>.</td><td><span class="new">LIKELY</span></td></tr>
+
+<tr><td class="n">39</td><td><strong>Define a boundary value problem</strong>, with an example</td>
+<td>A DE with conditions specified at <strong>two or more different</strong> values of the independent variable. e.g. <span class="m">y&Prime; + y = 0</span>, <span class="m">y(0)=2</span>, <span class="m">y(&pi;/2)=&minus;2</span>.</td><td><span class="s2">2&times;</span></td></tr>
+
+<tr><td class="n">40</td><td>Write the <strong>P.I. rule for <span class="m">e&#7491;&#8339;</span></strong></td>
+<td><span class="m">(1/f(D))e&#7491;&#8339; = e&#7491;&#8339;/f(a)</span>, provided <span class="m">f(a) &ne; 0</span>.<br>
+If <span class="m">f(a)=0</span>, multiply by <span class="m">x</span> and differentiate the denominator: <span class="m">x e&#7491;&#8339;/f&prime;(a)</span>; repeat if needed.</td><td><span class="new">LIKELY</span></td></tr>
+
+<tr><td class="n">41</td><td>Write the <strong>P.I. rule for <span class="m">sin ax</span> or <span class="m">cos ax</span></strong></td>
+<td>In <span class="m">(1/f(D&sup2;))</span> replace <span class="m">D&sup2;</span> by <span class="m">&minus;a&sup2;</span>. If the denominator becomes zero, multiply by <span class="m">x</span> and differentiate the denominator.</td><td><span class="new">LIKELY</span></td></tr>
+
+<tr><td class="n">42</td><td>Write the <strong>exponential shift rule</strong> (P.I. for <span class="m">e&#7491;&#8339;V(x)</span>)</td>
+<td><span class="m">(1/f(D))&middot;e&#7491;&#8339;V(x) = e&#7491;&#8339;&middot;(1/f(D+a))&middot;V(x)</span><br>
+<em>Every D becomes D+a &mdash; this is the step most often got wrong.</em></td><td><span class="new">LIKELY</span></td></tr>
+
+<tr><td class="n">43</td><td>If <span class="m">D = d/dx</span>, prove <span class="m">(1/(D+a))X = e&#8315;&#7491;&#8339;&int;Xe&#7491;&#8339;dx</span></td>
+<td>Let <span class="m">y = (1/(D+a))X</span>, so <span class="m">(D+a)y = X</span>, i.e. <span class="m">y&prime; + ay = X</span>.<br>
+This is linear with I.F. <span class="m">e&#7491;&#8339;</span>: <span class="m">(y e&#7491;&#8339;)&prime; = X e&#7491;&#8339;</span>.<br>
+Integrating, <span class="m">y e&#7491;&#8339; = &int;X e&#7491;&#8339; dx</span>, hence <span class="m">y = e&#8315;&#7491;&#8339;&int;X e&#7491;&#8339; dx</span>. &#9632;
+<em>(Usually a 4-marker &mdash; appeared 4&times;.)</em></td><td><span class="seen">4&times;</span></td></tr>
+</table>
+
+<h2>UNIT IV &nbsp;&mdash;&nbsp; Interpolation, Numerical Differentiation & Integration</h2>
+<table>
+<tr><th style="width:3%">#</th><th style="width:30%">Question</th><th>Answer</th><th style="width:8%">Seen</th></tr>
+
+<tr><td class="n">44</td><td><strong>Define forward and backward difference</strong>, with an example</td>
+<td><strong>Forward:</strong> <span class="m">&Delta;y&#8345; = y&#8345;&#8330;&#8321; &minus; y&#8345;</span>. &nbsp;<strong>Backward:</strong> <span class="m">&nabla;y&#8345; = y&#8345; &minus; y&#8345;&#8331;&#8321;</span>.<br>
+e.g. for <span class="m">y = 2, 5, 10</span>: <span class="m">&Delta;y&#8320; = 3</span>, <span class="m">&Delta;y&#8321; = 5</span>; <span class="m">&nabla;y&#8322; = 5</span>.</td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">45</td><td>Obtain <span class="m">&Delta;&sup2;y&#8345;</span> <strong>in terms of y values</strong></td>
+<td><span class="m">&Delta;&sup2;y&#8345; = &Delta;(&Delta;y&#8345;) = &Delta;(y&#8345;&#8330;&#8321; &minus; y&#8345;) = (y&#8345;&#8330;&#8322; &minus; y&#8345;&#8330;&#8321;) &minus; (y&#8345;&#8330;&#8321; &minus; y&#8345;)</span><br>
+<span class="m">&there4; &Delta;&sup2;y&#8345; = y&#8345;&#8330;&#8322; &minus; 2y&#8345;&#8330;&#8321; + y&#8345;</span></td><td><span class="s2">2&times;</span></td></tr>
+
+<tr><td class="n">46</td><td>Obtain <span class="m">&nabla;&sup2;y&#8345;</span> <strong>in terms of y values</strong></td>
+<td><span class="m">&nabla;&sup2;y&#8345; = y&#8345; &minus; 2y&#8345;&#8331;&#8321; + y&#8345;&#8331;&#8322;</span></td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">47</td><td><strong>Define the shift operator E</strong> and its relation to <span class="m">&Delta;</span> and <span class="m">&nabla;</span></td>
+<td><span class="m">E y&#8345; = y&#8345;&#8330;&#8321;</span>. Then <span class="m">&Delta; = E &minus; 1</span> and <span class="m">&nabla; = 1 &minus; E&#8315;&sup1;</span>,
+so <span class="m">E = 1 + &Delta;</span>.</td><td><span class="new">LIKELY</span></td></tr>
+
+<tr><td class="n">48</td><td>Determine <span class="m">&Delta;&sup2;y&#8322;</span> and <span class="m">&Delta;&sup3;y&#8321;</span> from
+<span class="m">y = 0.0567, 1.2345, 1.5678, 1.0023, 1.786</span> &nbsp;<em>(a rare calculation)</em></td>
+<td><span class="m">&Delta;: 1.1778, 0.3333, &minus;0.5655, 0.7837</span><br>
+<span class="m">&Delta;&sup2;: &minus;0.8445, &minus;0.8988, 1.3492</span> &nbsp;&nbsp;<span class="m">&Delta;&sup3;: &minus;0.0543, 2.2480</span><br>
+<strong><span class="m">&Delta;&sup2;y&#8322; = &minus;0.8988</span>, &nbsp;<span class="m">&Delta;&sup3;y&#8321; = &minus;0.0543</span></strong></td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">49</td><td>Write <strong>Newton-Gregory forward interpolation formula</strong></td>
+<td><span class="m">y = y&#8320; + p&Delta;y&#8320; + p(p&minus;1)/2!&middot;&Delta;&sup2;y&#8320; + p(p&minus;1)(p&minus;2)/3!&middot;&Delta;&sup3;y&#8320; + &hellip;</span>, where <span class="m">p = (x &minus; x&#8320;)/h</span>.</td><td><span class="new">LIKELY</span></td></tr>
+
+<tr><td class="n">50</td><td>Write <strong>Newton-Gregory backward interpolation formula</strong></td>
+<td><span class="m">y = y&#8345; + p&nabla;y&#8345; + p(p+1)/2!&middot;&nabla;&sup2;y&#8345; + p(p+1)(p+2)/3!&middot;&nabla;&sup3;y&#8345; + &hellip;</span>, where <span class="m">p = (x &minus; x&#8345;)/h</span>.</td><td><span class="new">LIKELY</span></td></tr>
+
+<tr><td class="n">51</td><td>Write the formula for <span class="m">y&prime;(x)</span> and <span class="m">y&Prime;(x)</span> using <strong>Newton-Gregory forward</strong></td>
+<td><span class="m">dy/dx = (1/h)[&Delta;y&#8320; + (2p&minus;1)/2&middot;&Delta;&sup2;y&#8320; + (3p&sup2;&minus;6p+2)/6&middot;&Delta;&sup3;y&#8320; + &hellip;]</span><br>
+<span class="m">d&sup2;y/dx&sup2; = (1/h&sup2;)[&Delta;&sup2;y&#8320; + (p&minus;1)&Delta;&sup3;y&#8320; + (12p&sup2;&minus;36p+22)/24&middot;&Delta;&#8308;y&#8320; + &hellip;]</span><br>
+At <span class="m">x = x&#8320;</span> (<span class="m">p=0</span>): <span class="m">y&prime; = (1/h)[&Delta;y&#8320; &minus; &Delta;&sup2;y&#8320;/2 + &Delta;&sup3;y&#8320;/3 &minus; &hellip;]</span></td><td><span class="s2">2&times;</span></td></tr>
+
+<tr><td class="n">52</td><td>Write <strong>Lagrange's interpolation formula</strong></td>
+<td><span class="m">y = &Sigma;&#7522; y&#7522; &middot; &Pi;&#11388;&ne;&#7522; (x &minus; x&#11388;)/(x&#7522; &minus; x&#11388;)</span> &nbsp;&mdash; valid for <strong>unequally spaced</strong> data.</td><td><span class="new">LIKELY</span></td></tr>
+
+<tr><td class="n">53</td><td>Write <strong>Lagrange's inverse interpolation formula</strong> for two points</td>
+<td><span class="m">x = x&#8320;(y &minus; y&#8321;)/(y&#8320; &minus; y&#8321;) + x&#8321;(y &minus; y&#8320;)/(y&#8321; &minus; y&#8320;)</span><br>
+<em>Same formula with the roles of x and y interchanged.</em></td><td><span class="s2">2&times;</span></td></tr>
+
+<tr><td class="n">54</td><td>Write <strong>Newton's divided difference formula</strong></td>
+<td><span class="m">y = y&#8320; + (x&minus;x&#8320;)f[x&#8320;,x&#8321;] + (x&minus;x&#8320;)(x&minus;x&#8321;)f[x&#8320;,x&#8321;,x&#8322;] + &hellip;</span><br>
+where <span class="m">f[x&#8320;,x&#8321;] = (y&#8321;&minus;y&#8320;)/(x&#8321;&minus;x&#8320;)</span> and
+<span class="m">f[x&#8320;,x&#8321;,x&#8322;] = (f[x&#8321;,x&#8322;] &minus; f[x&#8320;,x&#8321;])/(x&#8322;&minus;x&#8320;)</span>.</td><td><span class="new">LIKELY</span></td></tr>
+
+<tr><td class="n">55</td><td>Find the <strong>first order divided difference</strong> of <span class="m">x&#8320;=1</span>, <span class="m">x&#8321;=2</span> if <span class="m">y = x&sup3;+4x+3</span> &nbsp;<em>(a rare calculation)</em></td>
+<td><span class="m">y(1) = 1+4+3 = 8</span>, &nbsp;<span class="m">y(2) = 8+8+3 = 19</span><br>
+<span class="m">f[x&#8320;,x&#8321;] = (19 &minus; 8)/(2 &minus; 1) = </span> <strong>11</strong></td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">56</td><td>Write the <strong>trapezoidal rule</strong></td>
+<td><span class="m">&int; y dx = (h/2)[(y&#8320; + y&#8345;) + 2(y&#8321; + y&#8322; + &hellip; + y&#8345;&#8331;&#8321;)]</span> &nbsp;&mdash; any number of intervals.</td><td><span class="new">LIKELY</span></td></tr>
+
+<tr><td class="n">57</td><td>Write <strong>Simpson's 1/3rd rule</strong></td>
+<td><span class="m">&int; y dx = (h/3)[(y&#8320; + y&#8345;) + 4(y&#8321;+y&#8323;+y&#8325;+&hellip;) + 2(y&#8322;+y&#8324;+y&#8326;+&hellip;)]</span><br>
+Requires <span class="m">n</span> to be <strong>even</strong>.</td><td><span class="s2">2&times;</span></td></tr>
+
+<tr><td class="n">58</td><td>Write <strong>Simpson's 3/8th rule</strong></td>
+<td><span class="m">&int; y dx = (3h/8)[(y&#8320; + y&#8345;) + 3(y&#8321;+y&#8322;+y&#8324;+y&#8325;+&hellip;) + 2(y&#8323;+y&#8326;+&hellip;)]</span><br>
+Requires <span class="m">n</span> to be a <strong>multiple of 3</strong>. The 2 multiplies every third ordinate.</td><td><span class="new">LIKELY</span></td></tr>
+
+<tr><td class="n">59</td><td>State the <strong>Newton-Cotes quadrature formula</strong></td>
+<td>The general formula obtained by integrating Newton's forward interpolation polynomial over
+<span class="m">[x&#8320;, x&#8320;+nh]</span>. Trapezoidal (<span class="m">n=1</span>), Simpson's 1/3 (<span class="m">n=2</span>) and Simpson's 3/8 (<span class="m">n=3</span>) are its special cases.</td><td><span class="new">LIKELY</span></td></tr>
+
+<tr><td class="n">60</td><td><strong>Relation between ordinates and intervals</strong></td>
+<td>Number of intervals <span class="m">n</span> = number of ordinates <span class="m">&minus; 1</span>.
+e.g. "seven equidistant ordinates" means <span class="m">n = 6</span>, and <span class="m">h = (b&minus;a)/n</span>.</td><td><span class="new">LIKELY</span></td></tr>
+</table>
+
+<h2>UNIT V &nbsp;&mdash;&nbsp; Linear Algebra</h2>
+<table>
+<tr><th style="width:3%">#</th><th style="width:30%">Question</th><th>Answer</th><th style="width:8%">Seen</th></tr>
+
+<tr><td class="n">61</td><td><strong>Define row echelon form</strong> of a matrix</td>
+<td>A matrix is in row echelon form if: (i) all zero rows are below every non-zero row; (ii) the first non-zero entry of each row (the <strong>leading entry</strong>) lies strictly to the right of the leading entry of the row above.</td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">62</td><td><strong>Define the rank</strong> of a matrix</td>
+<td>The number of non-zero rows when the matrix is reduced to echelon form &mdash; equivalently the order of its largest non-vanishing minor. Denoted <span class="m">&rho;(A)</span>, and <span class="m">&rho;(A) = &rho;(A&#7488;)</span>.</td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">63</td><td>Write the <strong>conditions for consistency and inconsistency</strong> of <span class="m">AX = B</span></td>
+<td><strong>Consistent</strong> if <span class="m">&rho;(A) = &rho;(A|B)</span>:<br>
+&nbsp;&nbsp;&bull; <span class="m">= n</span> (number of unknowns) &rarr; <strong>unique</strong> solution<br>
+&nbsp;&nbsp;&bull; <span class="m">= r &lt; n</span> &rarr; <strong>infinitely many</strong>, with <span class="m">n&minus;r</span> free parameters<br>
+<strong>Inconsistent</strong> (no solution) if <span class="m">&rho;(A) &ne; &rho;(A|B)</span>.</td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">64</td><td><strong>Geometrical interpretation of infinitely many solutions</strong> for <span class="m">2x+y=3</span>, <span class="m">4x+2y=6</span></td>
+<td>The second equation is exactly twice the first, so both represent the <strong>same straight line</strong>. The lines coincide, so every point on the line is a solution &mdash; hence infinitely many.</td><td><span class="s2">2&times;</span></td></tr>
+
+<tr><td class="n">65</td><td><strong>Geometrical interpretation</strong> of a unique solution / no solution</td>
+<td><strong>Unique:</strong> the lines intersect at exactly one point. &nbsp;<strong>No solution:</strong> the lines are parallel and distinct &mdash; they never meet.</td><td><span class="new">LIKELY</span></td></tr>
+
+<tr><td class="n">66</td><td><strong>Define elementary row transformations</strong></td>
+<td>(i) Interchange two rows; (ii) multiply a row by a non-zero scalar; (iii) add a multiple of one row to another. They do not change the rank.</td><td><span class="new">LIKELY</span></td></tr>
+
+<tr><td class="n">67</td><td><strong>Trivial and non-trivial solutions</strong> of <span class="m">AX = 0</span></td>
+<td><strong>Trivial:</strong> <span class="m">X = 0</span>, which always exists. <br>
+<strong>Non-trivial</strong> solutions exist only if <span class="m">|A| = 0</span>, i.e. <span class="m">&rho;(A) &lt; n</span>.</td><td><span class="new">LIKELY</span></td></tr>
+
+<tr><td class="n">68</td><td><strong>Define eigenvalue and eigenvector</strong></td>
+<td>For a square matrix <span class="m">A</span>, if there is a scalar <span class="m">&lambda;</span> and a <strong>non-zero</strong> vector <span class="m">X</span> with <span class="m">AX = &lambda;X</span>, then <span class="m">&lambda;</span> is an eigenvalue of <span class="m">A</span> and <span class="m">X</span> the corresponding eigenvector.</td><td><span class="new">LIKELY</span></td></tr>
+
+<tr><td class="n">69</td><td>Write the <strong>characteristic equation</strong></td>
+<td><span class="m">|A &minus; &lambda;I| = 0</span>. Its roots are the eigenvalues.<br>
+<em>Note: the eigenvector then comes from <span class="m">(A &minus; &lambda;I)X = 0</span> &mdash; a different equation.</em></td><td><span class="new">LIKELY</span></td></tr>
+
+<tr><td class="n">70</td><td><strong>Two properties of eigenvalues</strong></td>
+<td>Sum of the eigenvalues = <strong>trace</strong> of <span class="m">A</span>; product of the eigenvalues = <span class="m">|A|</span>.
+Also: <span class="m">A</span> and <span class="m">A&#7488;</span> have the same eigenvalues, and if <span class="m">&lambda;</span> is an eigenvalue of <span class="m">A</span> then <span class="m">1/&lambda;</span> is one of <span class="m">A&#8315;&sup1;</span>.</td><td><span class="new">LIKELY</span></td></tr>
+
+<tr><td class="n">71</td><td><strong>Define modal and spectral matrix</strong></td>
+<td><strong>Modal matrix P:</strong> the matrix whose columns are the eigenvectors of <span class="m">A</span> &mdash; it diagonalizes <span class="m">A</span>.<br>
+<strong>Spectral matrix D:</strong> the resulting diagonal matrix, whose diagonal entries are the eigenvalues in the same order.</td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">72</td><td><strong>Define similarity transformation</strong></td>
+<td>If <span class="m">P</span> is non-singular, <span class="m">P&#8315;&sup1;AP = D</span> is a similarity transformation. Similar matrices have the same eigenvalues.</td><td><span class="new">LIKELY</span></td></tr>
+
+<tr><td class="n">73</td><td><strong>Is every square matrix diagonalizable?</strong> Justify</td>
+<td><strong>No.</strong> An <span class="m">n&times;n</span> matrix is diagonalizable only if it has <span class="m">n</span> <strong>linearly independent eigenvectors</strong>. A repeated eigenvalue may not supply enough of them &mdash; e.g. <span class="m">[[1,1],[0,1]]</span> has <span class="m">&lambda;=1</span> twice but only one independent eigenvector, so it is not diagonalizable.</td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">74</td><td>What does <strong>Rayleigh's power method</strong> determine?</td>
+<td>The <strong>numerically largest (dominant) eigenvalue</strong> of a square matrix, and its corresponding eigenvector, by repeatedly forming <span class="m">Y = AX</span> and normalising by the largest component.</td><td><span class="new">LIKELY</span></td></tr>
+
+<tr><td class="n">75</td><td>State the <strong>condition for convergence of Gauss-Seidel</strong> (diagonal dominance)</td>
+<td>In each row the magnitude of the diagonal element must be at least the sum of the magnitudes of the other elements in that row: <span class="m">|a&#7522;&#7522;| &ge; &Sigma;&#11388;&ne;&#7522;|a&#7522;&#11388;|</span>. Reorder the equations to achieve this before iterating.</td><td><span class="new">LIKELY</span></td></tr>
+
+<tr><td class="n">76</td><td><strong>Difference between Gauss elimination and Gauss-Seidel</strong></td>
+<td><strong>Gauss elimination</strong> is a <em>direct</em> method &mdash; row-reduce to triangular form and back-substitute, giving the exact solution in finitely many steps.<br>
+<strong>Gauss-Seidel</strong> is an <em>iterative</em> method &mdash; start from a guess and refine repeatedly; needs diagonal dominance to converge.</td><td><span class="new">LIKELY</span></td></tr>
+</table>
+
+<div class="box win">
+<p class="big" style="margin:0 0 1.2mm">How to use this</p>
+<strong>1.</strong> Cover the answer column and go down the list. Anything you cannot say in one line, mark it.<br>
+<strong>2.</strong> Second pass on the marked ones only.<br>
+<strong>3.</strong> Priority if time is short: the <span class="seen">2&times;</span> and <span class="seen">3&times;</span> rows first, then <span class="seen">1&times;</span>, then LIKELY.<br>
+<strong>4.</strong> In the hall, <strong>do all five 2-markers before anything else</strong> &mdash; 10 marks in about 15 minutes,
+while you are still calm, and you choose the easier of two in each unit.<br>
+<strong>Write two or three lines, not an essay.</strong> A definition plus an example, or the formula plus what the
+symbols mean, is a full 2 marks.
+</div>
+
+<p class="foot">
+76 questions: every 2-mark part asked across the 6 papers, plus every additional 2-marker the MAC21 portion can
+support. Counts are appearances across those papers; LIKELY means not yet asked but squarely on the syllabus.
+The two computational entries (#48, #55) were computed and verified. Answers are exam-length by design.
+</p>
+</body></html>
