@@ -1,0 +1,312 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>MAC21 4-Mark Bank</title>
+<style>
+@page{size:A4;margin:9mm 8mm 9mm 8mm}
+*{box-sizing:border-box}
+body{font-family:"DejaVu Sans","Segoe UI",Helvetica,Arial,sans-serif;font-size:8.1pt;line-height:1.32;color:#14181d;margin:0}
+h1{font-size:18pt;margin:0 0 1.5mm;letter-spacing:-.4px}
+h2{font-size:11.5pt;margin:4.5mm 0 2mm;padding:1.8mm 2.8mm;background:#14181d;color:#fff;border-radius:2px}
+p{margin:0 0 1.5mm}
+table{width:100%;border-collapse:collapse;margin:0 0 2.2mm;font-size:7.7pt}
+th{background:#eceef1;text-align:left;padding:1.1mm 1.5mm;border:.6px solid #9aa3ad;font-weight:700;font-size:7pt;text-transform:uppercase}
+td{padding:1.2mm 1.6mm;border:.6px solid #c2c8ce;vertical-align:top}
+tr:nth-child(even) td{background:#f7f8f9}
+tr{page-break-inside:avoid} h2{page-break-after:avoid}
+code,.m{font-family:"DejaVu Sans Mono",monospace;font-size:7.4pt;background:#eceef1;padding:0 1mm;border-radius:2px}
+.n{font-family:"DejaVu Sans Mono",monospace;font-weight:700;font-size:7.2pt;color:#5a636d}
+.ans{font-weight:800;background:#c9edd9;padding:.2mm 1.3mm;border-radius:2px}
+.seen{display:inline-block;background:#8a1420;color:#fff;padding:.2mm 1.2mm;border-radius:2px;font-weight:700;font-size:6.6pt;white-space:nowrap}
+.s2{background:#a8481a}.new{background:#4a525b}
+.box{border:1.3px solid #14181d;border-radius:3px;padding:2mm 2.6mm;margin:0 0 2.8mm;background:#f7f8f9;page-break-inside:avoid}
+.win{border-color:#16603a;background:#f3faf6}.warn{border-color:#8a1420;background:#fdf5f5}
+.lead{font-size:8.8pt;color:#3d454e;margin-bottom:2.5mm}
+.big{font-size:12.5pt;font-weight:800}
+.foot{margin-top:3mm;padding-top:1.5mm;border-top:.8px solid #c2c8ce;font-size:7pt;color:#6b737c}
+</style></head><body>
+
+<h1>MAC21 &mdash; The Complete 4-Mark Bank</h1>
+<p class="lead"><strong>Every 4-mark question asked, worked out.</strong> 45 questions with full solutions.
+You face five 4-markers and choose the easier of two in each unit &mdash; that is <strong>20 marks</strong>,
+the cheapest big block in the paper after the 2-markers.</p>
+
+<div class="box win" style="padding:1.8mm 2.4mm">
+<strong>Unlike the 2-markers, these are short calculations</strong> &mdash; you must show working, not just the answer.
+Every number below was computed and verified. <span class="seen">n&times;</span> = times asked across the 6 papers;
+<span class="seen new">LIKELY</span> = not yet asked but on the portion.<br>
+<strong>Budget 6 minutes each.</strong> If one runs past 8, write the setup and move on.
+</div>
+
+<h2>UNIT I &nbsp;&mdash;&nbsp; Q1(b) or Q2(b)</h2>
+<table>
+<tr><th style="width:3%">#</th><th style="width:24%">Question</th><th>Worked answer</th><th style="width:7%">Seen</th></tr>
+
+<tr><td class="n">1</td><td>Show <span class="m">f(x,y) = xy(1&minus;x&minus;y)</span> is <strong>maximum at (1/3, 1/3)</strong></td>
+<td><span class="m">f&#8339; = y(1&minus;2x&minus;y) = 0</span>, <span class="m">f&#7527; = x(1&minus;x&minus;2y) = 0</span> &rarr; stationary points <span class="m">(0,0), (1,0), (0,1), (1/3,1/3)</span><br>
+<span class="m">r = &minus;2y</span>, <span class="m">s = 1&minus;2x&minus;2y</span>, <span class="m">t = &minus;2x</span><br>
+At <span class="m">(1/3,1/3)</span>: <span class="m">r = &minus;2/3</span>, <span class="m">s = &minus;1/3</span>, <span class="m">t = &minus;2/3</span>, so <span class="m">rt &minus; s&sup2; = 4/9 &minus; 1/9 = 1/3 &gt; 0</span> and <span class="m">r &lt; 0</span><br>
+<span class="ans">&there4; maximum, and f_max = 1/27</span></td><td><span class="seen">3&times;</span></td></tr>
+
+<tr><td class="n">2</td><td>Examine <span class="m">x&sup3; + y&sup3; &minus; 3axy</span> for extreme values</td>
+<td><span class="m">f&#8339; = 3x&sup2;&minus;3ay = 0</span>, <span class="m">f&#7527; = 3y&sup2;&minus;3ax = 0</span> &rarr; <span class="m">(0,0)</span> and <span class="m">(a,a)</span><br>
+<span class="m">r = 6x</span>, <span class="m">s = &minus;3a</span>, <span class="m">t = 6y</span> &rarr; <span class="m">rt &minus; s&sup2; = 36xy &minus; 9a&sup2;</span><br>
+At <span class="m">(0,0)</span>: <span class="m">&minus;9a&sup2; &lt; 0</span> &rarr; <span class="ans">saddle point</span><br>
+At <span class="m">(a,a)</span>: <span class="m">27a&sup2; &gt; 0</span>, <span class="m">r = 6a</span> &rarr; <span class="ans">minimum if a&gt;0, maximum if a&lt;0; f = &minus;a&sup3;</span></td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">3</td><td>Expand <span class="m">a&#8339;</span> in powers of x, first three terms</td>
+<td><span class="m">a&#8339; = e&#8339; &#7896;&#7789;&#7909; &#7841;</span>&hellip; use <span class="m">f(x)=a&#8339;</span>, <span class="m">f&prime;=a&#8339;log a</span>, <span class="m">f&Prime;=a&#8339;(log a)&sup2;</span>; at 0: <span class="m">1, log a, (log a)&sup2;</span><br>
+<span class="ans">a&#8339; = 1 + x log a + x&sup2;(log a)&sup2;/2! + &hellip;</span></td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">4</td><td>Expand <span class="m">sin&#8315;&sup1;x</span> in powers of x</td>
+<td><span class="m">d/dx(sin&#8315;&sup1;x) = (1&minus;x&sup2;)&#8315;&#189; = 1 + x&sup2;/2 + 3x&#8308;/8 + &hellip;</span> (binomial)<br>
+Integrate term by term: <span class="ans">sin&#8315;&sup1;x = x + x&sup3;/6 + 3x&#8309;/40 + &hellip;</span><br>
+<em>Odd function &mdash; every even power is zero. Say so.</em></td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">5</td><td>Expand <span class="m">tan&#8315;&sup1;x</span> in powers of <span class="m">(x&minus;1)</span> to 4th degree</td>
+<td>Taylor about <span class="m">a=1</span>. <span class="m">f(1)=&pi;/4</span>; <span class="m">f&prime;=1/(1+x&sup2;)</span> &rarr; 1/2; <span class="m">f&Prime;=&minus;2x/(1+x&sup2;)&sup2;</span> &rarr; &minus;1/2; <span class="m">f&prime;&Prime;</span> &rarr; 1/2; <span class="m">f&#8305;&#7515;</span> &rarr; 0<br>
+<span class="ans">tan&#8315;&sup1;x = &pi;/4 + (x&minus;1)/2 &minus; (x&minus;1)&sup2;/4 + (x&minus;1)&sup3;/12 + 0&middot;(x&minus;1)&#8308;</span><br>
+<em>The 4th-degree term genuinely vanishes.</em></td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">6</td><td><strong>N-R system, ONE iteration</strong>: <span class="m">x&sup2;+y&sup2;=x</span>, <span class="m">x&sup2;&minus;y&sup2;=y</span> from <span class="m">(0.8, 0.4)</span></td>
+<td><span class="m">f = 0.0000</span>, <span class="m">g = 0.0800</span>; <span class="m">J = [[0.6, 0.8],[1.6, &minus;1.8]]</span><br>
+Solve <span class="m">J[h,k]&#7488; = &minus;[f,g]&#7488;</span> &rarr; <span class="m">h = &minus;0.027119</span>, <span class="m">k = 0.020339</span><br>
+<span class="ans">x&#8321; = 0.772881, y&#8321; = 0.420339</span></td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">7</td><td><strong>N-R system, ONE iteration</strong>: <span class="m">x&sup2;+y=11</span>, <span class="m">y&sup2;+x=7</span> from <span class="m">(3.5, &minus;1.8)</span></td>
+<td><span class="m">f = &minus;0.5500</span>, <span class="m">g = &minus;0.2600</span>; <span class="m">J = [[7, 1],[1, &minus;3.6]]</span><br>
+<span class="m">h = 0.085496</span>, <span class="m">k = &minus;0.048473</span><br>
+<span class="ans">x&#8321; = 3.585496, y&#8321; = &minus;1.848473</span></td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">8</td><td>Find a <strong>negative root</strong> of <span class="m">x e&#8339; &minus; sin x = 0</span> to three decimals</td>
+<td>Bracket first: <span class="m">f(&minus;2.9)=+0.080</span>, <span class="m">f(&minus;3.0)=&minus;0.008</span> &rarr; root in <span class="m">(&minus;3, &minus;2.9)</span><br>
+<span class="m">f&prime; = e&#8339;(1+x) &minus; cos x</span>; from <span class="m">x&#8320;=&minus;3</span>: <span class="m">x&#8321;=&minus;2.990745</span>, <span class="m">x&#8322;=&minus;2.990735</span><br>
+<span class="ans">root = &minus;2.991</span> &nbsp;<em>Starting near 0 collapses to the trivial root x=0.</em></td><td><span class="s2">2&times;</span></td></tr>
+
+<tr><td class="n">9</td><td>Can N-R solve <span class="m">x e&#8315;&#8339; = 0</span> near <span class="m">x=2</span>? Justify</td>
+<td><span class="m">f&prime;(x) = e&#8315;&#8339;(1&minus;x)</span>, which is <strong>0 at x=1</strong> and <span class="m">&minus;e&#8315;&sup2; &asymp; &minus;0.135</span> at <span class="m">x=2</span> while <span class="m">f(2)=0.271</span>.<br>
+The correction <span class="m">f/f&prime;</span> is large and pushes x away from the root at <span class="m">x=0</span>.
+<span class="ans">N-R diverges here &mdash; it fails when f&prime; is zero or small near the start.</span></td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">10</td><td>Expand <span class="m">e&#8339; log x</span> / <span class="m">&radic;(1+sin 2x)</span> &mdash; other expansions</td>
+<td>Same Taylor/Maclaurin machinery: compute <span class="m">f, f&prime;, f&Prime;, f&prime;&Prime;</span> at the point, substitute.<br>
+For <span class="m">&radic;(1+sin2x)</span>: note <span class="m">1+sin2x = (sin x + cos x)&sup2;</span>, so it is just <span class="m">sin x + cos x</span> &rarr; <span class="ans">1 + x &minus; x&sup2;/2 &minus; x&sup3;/6 + x&#8308;/24</span></td><td><span class="seen new">LIKELY</span></td></tr>
+</table>
+
+<h2>UNIT II &nbsp;&mdash;&nbsp; Q3(b) or Q4(b)</h2>
+<table>
+<tr><th style="width:3%">#</th><th style="width:24%">Question</th><th>Worked answer</th><th style="width:7%">Seen</th></tr>
+
+<tr><td class="n">11</td><td><strong>Bungee jumper</strong>, <span class="m">m=68.1</span>, <span class="m">c=0.25</span>, <span class="m">g=9.8</span>, Euler, 1-second steps</td>
+<td><span class="m">dv/dt = 9.8 &minus; 0.003671v&sup2;</span> &nbsp;(<span class="m">c/m = 0.25/68.1</span>)<br>
+<span class="m">t=0: v=0, f=9.8000 &rarr; v(1)=9.8000</span><br>
+<span class="m">t=1: v=9.8, f=9.4474 &rarr; v(2)=19.2474</span><br>
+<span class="m">t=2: v=19.2474, f=8.4400 &rarr;</span> <span class="ans">v(3) = 27.6874 m/s</span></td><td><span class="s2">2&times;</span></td></tr>
+
+<tr><td class="n">12</td><td><strong>Euler's method</strong>: <span class="m">dy/dx &minus; 2y = 3e&#8339;</span>, <span class="m">y(0)=0</span>, at <span class="m">x=0.2</span>, <span class="m">h=0.1</span></td>
+<td><span class="m">f(x,y) = 2y + 3e&#8339;</span><br>
+<span class="m">y(0.1) = 0 + 0.1(0 + 3) = 0.300000</span><br>
+<span class="m">y(0.2) = 0.3 + 0.1(0.6 + 3e&#8304;&#903;&sup1;) = </span><span class="ans">0.691551</span></td><td><span class="s2">2&times;</span></td></tr>
+
+<tr><td class="n">13</td><td>Same DE with <span class="m">y(1)=0</span>, at <span class="m">x=1.1</span>, <span class="m">h=0.05</span></td>
+<td><span class="m">y(1.05) = 0 + 0.05(0 + 3e&sup1;) = 0.407742</span><br>
+<span class="m">y(1.10) = 0.407742 + 0.05(0.815484 + 3e&sup1;&#903;&#8304;&#8309;) = </span><span class="ans">0.877164</span></td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">14</td><td><strong>Taylor's series method</strong>: <span class="m">dy/dt = e&#7511; &minus; 2y</span>, <span class="m">y(0)=1</span>, at <span class="m">t=0.1</span>, 3rd degree</td>
+<td><span class="m">y&prime; = e&#7511; &minus; 2y</span> &rarr; <span class="m">&minus;1</span>; <span class="m">y&Prime; = e&#7511; &minus; 2y&prime;</span> &rarr; <span class="m">3</span>; <span class="m">y&prime;&Prime; = e&#7511; &minus; 2y&Prime;</span> &rarr; <span class="m">&minus;5</span><br>
+<span class="m">y(0.1) = 1 + 0.1(&minus;1) + (0.01/2)(3) + (0.001/6)(&minus;5)</span><br>
+<span class="ans">y(0.1) = 0.914167</span></td><td><span class="s2">2&times;</span></td></tr>
+
+<tr><td class="n">15</td><td><strong>Newton's law of cooling</strong>: object 300&deg;F, room 80&deg;F, 250&deg;F after 10 min &mdash; temperature after 20 min?</td>
+<td><span class="m">T = 80 + 220e&#8315;&#7503;&#7511;</span>. At <span class="m">t=10</span>: <span class="m">170 = 220e&#8315;&sup1;&#8304;&#7503;</span> &rarr; <span class="m">e&#8315;&sup1;&#8304;&#7503; = 17/22</span><br>
+At <span class="m">t=20</span>: <span class="m">T = 80 + 220(e&#8315;&sup1;&#8304;&#7503;)&sup2; = 80 + 220(17/22)&sup2;</span><br>
+<span class="ans">T(20) = 211.36 &deg;F</span> &nbsp;<em>No need to find k &mdash; square the ratio.</em></td><td><span class="s2">2&times;</span></td></tr>
+
+<tr><td class="n">16</td><td><strong>Orthogonal trajectory of cardioids</strong> <span class="m">r = a(1&minus;cos&theta;)</span>, given <span class="m">dr/d&theta; = r cot(&theta;/2)</span></td>
+<td>Replace <span class="m">dr/d&theta; &rarr; &minus;r&sup2;(d&theta;/dr)</span>: &nbsp;<span class="m">&minus;r(d&theta;/dr) = cot(&theta;/2)</span><br>
+<span class="m">&rArr; dr/r = &minus;tan(&theta;/2)d&theta;</span> &rarr; <span class="m">log r = 2 log cos(&theta;/2) + log c</span><br>
+<span class="ans">r = c cos&sup2;(&theta;/2) = C(1 + cos&theta;)</span> &nbsp;&mdash; the reflected cardioid</td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">17</td><td>If <span class="m">r&#8319; = k cos(n&theta;)</span>, find the <strong>DE of that family</strong></td>
+<td>Take logs: <span class="m">n log r = log k + log cos(n&theta;)</span><br>
+Differentiate w.r.t. <span class="m">&theta;</span>: <span class="m">n(1/r)(dr/d&theta;) = &minus;n tan(n&theta;)</span><br>
+<span class="ans">(1/r)(dr/d&theta;) = &minus;tan(n&theta;), i.e. dr/d&theta; + r tan(n&theta;) = 0</span></td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">18</td><td><strong>Orthogonal trajectory of</strong> <span class="m">r = b sin&theta;</span></td>
+<td>Eliminate b: <span class="m">(1/r)(dr/d&theta;) = cot&theta;</span>. Swap &rarr; <span class="m">(1/r)(dr/d&theta;) = &minus;tan&theta;</span><br>
+<span class="m">dr/r = &minus;tan&theta; d&theta;</span> &rarr; <span class="m">log r = log cos&theta; + log c</span><br>
+<span class="ans">r = c cos&theta;</span></td><td><span class="s2">2&times;</span></td></tr>
+
+<tr><td class="n">19</td><td><strong>Orthogonal trajectories, Cartesian</strong> &mdash; general 4-mark form</td>
+<td>1. Differentiate, eliminate the parameter. &nbsp;2. Replace <span class="m">dy/dx &rarr; &minus;dx/dy</span>. &nbsp;3. Separate and integrate.<br>
+<em>e.g. <span class="m">x&sup2;+y&sup2;=2ax</span> &rarr; DE <span class="m">2xy y&prime; = y&sup2;&minus;x&sup2;</span> &rarr; swap &rarr; <span class="ans">x&sup2;+y&sup2; = 2by</span></em></td><td><span class="seen new">LIKELY</span></td></tr>
+
+<tr><td class="n">20</td><td><strong>Modified Euler</strong>, one stage (4-mark version)</td>
+<td>Predictor <span class="m">y&#8321;&#8317;&#8304;&#8318; = y&#8320; + h f(x&#8320;,y&#8320;)</span>, then corrector<br>
+<span class="m">y&#8321;&#8317;&#7503;&#8314;&sup1;&#8318; = y&#8320; + (h/2)[f(x&#8320;,y&#8320;) + f(x&#8321;, y&#8321;&#8317;&#7503;&#8318;)]</span> twice.<br>
+<em>Keep <span class="m">f(x&#8320;,y&#8320;)</span> fixed; only the second term updates.</em></td><td><span class="seen new">LIKELY</span></td></tr>
+</table>
+
+<h2>UNIT III &nbsp;&mdash;&nbsp; Q5(b) or Q6(b)</h2>
+<table>
+<tr><th style="width:3%">#</th><th style="width:24%">Question</th><th>Worked answer</th><th style="width:7%">Seen</th></tr>
+
+<tr><td class="n">21</td><td>Prove <span class="m">(1/(D+a))X = e&#8315;&#7491;&#8339;&int;X e&#7491;&#8339; dx</span> &nbsp;<span class="seen">the safest 4 marks in the paper</span></td>
+<td>Let <span class="m">y = (1/(D+a))X</span>. Then <span class="m">(D+a)y = X</span>, i.e. <span class="m">dy/dx + ay = X</span>.<br>
+Linear first-order; integrating factor <span class="m">e&#7491;&#8339;</span>:<br>
+<span class="m">e&#7491;&#8339;(dy/dx) + a e&#7491;&#8339;y = X e&#7491;&#8339;</span> &rarr; <span class="m">d(y e&#7491;&#8339;)/dx = X e&#7491;&#8339;</span><br>
+Integrate: <span class="m">y e&#7491;&#8339; = &int;X e&#7491;&#8339;dx</span> &rarr; <span class="ans">y = e&#8315;&#7491;&#8339;&int;X e&#7491;&#8339;dx</span> &#9632;</td><td><span class="seen">4&times;</span></td></tr>
+
+<tr><td class="n">22</td><td>General solution if the A.E. is <span class="m">&lambda;&sup3;(&lambda;+4)&sup2;(&lambda;&sup2;+2&lambda;+5)&sup2; = 0</span></td>
+<td>Roots: <span class="m">0</span> (three times), <span class="m">&minus;4</span> (twice), <span class="m">&minus;1&plusmn;2i</span> (each twice)<br>
+<span class="ans">y = (C&#8321;+C&#8322;x+C&#8323;x&sup2;) + (C&#8324;+C&#8325;x)e&#8315;&#8308;&#8339; + e&#8315;&#8339;[(C&#8326;+C&#8327;x)cos2x + (C&#8328;+C&#8329;x)sin2x]</span><br>
+<em>Repeated complex roots get the extra x factor too.</em></td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">23</td><td>Show <span class="m">y&#8305;&#7515; &minus; k&#8308;y = 0</span> has solution <span class="m">C&#8321;cos kx + C&#8322;sin kx + C&#8323;cosh kx + C&#8324;sinh kx</span></td>
+<td>A.E.: <span class="m">m&#8308; &minus; k&#8308; = (m&sup2;&minus;k&sup2;)(m&sup2;+k&sup2;) = 0</span> &rarr; <span class="m">m = &plusmn;k, &plusmn;ik</span><br>
+<span class="m">y = Ae&#7503;&#8339; + Be&#8315;&#7503;&#8339; + C cos kx + D sin kx</span><br>
+Since <span class="m">e&#7503;&#8339; = cosh kx + sinh kx</span> and <span class="m">e&#8315;&#7503;&#8339; = cosh kx &minus; sinh kx</span>, the first two combine into
+<span class="ans">C&#8323;cosh kx + C&#8324;sinh kx</span>. &#9632;</td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">24</td><td>Solve the BVP <span class="m">y&Prime; + 4y&prime; + 4y = 0</span>, <span class="m">y(1)=0</span>, <span class="m">y&prime;(0)=&minus;1</span></td>
+<td>A.E. <span class="m">(m+2)&sup2;=0</span> &rarr; <span class="m">y = (A+Bx)e&#8315;&sup2;&#8339;</span>; <span class="m">y&prime; = (B &minus; 2A &minus; 2Bx)e&#8315;&sup2;&#8339;</span><br>
+<span class="m">y&prime;(0) = B &minus; 2A = &minus;1</span>; &nbsp;<span class="m">y(1) = (A+B)e&#8315;&sup2; = 0 &rArr; B = &minus;A</span><br>
+&rarr; <span class="m">&minus;3A = &minus;1</span>, <span class="m">A = 1/3</span>, <span class="m">B = &minus;1/3</span> &rarr; <span class="ans">y = (1 &minus; x)e&#8315;&sup2;&#8339;/3</span></td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">25</td><td>Solve the IVP <span class="m">y&Prime; &minus; y = 0</span>, <span class="m">y(0)=3</span>, <span class="m">y&prime;(0)=3</span></td>
+<td><span class="m">m&sup2;&minus;1=0</span> &rarr; <span class="m">y = Ae&#8339; + Be&#8315;&#8339;</span>. <span class="m">A+B=3</span>, <span class="m">A&minus;B=3</span> &rarr; <span class="m">A=3, B=0</span><br>
+<span class="ans">y = 3e&#8339;</span></td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">26</td><td>Find the P.I. of <span class="m">y&Prime; &minus; y&prime; = x&sup2; + 2x + 4</span></td>
+<td><span class="m">y&#7527; = 1/(D&sup2;&minus;D)&middot;(x&sup2;+2x+4) = &minus;(1/D)&middot;(1&minus;D)&#8315;&sup1;(x&sup2;+2x+4)</span><br>
+<span class="m">(1&minus;D)&#8315;&sup1; = 1 + D + D&sup2; + &hellip;</span> &rarr; applied: <span class="m">(x&sup2;+2x+4) + (2x+2) + 2 = x&sup2;+4x+8</span><br>
+Then <span class="m">&minus;(1/D)</span> means integrate and negate: <span class="ans">y&#7527; = &minus;(x&sup3;/3 + 2x&sup2; + 8x)</span></td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">27</td><td>Solve the Legendre equation <span class="m">(2x+3)&sup2;y&Prime; + 2(2x+3)y&prime; &minus; 12y = 0</span></td>
+<td>Put <span class="m">2x+3 = e&#7611;</span>, <span class="m">a=2</span>: <span class="m">4D(D&minus;1)y + 4Dy &minus; 12y = 0</span> &rarr; <span class="m">4D&sup2;y = 12y</span><br>
+<span class="m">m&sup2; = 3</span> &rarr; <span class="m">m = &plusmn;&radic;3</span> &rarr; <span class="m">y = C&#8321;e&#8730;&sup3;&#7611; + C&#8322;e&#8315;&#8730;&sup3;&#7611;</span><br>
+<span class="ans">y = C&#8321;(2x+3)&#8730;&sup3; + C&#8322;(2x+3)&#8315;&#8730;&sup3;</span> &nbsp;<em>Do not drop the a&sup2; = 4.</em></td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">28</td><td>Write the C.F. given roots <span class="m">&minus;3&plusmn;i, 2, 2, 2</span></td>
+<td><span class="ans">y = e&#8315;&sup3;&#8339;(C&#8321;cos x + C&#8322;sin x) + (C&#8323; + C&#8324;x + C&#8325;x&sup2;)e&sup2;&#8339;</span></td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">29</td><td>C.F. of a 4th-order LDE: two roots imaginary, two real distinct</td>
+<td>Roots <span class="m">&alpha;&plusmn;i&beta;, m&#8321;, m&#8322;</span> &rarr;
+<span class="ans">y = e&#7482;&#8339;(C&#8321;cos&beta;x + C&#8322;sin&beta;x) + C&#8323;e&#7504;&sup1;&#8339; + C&#8324;e&#7504;&sup2;&#8339;</span></td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">30</td><td>P.I. for a standard case &mdash; general 4-mark form</td>
+<td><span class="m">e&#7491;&#8339;</span> &rarr; <span class="m">e&#7491;&#8339;/f(a)</span>; if <span class="m">f(a)=0</span> multiply by x and differentiate the denominator.<br>
+<span class="m">sin/cos ax</span> &rarr; put <span class="m">D&sup2; = &minus;a&sup2;</span>. &nbsp;<span class="m">e&#7491;&#8339;V</span> &rarr; <span class="m">e&#7491;&#8339;(1/f(D+a))V</span>.</td><td><span class="seen new">LIKELY</span></td></tr>
+</table>
+
+<h2>UNIT IV &nbsp;&mdash;&nbsp; Q7(b) or Q8(b)</h2>
+<table>
+<tr><th style="width:3%">#</th><th style="width:24%">Question</th><th>Worked answer</th><th style="width:7%">Seen</th></tr>
+
+<tr><td class="n">31</td><td><strong>Missing terms</strong>: <span class="m">x = 45,50,55,60,65</span>; <span class="m">y = 3.0, &ndash;, 2.0, &ndash;, &minus;2.4</span></td>
+<td>3 known values &rarr; quadratic fits &rarr; <strong>both</strong> third differences vanish:<br>
+<span class="m">&Delta;&sup3;y&#8320; = 3a + b &minus; 9 = 0</span>, &nbsp;<span class="m">&Delta;&sup3;y&#8321; = &minus;a &minus; 3b + 3.6 = 0</span><br>
+<span class="ans">y(50) = 2.925, &nbsp; y(60) = 0.225</span><br>
+<em>Check: 2nd differences all <span class="m">&minus;0.85</span>. Show this.</em></td><td><span class="s2">2&times;</span></td></tr>
+
+<tr><td class="n">32</td><td><strong>Missing terms</strong>: <span class="m">x = 1&hellip;7</span>; <span class="m">y = 2, 5, &ndash;, 13, 22, &ndash;, 63</span></td>
+<td>5 known values &rarr; quartic fits &rarr; both <strong>fifth</strong> differences vanish.<br>
+Equivalently, fit the quartic through <span class="m">(1,2)(2,5)(4,13)(5,22)(7,63)</span>:<br>
+<span class="m">P(x) = x&#8308;/60 + 2x&sup3;/15 &minus; 71x&sup2;/60 + 161x/30 &minus; 7/3</span><br>
+<span class="ans">y(3) = 121/15 = 8.067, &nbsp; y(6) = 113/3 = 37.667</span></td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">33</td><td><strong>Trapezoidal</strong>: <span class="m">&int;&#8320;&sup1; dx/(1+x&sup2;)</span>, 4 equal strips</td>
+<td><span class="m">h = 0.25</span>; <span class="m">y = 1, 0.941176, 0.8, 0.64, 0.5</span><br>
+<span class="m">I = (0.25/2)[(1+0.5) + 2(0.941176+0.8+0.64)]</span><br>
+<span class="ans">I = 0.782794</span> &nbsp;(exact <span class="m">&pi;/4 = 0.785398</span>; <span class="m">4I &asymp; 3.1312</span>)</td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">34</td><td><strong>Trapezoidal</strong>: <span class="m">&int;&#8320;&sup1; e&#8339; dx</span>, steps of 0.2</td>
+<td><span class="m">h = 0.2</span>; <span class="m">y = 1, 1.221403, 1.491825, 1.822119, 2.225541, 2.718282</span><br>
+<span class="m">I = (0.2/2)[(1+2.718282) + 2(1.221403+1.491825+1.822119+2.225541)]</span><br>
+<span class="ans">I = 1.724006</span> &nbsp;(exact <span class="m">e&minus;1 = 1.718282</span>)</td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">35</td><td><strong>Backward difference table</strong> for <span class="m">y = 2x&sup2; &minus; x + cos2</span> on <span class="m">(2,3)</span>, <span class="m">h=0.2</span>; find <span class="m">&nabla;&sup2;y&#8323;</span></td>
+<td><span class="m">y: 5.583853, 7.063853, 8.703853, 10.503853, 12.463853, 14.583853</span><br>
+<span class="m">&nabla;: 1.48, 1.64, 1.80, 1.96, 2.12</span> &nbsp;&nbsp; <span class="m">&nabla;&sup2;: 0.16, 0.16, 0.16, 0.16</span><br>
+<span class="ans">&nabla;&sup2;y&#8323; = 0.16</span> &nbsp;<em>y is quadratic, so 2nd differences are constant <span class="m">= 2ah&sup2; = 2(2)(0.04)</span>.</em></td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">36</td><td>Estimate <span class="m">cosh(0.56)</span> from <span class="m">x = 0.5, 0.6, 0.7, 0.8</span></td>
+<td><span class="m">&Delta;: 0.0579, 0.0697, 0.0822</span>; <span class="m">&Delta;&sup2;: 0.0118, 0.0125</span>; <span class="m">&Delta;&sup3;: 0.0007</span><br>
+<span class="m">p = (0.56&minus;0.5)/0.1 = 0.6</span> &rarr; Newton forward:<br>
+<span class="m">1.1276 + 0.6(0.0579) + (0.6)(&minus;0.4)/2 &middot;(0.0118) + &hellip;</span><br>
+<span class="ans">cosh(0.56) &asymp; 1.16096</span> &nbsp;(true 1.16094)</td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">37</td><td><strong>Lagrange interpolation</strong>: <span class="m">f(1)</span> from <span class="m">(&minus;1,9), (0,5), (2,3)</span></td>
+<td><span class="m">P(x) = 9&middot;x(x&minus;2)/3 + 5&middot;(x+1)(x&minus;2)/(&minus;2) + 3&middot;(x+1)x/6</span><br>
+Simplify: <span class="m">P(x) = x&sup2; &minus; 3x + 5</span> &rarr; <span class="ans">f(1) = 3</span></td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">38</td><td><strong>Lagrange inverse</strong>: find <span class="m">x</span> when <span class="m">y=15</span> from <span class="m">(6,13), (9,14), (11,16)</span></td>
+<td>Swap roles: <span class="m">x = 6&middot;(15&minus;14)(15&minus;16)/((13&minus;14)(13&minus;16)) + 9&middot;(15&minus;13)(15&minus;16)/((14&minus;13)(14&minus;16)) + 11&middot;(15&minus;13)(15&minus;14)/((16&minus;13)(16&minus;14))</span><br>
+<span class="m">= 6(&minus;1/3) + 9(1) + 11(1/3)</span> &rarr; <span class="ans">x = 32/3 = 10.667</span></td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">39</td><td>Write the formula for <span class="m">y&prime;, y&Prime;</span> from Newton-Gregory forward</td>
+<td><span class="m">dy/dx = (1/h)[&Delta;y&#8320; + (2p&minus;1)/2&middot;&Delta;&sup2;y&#8320; + (3p&sup2;&minus;6p+2)/6&middot;&Delta;&sup3;y&#8320; + &hellip;]</span><br>
+<span class="m">d&sup2;y/dx&sup2; = (1/h&sup2;)[&Delta;&sup2;y&#8320; + (p&minus;1)&Delta;&sup3;y&#8320; + (12p&sup2;&minus;36p+22)/24&middot;&Delta;&#8308;y&#8320; + &hellip;]</span><br>
+At <span class="m">p=0</span>: <span class="ans">y&prime; = (1/h)[&Delta;y&#8320; &minus; &Delta;&sup2;y&#8320;/2 + &Delta;&sup3;y&#8320;/3 &minus; &hellip;]</span></td><td><span class="s2">2&times;</span></td></tr>
+
+<tr><td class="n">40</td><td>Determine <span class="m">&Delta;&sup2;y&#8322;</span>, <span class="m">&Delta;&sup3;y&#8321;</span> from <span class="m">y = 0.0567, 1.2345, 1.5678, 1.0023, 1.786</span></td>
+<td><span class="m">&Delta;: 1.1778, 0.3333, &minus;0.5655, 0.7837</span><br>
+<span class="m">&Delta;&sup2;: &minus;0.8445, &minus;0.8988, 1.3492</span> &nbsp;&nbsp;<span class="m">&Delta;&sup3;: &minus;0.0543, 2.2480</span><br>
+<span class="ans">&Delta;&sup2;y&#8322; = &minus;0.8988, &nbsp; &Delta;&sup3;y&#8321; = &minus;0.0543</span></td><td><span class="seen">1&times;</span></td></tr>
+</table>
+
+<h2>UNIT V &nbsp;&mdash;&nbsp; Q9(b) or Q10(b)</h2>
+<table>
+<tr><th style="width:3%">#</th><th style="width:24%">Question</th><th>Worked answer</th><th style="width:7%">Seen</th></tr>
+
+<tr><td class="n">41</td><td><strong>Gauss-Seidel</strong>: <span class="m">2x+17y+4z=35</span>; <span class="m">3x+y+10z=24</span>; <span class="m">28x+4y&minus;z=32</span>, from (0,0,0)</td>
+<td><strong>Reorder for dominance:</strong> <span class="m">28x+4y&minus;z=32</span>; <span class="m">2x+17y+4z=35</span>; <span class="m">3x+y+10z=24</span><br>
+<span class="m">x=(32&minus;4y+z)/28</span>, <span class="m">y=(35&minus;2x&minus;4z)/17</span>, <span class="m">z=(24&minus;3x&minus;y)/10</span><br>
+<span class="m">It1: 1.142857, 1.924370, 1.864706</span><br>
+<span class="ans">It2: x=0.934544, y=1.510123, z=1.968625</span> &nbsp;(&rarr; 1.001, 1.482, 1.952)</td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">42</td><td><strong>Gauss-Seidel</strong>: <span class="m">5x+2y+z=12</span>; <span class="m">x+4y+2z=15</span>; <span class="m">x+2y+5z=20</span>, from (1,0,0)</td>
+<td>Already diagonally dominant. <span class="m">x=(12&minus;2y&minus;z)/5</span>, <span class="m">y=(15&minus;x&minus;2z)/4</span>, <span class="m">z=(20&minus;x&minus;2y)/5</span><br>
+<span class="m">It1: 2.400000, 3.150000, 2.260000</span><br>
+<span class="ans">It2: x=0.688000, y=2.448000, z=2.883200</span> &nbsp;(exact solution 1, 2, 3)</td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">43</td><td><strong>Rayleigh's power method</strong>: <span class="m">A = [[2,&minus;2,1],[1,3,&minus;1],[&minus;1,2,2]]</span>, <span class="m">X&#8320;=[1,0,0]&#7488;</span>, 2 iterations</td>
+<td><span class="m">AX&#8320; = [2,1,&minus;1]&#7488; = 2[1, 0.5, &minus;0.5]&#7488;</span> &rarr; <span class="m">&lambda;&#8321; = 2</span><br>
+<span class="m">AX&#8321; = [0.5, 3, &minus;1]&#7488; = 3[0.1667, 1, &minus;0.3333]&#7488;</span> &rarr; <span class="ans">&lambda;&#8322; = 3, X = [0.167, 1, &minus;0.333]&#7488;</span><br>
+<em>Careful: this matrix has <strong>complex</strong> eigenvalues (2.397&plusmn;2.163i), so the method never actually converges. The question only asks for two iterations &mdash; write them and stop.</em></td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">44</td><td>Find <span class="m">x</span> so that <span class="m">A = [[4&minus;x, 2&radic;5, 0],[2&radic;5, 4&minus;x, &radic;5],[0, &radic;5, 4&minus;x]]</span> has <strong>rank 2</strong></td>
+<td>Rank <span class="m">&lt; 3</span> requires <span class="m">|A| = 0</span>.<br>
+<span class="m">|A| = &minus;(x&minus;9)(x&minus;4)(x+1)</span><br>
+<span class="ans">x = 9, 4 or &minus;1</span> &nbsp;<em>(check a 2&times;2 minor is non-zero at each, so the rank is exactly 2)</em></td><td><span class="seen">1&times;</span></td></tr>
+
+<tr><td class="n">45</td><td>Prove: if <span class="m">&lambda;</span> is an eigenvalue of <span class="m">A</span> then <span class="m">1/&lambda;</span> is an eigenvalue of <span class="m">A&#8315;&sup1;</span></td>
+<td><span class="m">AX = &lambda;X</span>. Pre-multiply by <span class="m">A&#8315;&sup1;</span>:<br>
+<span class="m">A&#8315;&sup1;AX = &lambda;A&#8315;&sup1;X</span> &rarr; <span class="m">X = &lambda;A&#8315;&sup1;X</span><br>
+Divide by <span class="m">&lambda;</span> (non-zero since <span class="m">A</span> is invertible): <span class="ans">A&#8315;&sup1;X = (1/&lambda;)X</span> &#9632;</td><td><span class="seen">1&times;</span></td></tr>
+</table>
+
+<div class="box warn">
+<strong>Three that bite.</strong><br>
+<strong>1. Gauss-Seidel &mdash; reorder first.</strong> Both systems above need it (or check they are already dominant).
+Charge straight in and the numbers wander.<br>
+<strong>2. Missing terms &mdash; count your knowns.</strong> 3 knowns &rarr; quadratic &rarr; set 3rd differences to zero.
+5 knowns &rarr; quartic &rarr; 5th differences. Setting one higher difference to zero gives one equation and you cannot solve for two unknowns.<br>
+<strong>3. Cooling &mdash; do not compute k.</strong> Square (or cube) the ratio instead: if
+<span class="m">e&#8315;&sup1;&#8304;&#7503; = 17/22</span> then <span class="m">e&#8315;&sup2;&#8304;&#7503; = (17/22)&sup2;</span>. Faster and no rounding error.
+</div>
+
+<div class="box win">
+<p class="big" style="margin:0 0 1.2mm">Why this bank is worth more than it looks</p>
+<strong>20 marks, and each question is ~6 minutes.</strong> Combined with the 2-mark bank that is
+<strong>30 marks in the first 50 minutes of the exam</strong>, before you touch a single 7-marker.<br>
+<strong>Unit III is free:</strong> <span class="m">1/(D+a)</span> has been the <span class="m">Q5(b)</span> part in
+<strong>3 of 3</strong> exact-match papers. Memorise the four-line proof and that unit's 4-marker is done.<br>
+<strong>Show the working.</strong> These are method-marked &mdash; a Gauss-Seidel table with a slip in the last row
+still scores 3 of 4; a bare answer scores 1.
+</div>
+
+<p class="foot">
+45 questions: every 4-mark part asked across the 6 papers, plus the standard forms the portion supports.
+Every numerical result was computed and verified &mdash; including the quartic for #32 and the eigenvalues for #43.
+Counts are appearances across those papers; LIKELY means not yet asked but squarely on the syllabus.
+</p>
+</body></html>
