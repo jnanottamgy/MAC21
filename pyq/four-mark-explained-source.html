@@ -1,0 +1,637 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>MAC21 4-Mark Bank — Every Step</title>
+<style>
+@page{size:A4;margin:9mm 8mm 9mm 8mm}
+*{box-sizing:border-box}
+body{font-family:"DejaVu Sans","Segoe UI",Helvetica,Arial,sans-serif;font-size:8.3pt;line-height:1.38;color:#14181d;margin:0}
+h1{font-size:18pt;margin:0 0 1.5mm;letter-spacing:-.4px}
+h2{font-size:11.5pt;margin:5mm 0 2mm;padding:1.8mm 2.8mm;background:#14181d;color:#fff;border-radius:2px}
+h3{font-size:9.6pt;margin:3.5mm 0 1.4mm;padding:1.3mm 2.4mm;background:#e4e7ea;border-left:3.5px solid #14181d;border-radius:2px}
+p{margin:0 0 1.4mm}
+table{width:100%;border-collapse:collapse;margin:0 0 2.2mm;font-size:7.7pt}
+th{background:#eceef1;text-align:left;padding:1.1mm 1.5mm;border:.6px solid #9aa3ad;font-weight:700;font-size:7pt;text-transform:uppercase}
+td{padding:1.1mm 1.5mm;border:.6px solid #c2c8ce;vertical-align:top}
+tr:nth-child(even) td{background:#f7f8f9}
+tr{page-break-inside:avoid} h2,h3{page-break-after:avoid}
+code,.m{font-family:"DejaVu Sans Mono",monospace;font-size:7.6pt;background:#eceef1;padding:0 1mm;border-radius:2px}
+.ans{font-weight:800;background:#c9edd9;padding:.3mm 1.4mm;border-radius:2px}
+.seen{display:inline-block;background:#8a1420;color:#fff;padding:.2mm 1.2mm;border-radius:2px;font-weight:700;font-size:6.6pt;white-space:nowrap}
+.nc{display:inline-block;background:#16603a;color:#fff;padding:.2mm 1.2mm;border-radius:2px;font-weight:700;font-size:6.5pt;white-space:nowrap}
+.cal{display:inline-block;background:#8a5410;color:#fff;padding:.2mm 1.2mm;border-radius:2px;font-weight:700;font-size:6.5pt;white-space:nowrap}
+.box{border:1.3px solid #14181d;border-radius:3px;padding:2.2mm 2.8mm;margin:0 0 3mm;background:#f7f8f9;page-break-inside:avoid}
+.win{border-color:#16603a;background:#f3faf6}.warn{border-color:#8a1420;background:#fdf5f5}.tk{border-color:#8a5410;background:#fefaf3}
+.lead{font-size:8.8pt;color:#3d454e;margin-bottom:2.5mm}
+.big{font-size:12.5pt;font-weight:800}
+ol,ul{margin:0 0 1.4mm;padding-left:4.6mm}li{margin-bottom:1mm}
+.st{margin:0 0 1.2mm;padding-left:0}
+.st b{display:inline-block;min-width:15mm;color:#5a636d;font-size:7.4pt}
+.foot{margin-top:3mm;padding-top:1.5mm;border-top:.8px solid #c2c8ce;font-size:7pt;color:#6b737c}
+</style></head><body>
+
+<h1>MAC21 &mdash; 4-Mark Bank, Every Single Step</h1>
+<p class="lead">Same 45 questions, but nothing skipped. <strong>Every derivative is computed in front of you,
+every integral is named, every line of algebra is shown.</strong> No step assumes you already know calculus.</p>
+
+<div class="box win" style="padding:2mm 2.6mm">
+<span class="nc">NO CALCULUS</span> = pure arithmetic, you can do these today &nbsp;&middot;&nbsp;
+<span class="cal">NEEDS CALCULUS</span> = uses a derivative or integral, all of which are in the toolkit below.<br>
+<strong>Good news first: Units IV and V are almost entirely arithmetic.</strong> Difference tables,
+Gauss-Seidel, Lagrange, trapezoidal, determinants &mdash; that is 15 of the 45 questions with
+<em>no calculus at all</em>. If maths is fighting you, start there.
+</div>
+
+<h2>THE TOOLKIT &nbsp;&mdash;&nbsp; every rule these 45 questions actually use</h2>
+
+<div class="box tk">
+<h3 style="margin-top:0">Differentiation &mdash; "rate of change". Written <span class="m">d/dx</span> or <span class="m">f&prime;</span></h3>
+<table>
+<tr><th style="width:32%">Rule</th><th>What it does</th><th style="width:30%">Example</th></tr>
+<tr><td><span class="m">d/dx (x&#8319;) = n&middot;x&#8319;&#8315;&sup1;</span></td><td>Bring the power down in front, then reduce the power by 1.</td><td><span class="m">x&sup3; &rarr; 3x&sup2;</span> &nbsp;&middot;&nbsp; <span class="m">x &rarr; 1</span> &nbsp;&middot;&nbsp; <span class="m">5 &rarr; 0</span></td></tr>
+<tr><td><span class="m">d/dx (e&#8339;) = e&#8339;</span></td><td>Unchanged. <span class="m">e</span> is a number &asymp; 2.718.</td><td><span class="m">e&#8339; &rarr; e&#8339;</span></td></tr>
+<tr><td><span class="m">d/dx (e&#7491;&#8339;) = a&middot;e&#7491;&#8339;</span></td><td>Copy it, multiply by whatever multiplies x.</td><td><span class="m">e&sup2;&#8339; &rarr; 2e&sup2;&#8339;</span> &nbsp;&middot;&nbsp; <span class="m">e&#8315;&sup2;&#8339; &rarr; &minus;2e&#8315;&sup2;&#8339;</span></td></tr>
+<tr><td><span class="m">d/dx (a&#8339;) = a&#8339;&middot;log a</span></td><td>Copy it, multiply by <span class="m">log a</span> (a constant).</td><td><span class="m">2&#8339; &rarr; 2&#8339; log 2</span></td></tr>
+<tr><td><span class="m">d/dx (sin x) = cos x</span><br><span class="m">d/dx (cos x) = &minus;sin x</span></td><td>They swap. Cosine picks up a minus sign.</td><td><span class="m">sin x &rarr; cos x &rarr; &minus;sin x &rarr; &minus;cos x</span> (cycles every 4)</td></tr>
+<tr><td><span class="m">d/dx (log x) = 1/x</span></td><td></td><td><span class="m">log x &rarr; 1/x</span></td></tr>
+<tr><td><span class="m">d/dx (tan&#8315;&sup1;x) = 1/(1+x&sup2;)</span><br><span class="m">d/dx (sin&#8315;&sup1;x) = 1/&radic;(1&minus;x&sup2;)</span></td><td>Just memorise these two.</td><td>&mdash;</td></tr>
+<tr><td><strong>Product rule</strong><br><span class="m">(u&middot;v)&prime; = u&prime;v + u&middot;v&prime;</span></td><td>Two things multiplied: differentiate the first times the second, plus the first times the derivative of the second.</td><td><span class="m">x e&#8339;</span> &rarr; <span class="m">(1)(e&#8339;) + (x)(e&#8339;) = e&#8339;(1+x)</span></td></tr>
+<tr><td><strong>Chain rule</strong><br><span class="m">d/dx f(g) = f&prime;(g)&middot;g&prime;</span></td><td>Something inside something: differentiate the outside, then multiply by the derivative of the inside.</td><td><span class="m">e&#8315;&sup2;&#7511;</span> &rarr; <span class="m">e&#8315;&sup2;&#7511;&middot;(&minus;2)</span></td></tr>
+<tr><td><strong>Partial derivative</strong><br><span class="m">&part;f/&part;x</span>, written <span class="m">f&#8339;</span></td><td>Two variables. To get <span class="m">f&#8339;</span>, <strong>treat y as if it were a plain number</strong> and differentiate normally. For <span class="m">f&#7527;</span>, treat x as a number.</td><td><span class="m">f = x&sup2;y</span>: &nbsp;<span class="m">f&#8339; = 2xy</span> &nbsp;(y is "a number")<br><span class="m">f&#7527; = x&sup2;</span> &nbsp;(x&sup2; is "a number")</td></tr>
+</table>
+
+<h3>Integration &mdash; the reverse of differentiation. Written <span class="m">&int; &hellip; dx</span></h3>
+<table>
+<tr><th style="width:32%">Rule</th><th>What it does</th><th style="width:30%">Example</th></tr>
+<tr><td><span class="m">&int; x&#8319; dx = x&#8319;&#8314;&sup1;/(n+1)</span></td><td>Raise the power by 1, divide by the new power. (Opposite of differentiating.)</td><td><span class="m">&int;x&sup2;dx = x&sup3;/3</span> &nbsp;&middot;&nbsp; <span class="m">&int;1 dx = x</span></td></tr>
+<tr><td><span class="m">&int; e&#7491;&#8339; dx = e&#7491;&#8339;/a</span></td><td>Copy it, <em>divide</em> by whatever multiplies x.</td><td><span class="m">&int;e&sup2;&#8339;dx = e&sup2;&#8339;/2</span></td></tr>
+<tr><td><span class="m">&int; (1/x) dx = log x</span></td><td>The one exception to the power rule.</td><td><span class="m">&int;dx/x = log x</span></td></tr>
+<tr><td><span class="m">&int; tan &theta; d&theta; = &minus;log(cos &theta;)</span><br><span class="m">&int; cot &theta; d&theta; = log(sin &theta;)</span></td><td>Needed only for orthogonal-trajectory questions.</td><td>&mdash;</td></tr>
+</table>
+
+<h3>Two facts about logs you will need</h3>
+<p><span class="m">log A + log B = log(AB)</span> &nbsp;&middot;&nbsp; <span class="m">n&middot;log A = log(A&#8319;)</span> &nbsp;&middot;&nbsp;
+if <span class="m">log P = log Q</span> then <span class="m">P = Q</span> &nbsp;&middot;&nbsp; <span class="m">log(e&#7503;) = k</span></p>
+</div>
+
+<h2>UNIT I &nbsp;&mdash;&nbsp; Q1(b) or Q2(b)</h2>
+
+<h3>1 &nbsp; Show <span class="m">f(x,y) = xy(1&minus;x&minus;y)</span> is maximum at <span class="m">(1/3, 1/3)</span> &nbsp;<span class="seen">3&times;</span> <span class="cal">NEEDS CALCULUS</span></h3>
+<div class="box">
+<p class="st"><b>Step 1</b> Multiply it out first &mdash; much easier to differentiate.<br>
+<span class="m">f = xy(1 &minus; x &minus; y) = xy &minus; x&sup2;y &minus; xy&sup2;</span></p>
+
+<p class="st"><b>Step 2</b> Find <span class="m">f&#8339;</span>. <strong>Treat y as a plain number.</strong><br>
+&bull; <span class="m">xy</span> &rarr; y is a number multiplying x, so this differentiates to <span class="m">y</span><br>
+&bull; <span class="m">&minus;x&sup2;y</span> &rarr; <span class="m">&minus;y&middot;(2x) = &minus;2xy</span><br>
+&bull; <span class="m">&minus;xy&sup2;</span> &rarr; <span class="m">y&sup2;</span> is a number, so this gives <span class="m">&minus;y&sup2;</span><br>
+<span class="m">f&#8339; = y &minus; 2xy &minus; y&sup2;</span></p>
+
+<p class="st"><b>Step 3</b> Find <span class="m">f&#7527;</span>. <strong>Treat x as a plain number.</strong><br>
+<span class="m">f&#7527; = x &minus; x&sup2; &minus; 2xy</span></p>
+
+<p class="st"><b>Step 4</b> Set both to zero and check the given point works.<br>
+Put <span class="m">x = 1/3, y = 1/3</span> into <span class="m">f&#8339;</span>:<br>
+<span class="m">1/3 &minus; 2(1/3)(1/3) &minus; (1/3)&sup2; = 1/3 &minus; 2/9 &minus; 1/9 = 3/9 &minus; 2/9 &minus; 1/9 = 0</span> &#10003;<br>
+By symmetry <span class="m">f&#7527; = 0</span> too. So <span class="m">(1/3,1/3)</span> <em>is</em> a stationary point.</p>
+
+<p class="st"><b>Step 5</b> Differentiate a <em>second</em> time to get <span class="m">r, s, t</span>.<br>
+&bull; <span class="m">r = f&#8339;&#8339;</span> = differentiate <span class="m">f&#8339; = y &minus; 2xy &minus; y&sup2;</span> w.r.t. x again &rarr; only <span class="m">&minus;2xy</span> has an x &rarr; <span class="m">r = &minus;2y</span><br>
+&bull; <span class="m">s = f&#8339;&#7527;</span> = differentiate <span class="m">f&#8339;</span> w.r.t. <em>y</em> &rarr; <span class="m">s = 1 &minus; 2x &minus; 2y</span><br>
+&bull; <span class="m">t = f&#7527;&#7527;</span> = differentiate <span class="m">f&#7527; = x &minus; x&sup2; &minus; 2xy</span> w.r.t. y &rarr; <span class="m">t = &minus;2x</span></p>
+
+<p class="st"><b>Step 6</b> Put <span class="m">(1/3, 1/3)</span> in &mdash; now it is only arithmetic.<br>
+<span class="m">r = &minus;2/3</span> &nbsp;&middot;&nbsp; <span class="m">s = 1 &minus; 2/3 &minus; 2/3 = &minus;1/3</span> &nbsp;&middot;&nbsp; <span class="m">t = &minus;2/3</span><br>
+<span class="m">rt &minus; s&sup2; = (&minus;2/3)(&minus;2/3) &minus; (&minus;1/3)&sup2; = 4/9 &minus; 1/9 = 3/9 = 1/3</span></p>
+
+<p class="st"><b>Step 7</b> Apply the test.<br>
+<span class="m">rt &minus; s&sup2; = 1/3 &gt; 0</span> and <span class="m">r = &minus;2/3 &lt; 0</span> &rarr; <span class="ans">MAXIMUM</span><br>
+Value: <span class="m">f = (1/3)(1/3)(1 &minus; 1/3 &minus; 1/3) = (1/9)(1/3) = </span><span class="ans">1/27</span></p>
+</div>
+
+<h3>2 &nbsp; Examine <span class="m">x&sup3; + y&sup3; &minus; 3axy</span> for extreme values &nbsp;<span class="seen">1&times;</span> <span class="cal">NEEDS CALCULUS</span></h3>
+<div class="box">
+<p class="st"><b>Step 1</b> <span class="m">f&#8339;</span>: treat y as a number. <span class="m">x&sup3; &rarr; 3x&sup2;</span>; <span class="m">y&sup3; &rarr; 0</span> (no x in it); <span class="m">&minus;3axy &rarr; &minus;3ay</span>.<br>
+<span class="m">f&#8339; = 3x&sup2; &minus; 3ay</span> &nbsp;&nbsp; and similarly &nbsp;&nbsp; <span class="m">f&#7527; = 3y&sup2; &minus; 3ax</span></p>
+
+<p class="st"><b>Step 2</b> Set both zero: <span class="m">x&sup2; = ay</span> &nbsp;and&nbsp; <span class="m">y&sup2; = ax</span>.<br>
+From the first, <span class="m">y = x&sup2;/a</span>. Put that into the second:
+<span class="m">(x&sup2;/a)&sup2; = ax</span> &rarr; <span class="m">x&#8308;/a&sup2; = ax</span> &rarr; <span class="m">x&#8308; = a&sup3;x</span> &rarr; <span class="m">x(x&sup3; &minus; a&sup3;) = 0</span><br>
+So <span class="m">x = 0</span> or <span class="m">x = a</span>. Stationary points: <span class="m">(0,0)</span> and <span class="m">(a,a)</span>.</p>
+
+<p class="st"><b>Step 3</b> Second derivatives:
+<span class="m">r = f&#8339;&#8339; = 6x</span>, &nbsp;<span class="m">s = f&#8339;&#7527; = &minus;3a</span>, &nbsp;<span class="m">t = f&#7527;&#7527; = 6y</span><br>
+<span class="m">rt &minus; s&sup2; = 36xy &minus; 9a&sup2;</span></p>
+
+<p class="st"><b>Step 4</b> Test each point.<br>
+At <span class="m">(0,0)</span>: <span class="m">rt &minus; s&sup2; = 0 &minus; 9a&sup2; = &minus;9a&sup2; &lt; 0</span> &rarr; <span class="ans">saddle point</span><br>
+At <span class="m">(a,a)</span>: <span class="m">rt &minus; s&sup2; = 36a&sup2; &minus; 9a&sup2; = 27a&sup2; &gt; 0</span>, and <span class="m">r = 6a</span><br>
+&nbsp;&nbsp;&rarr; if <span class="m">a &gt; 0</span>, <span class="m">r &gt; 0</span> so <span class="ans">minimum</span>; if <span class="m">a &lt; 0</span>, <span class="ans">maximum</span><br>
+Value there: <span class="m">a&sup3; + a&sup3; &minus; 3a&middot;a&middot;a = </span><span class="ans">&minus;a&sup3;</span></p>
+</div>
+
+<h3>3 &nbsp; Expand <span class="m">a&#8339;</span> in powers of x, first three terms &nbsp;<span class="seen">1&times;</span> <span class="cal">NEEDS CALCULUS</span></h3>
+<div class="box">
+<p class="st"><b>Formula</b> Maclaurin: <span class="m">f(x) = f(0) + x f&prime;(0) + (x&sup2;/2!) f&Prime;(0) + &hellip;</span> &nbsp;(<span class="m">2! = 2</span>)</p>
+<p class="st"><b>Step 1</b> <span class="m">f = a&#8339;</span> &rarr; at <span class="m">x=0</span>: <span class="m">a&#8304; = 1</span></p>
+<p class="st"><b>Step 2</b> <span class="m">f&prime; = a&#8339;&middot;log a</span> &rarr; at 0: <span class="m">1&middot;log a = log a</span></p>
+<p class="st"><b>Step 3</b> <span class="m">f&Prime;</span>: differentiate <span class="m">a&#8339; log a</span>. <span class="m">log a</span> is a constant, so it just rides along:
+<span class="m">f&Prime; = a&#8339;(log a)&sup2;</span> &rarr; at 0: <span class="m">(log a)&sup2;</span></p>
+<p class="st"><b>Step 4</b> Substitute: <span class="ans">a&#8339; = 1 + x log a + x&sup2;(log a)&sup2;/2 + &hellip;</span></p>
+</div>
+
+<h3>4 &nbsp; Expand <span class="m">sin&#8315;&sup1;x</span> in powers of x &nbsp;<span class="seen">1&times;</span> <span class="cal">NEEDS CALCULUS</span></h3>
+<div class="box">
+<p class="st"><b>Trick</b> Differentiating <span class="m">sin&#8315;&sup1;x</span> repeatedly is horrible. Instead: differentiate <em>once</em>,
+expand the simple thing you get, then integrate back.</p>
+<p class="st"><b>Step 1</b> <span class="m">d/dx(sin&#8315;&sup1;x) = 1/&radic;(1&minus;x&sup2;) = (1&minus;x&sup2;)&#8315;&#189;</span></p>
+<p class="st"><b>Step 2</b> Binomial expansion of <span class="m">(1&minus;u)&#8315;&#189;</span> is <span class="m">1 + u/2 + 3u&sup2;/8 + &hellip;</span>. Put <span class="m">u = x&sup2;</span>:<br>
+<span class="m">(1&minus;x&sup2;)&#8315;&#189; = 1 + x&sup2;/2 + 3x&#8308;/8 + &hellip;</span></p>
+<p class="st"><b>Step 3</b> Integrate term by term (raise the power by 1, divide by the new power):<br>
+<span class="m">&int;1 dx = x</span> &nbsp;&middot;&nbsp; <span class="m">&int;(x&sup2;/2)dx = x&sup3;/6</span> &nbsp;&middot;&nbsp; <span class="m">&int;(3x&#8308;/8)dx = 3x&#8309;/40</span></p>
+<p class="st"><b>Answer</b> <span class="ans">sin&#8315;&sup1;x = x + x&sup3;/6 + 3x&#8309;/40 + &hellip;</span><br>
+The constant is 0 because <span class="m">sin&#8315;&sup1;(0) = 0</span>. <em>All even powers are missing &mdash; say so, it is worth a mark.</em></p>
+</div>
+
+<h3>5 &nbsp; Expand <span class="m">tan&#8315;&sup1;x</span> in powers of <span class="m">(x&minus;1)</span> to 4th degree &nbsp;<span class="seen">1&times;</span> <span class="cal">NEEDS CALCULUS</span></h3>
+<div class="box">
+<p class="st"><b>Formula</b> Taylor about <span class="m">a=1</span>:
+<span class="m">f(x) = f(1) + (x&minus;1)f&prime;(1) + (x&minus;1)&sup2;f&Prime;(1)/2! + (x&minus;1)&sup3;f&prime;&Prime;(1)/3! + (x&minus;1)&#8308;f&#8305;&#7515;(1)/4!</span><br>
+<span class="m">2! = 2</span>, <span class="m">3! = 6</span>, <span class="m">4! = 24</span></p>
+<p class="st"><b>Step 1</b> <span class="m">f = tan&#8315;&sup1;x</span> &rarr; <span class="m">f(1) = tan&#8315;&sup1;(1) = &pi;/4</span></p>
+<p class="st"><b>Step 2</b> <span class="m">f&prime; = 1/(1+x&sup2;)</span> &rarr; <span class="m">f&prime;(1) = 1/2</span></p>
+<p class="st"><b>Step 3</b> <span class="m">f&Prime; = &minus;2x/(1+x&sup2;)&sup2;</span> &rarr; <span class="m">f&Prime;(1) = &minus;2/4 = &minus;1/2</span></p>
+<p class="st"><b>Step 4</b> <span class="m">f&prime;&Prime; = (6x&sup2;&minus;2)/(1+x&sup2;)&sup3;</span> &rarr; <span class="m">f&prime;&Prime;(1) = 4/8 = 1/2</span></p>
+<p class="st"><b>Step 5</b> <span class="m">f&#8305;&#7515;(1) = 0</span> &nbsp;(it works out to zero at <span class="m">x=1</span>)</p>
+<p class="st"><b>Step 6</b> Substitute, dividing by the factorials:<br>
+<span class="m">&pi;/4 + (x&minus;1)(1/2) + (x&minus;1)&sup2;(&minus;1/2)/2 + (x&minus;1)&sup3;(1/2)/6 + 0</span></p>
+<p class="st"><b>Answer</b> <span class="ans">tan&#8315;&sup1;x = &pi;/4 + (x&minus;1)/2 &minus; (x&minus;1)&sup2;/4 + (x&minus;1)&sup3;/12 + 0&middot;(x&minus;1)&#8308;</span></p>
+</div>
+
+<h3>6 &nbsp; Newton-Raphson system, ONE iteration, from <span class="m">(0.8, 0.4)</span> &nbsp;<span class="seen">1&times;</span> <span class="cal">easy calculus only</span></h3>
+<div class="box">
+<p class="st"><b>Setup</b> <span class="m">x&sup2;+y&sup2; = x</span> and <span class="m">x&sup2;&minus;y&sup2; = y</span>. Move everything to one side:<br>
+<span class="m">f = x&sup2; + y&sup2; &minus; x</span> &nbsp;&nbsp; <span class="m">g = x&sup2; &minus; y&sup2; &minus; y</span></p>
+<p class="st"><b>Step 1</b> Four partial derivatives (all just power rule):<br>
+<span class="m">f&#8339; = 2x &minus; 1</span> &nbsp;&middot;&nbsp; <span class="m">f&#7527; = 2y</span> &nbsp;&middot;&nbsp;
+<span class="m">g&#8339; = 2x</span> &nbsp;&middot;&nbsp; <span class="m">g&#7527; = &minus;2y &minus; 1</span></p>
+<p class="st"><b>Step 2</b> Evaluate everything at <span class="m">(0.8, 0.4)</span> &mdash; pure arithmetic from here.<br>
+<span class="m">f = 0.64 + 0.16 &minus; 0.8 = 0.0000</span> &nbsp;&nbsp;<em>(zero &mdash; that is fine, not an error)</em><br>
+<span class="m">g = 0.64 &minus; 0.16 &minus; 0.4 = 0.0800</span><br>
+<span class="m">f&#8339; = 0.6</span>, <span class="m">f&#7527; = 0.8</span>, <span class="m">g&#8339; = 1.6</span>, <span class="m">g&#7527; = &minus;1.8</span></p>
+<p class="st"><b>Step 3</b> Solve the two linear equations for the corrections <span class="m">h, k</span>:<br>
+<span class="m">0.6h + 0.8k = &minus;0.0000</span><br>
+<span class="m">1.6h &minus; 1.8k = &minus;0.0800</span><br>
+From the first, <span class="m">h = &minus;(0.8/0.6)k = &minus;1.3333k</span>. Substitute:<br>
+<span class="m">1.6(&minus;1.3333k) &minus; 1.8k = &minus;0.08</span> &rarr; <span class="m">&minus;2.1333k &minus; 1.8k = &minus;0.08</span> &rarr; <span class="m">&minus;3.9333k = &minus;0.08</span><br>
+<span class="m">k = 0.020339</span>, &nbsp;<span class="m">h = &minus;1.3333(0.020339) = &minus;0.027119</span></p>
+<p class="st"><b>Step 4</b> Update: <span class="m">x&#8321; = 0.8 &minus; 0.027119</span>, <span class="m">y&#8321; = 0.4 + 0.020339</span><br>
+<span class="ans">x&#8321; = 0.772881, &nbsp; y&#8321; = 0.420339</span></p>
+</div>
+
+<h3>7 &nbsp; Newton-Raphson system from <span class="m">(3.5, &minus;1.8)</span>, one iteration &nbsp;<span class="seen">1&times;</span></h3>
+<div class="box">
+<p class="st"><b>Setup</b> <span class="m">f = x&sup2; + y &minus; 11</span>, &nbsp;<span class="m">g = y&sup2; + x &minus; 7</span></p>
+<p class="st"><b>Step 1</b> <span class="m">f&#8339; = 2x</span>, <span class="m">f&#7527; = 1</span>, <span class="m">g&#8339; = 1</span>, <span class="m">g&#7527; = 2y</span></p>
+<p class="st"><b>Step 2</b> At <span class="m">(3.5, &minus;1.8)</span>:<br>
+<span class="m">f = 12.25 &minus; 1.8 &minus; 11 = &minus;0.5500</span> &nbsp;&middot;&nbsp; <span class="m">g = 3.24 + 3.5 &minus; 7 = &minus;0.2600</span><br>
+<span class="m">f&#8339; = 7</span>, <span class="m">f&#7527; = 1</span>, <span class="m">g&#8339; = 1</span>, <span class="m">g&#7527; = &minus;3.6</span></p>
+<p class="st"><b>Step 3</b> <span class="m">7h + k = 0.55</span> &nbsp;and&nbsp; <span class="m">h &minus; 3.6k = 0.26</span><br>
+From the first, <span class="m">k = 0.55 &minus; 7h</span>. Substitute: <span class="m">h &minus; 3.6(0.55 &minus; 7h) = 0.26</span><br>
+<span class="m">h &minus; 1.98 + 25.2h = 0.26</span> &rarr; <span class="m">26.2h = 2.24</span> &rarr; <span class="m">h = 0.085496</span><br>
+<span class="m">k = 0.55 &minus; 7(0.085496) = &minus;0.048473</span></p>
+<p class="st"><b>Answer</b> <span class="ans">x&#8321; = 3.585496, &nbsp; y&#8321; = &minus;1.848473</span></p>
+</div>
+
+<h3>8 &nbsp; Negative root of <span class="m">x e&#8339; &minus; sin x = 0</span> to three decimals &nbsp;<span class="seen">2&times;</span> <span class="cal">NEEDS CALCULUS</span></h3>
+<div class="box">
+<p class="st"><b>Step 1 &mdash; find where the root is.</b> Put in numbers until the sign flips:<br>
+<span class="m">f(&minus;2.9) = (&minus;2.9)(0.0550) &minus; sin(&minus;2.9) = &minus;0.1596 + 0.2392 = +0.0796</span><br>
+<span class="m">f(&minus;3.0) = (&minus;3.0)(0.0498) &minus; sin(&minus;3.0) = &minus;0.1494 + 0.1411 = &minus;0.0083</span><br>
+Sign changes &rarr; root lies between <span class="m">&minus;3.0</span> and <span class="m">&minus;2.9</span>. Start at <span class="m">x&#8320; = &minus;3</span>.<br>
+<strong>Do not start near 0 &mdash; <span class="m">x=0</span> is also a root and the method will slide into it.</strong></p>
+<p class="st"><b>Step 2 &mdash; the derivative.</b> <span class="m">x e&#8339;</span> is a product, so use the product rule:<br>
+<span class="m">d/dx(x e&#8339;) = (1)(e&#8339;) + (x)(e&#8339;) = e&#8339;(1+x)</span>; and <span class="m">d/dx(&minus;sin x) = &minus;cos x</span><br>
+<span class="m">f&prime;(x) = e&#8339;(1+x) &minus; cos x</span></p>
+<p class="st"><b>Step 3 &mdash; iterate</b> <span class="m">x&#8331; = x &minus; f(x)/f&prime;(x)</span>.<br>
+At <span class="m">x = &minus;3</span>: <span class="m">f = &minus;0.008240</span>; <span class="m">f&prime; = 0.0498(&minus;2) &minus; (&minus;0.98999) = &minus;0.0996 + 0.98999 = 0.89039</span><br>
+<span class="m">x&#8321; = &minus;3 &minus; (&minus;0.008240/0.89039) = &minus;3 + 0.009255 = &minus;2.990745</span><br>
+Repeat once: <span class="m">x&#8322; = &minus;2.990735</span> &mdash; the first three decimals have stopped moving.</p>
+<p class="st"><b>Answer</b> <span class="ans">root = &minus;2.991</span></p>
+</div>
+
+<h2>UNIT II &nbsp;&mdash;&nbsp; Q3(b) or Q4(b)</h2>
+
+<h3>11 &nbsp; Bungee jumper &mdash; Euler's method &nbsp;<span class="seen">2&times;</span> <span class="nc">NO CALCULUS</span></h3>
+<div class="box">
+<p class="st"><b>Given</b> <span class="m">dv/dt = g &minus; (c/m)v&sup2;</span>, <span class="m">g = 9.8</span>, <span class="m">c = 0.25</span>, <span class="m">m = 68.1</span>, <span class="m">v(0) = 0</span>, <span class="m">h = 1</span> second.</p>
+<p class="st"><b>Step 1</b> Work out the constant once: <span class="m">c/m = 0.25/68.1 = 0.003671</span>.<br>
+So <span class="m">f(t,v) = 9.8 &minus; 0.003671 v&sup2;</span>. <em>Keep 6 figures &mdash; rounding to 0.004 changes the answer.</em></p>
+<p class="st"><b>Step 2</b> Euler's rule: <span class="m">v&#8331;&#8321; = v&#8345; + h&middot;f</span>. With <span class="m">h=1</span> that is just <span class="m">v + f</span>.</p>
+<table><tr><th>t</th><th>v</th><th><span class="m">f = 9.8 &minus; 0.003671 v&sup2;</span></th><th>new v</th></tr>
+<tr><td>0</td><td>0</td><td><span class="m">9.8 &minus; 0 = 9.8000</span></td><td>9.8000</td></tr>
+<tr><td>1</td><td>9.8000</td><td><span class="m">9.8 &minus; 0.003671(96.04) = 9.8 &minus; 0.3526 = 9.4474</span></td><td>19.2474</td></tr>
+<tr><td>2</td><td>19.2474</td><td><span class="m">9.8 &minus; 0.003671(370.46) = 9.8 &minus; 1.3600 = 8.4400</span></td><td><span class="ans">27.6874</span></td></tr></table>
+<p class="st"><b>Answer</b> <span class="ans">v(3) = 27.69 m/s</span></p>
+</div>
+
+<h3>12 &nbsp; Euler: <span class="m">dy/dx &minus; 2y = 3e&#8339;</span>, <span class="m">y(0)=0</span>, find <span class="m">y(0.2)</span>, <span class="m">h=0.1</span> &nbsp;<span class="seen">2&times;</span> <span class="nc">NO CALCULUS</span></h3>
+<div class="box">
+<p class="st"><b>Step 1</b> Rearrange so <span class="m">dy/dx</span> is alone: <span class="m">dy/dx = 2y + 3e&#8339;</span>. So <span class="m">f(x,y) = 2y + 3e&#8339;</span>.</p>
+<p class="st"><b>Step 2</b> <span class="m">y&#8331;&#8321; = y&#8345; + h&middot;f(x&#8345;, y&#8345;)</span> with <span class="m">h = 0.1</span>.</p>
+<table><tr><th>Step</th><th>x</th><th>y</th><th><span class="m">f = 2y + 3e&#8339;</span></th><th><span class="m">y + 0.1f</span></th></tr>
+<tr><td>1</td><td>0</td><td>0</td><td><span class="m">0 + 3(1) = 3.000000</span></td><td>0.300000</td></tr>
+<tr><td>2</td><td>0.1</td><td>0.300000</td><td><span class="m">0.6 + 3(1.105171) = 3.915513</span></td><td><span class="ans">0.691551</span></td></tr></table>
+<p class="st"><b>Answer</b> <span class="ans">y(0.2) = 0.691551</span> &nbsp;&nbsp;<em>(<span class="m">e&#8304;&#903;&sup1; = 1.105171</span>)</em></p>
+<p class="st"><b>Variant</b> Same DE with <span class="m">y(1)=0</span>, <span class="m">h=0.05</span>, to <span class="m">x=1.1</span>:<br>
+<span class="m">y(1.05) = 0 + 0.05(0 + 3e&sup1;) = 0.05(8.154845) = 0.407742</span><br>
+<span class="m">y(1.10) = 0.407742 + 0.05(0.815484 + 3&times;2.857651) = </span><span class="ans">0.877164</span></p>
+</div>
+
+<h3>14 &nbsp; Taylor's series method: <span class="m">dy/dt = e&#7511; &minus; 2y</span>, <span class="m">y(0)=1</span>, at <span class="m">t=0.1</span> &nbsp;<span class="seen">2&times;</span> <span class="cal">NEEDS CALCULUS</span></h3>
+<div class="box">
+<p class="st"><b>The formula</b> <span class="m">y(t) = y&#8320; + t&middot;y&prime;&#8320; + (t&sup2;/2!)y&Prime;&#8320; + (t&sup3;/3!)y&prime;&Prime;&#8320;</span>, all derivatives at the start point.</p>
+<p class="st"><b>Step 1</b> The DE <em>is</em> <span class="m">y&prime;</span>: &nbsp;<span class="m">y&prime; = e&#7511; &minus; 2y</span></p>
+<p class="st"><b>Step 2</b> Differentiate that. <strong>Key point: <span class="m">y</span> is a function of <span class="m">t</span>, so
+<span class="m">d/dt(y) = y&prime;</span>, not zero.</strong><br>
+<span class="m">y&Prime; = d/dt(e&#7511;) &minus; 2&middot;d/dt(y) = e&#7511; &minus; 2y&prime;</span></p>
+<p class="st"><b>Step 3</b> Again: <span class="m">y&prime;&Prime; = e&#7511; &minus; 2y&Prime;</span></p>
+<p class="st"><b>Step 4</b> Now put in <span class="m">t = 0, y = 1</span> and work <em>downwards</em> &mdash; each line uses the one above.<br>
+<span class="m">y&prime; = e&#8304; &minus; 2(1) = 1 &minus; 2 = &minus;1</span><br>
+<span class="m">y&Prime; = e&#8304; &minus; 2(&minus;1) = 1 + 2 = 3</span><br>
+<span class="m">y&prime;&Prime; = e&#8304; &minus; 2(3) = 1 &minus; 6 = &minus;5</span></p>
+<p class="st"><b>Step 5</b> Substitute with <span class="m">t = 0.1</span> (<span class="m">2! = 2</span>, <span class="m">3! = 6</span>):<br>
+<span class="m">y = 1 + (0.1)(&minus;1) + (0.01/2)(3) + (0.001/6)(&minus;5)</span><br>
+<span class="m">= 1 &minus; 0.1 + 0.015 &minus; 0.000833</span></p>
+<p class="st"><b>Answer</b> <span class="ans">y(0.1) = 0.914167</span></p>
+</div>
+
+<h3>15 &nbsp; Newton's law of cooling: 300&deg;F, room 80&deg;F, 250&deg;F after 10 min &mdash; find <span class="m">T(20)</span> &nbsp;<span class="seen">2&times;</span> <span class="nc">NO CALCULUS NEEDED</span></h3>
+<div class="box">
+<p class="st"><b>Use the ready-made formula</b> &mdash; you do not have to solve the differential equation:<br>
+<span class="m">T = T&#8320; + (T&#8321; &minus; T&#8320;)e&#8315;&#7503;&#7511;</span>, &nbsp; <span class="m">T&#8320;</span> = room temp, <span class="m">T&#8321;</span> = starting temp.</p>
+<p class="st"><b>Step 1</b> <span class="m">T&#8320; = 80</span>, <span class="m">T&#8321; = 300</span>, so <span class="m">T&#8321; &minus; T&#8320; = 220</span>:<br>
+<span class="m">T = 80 + 220 e&#8315;&#7503;&#7511;</span></p>
+<p class="st"><b>Step 2</b> Use the 10-minute reading to pin down <span class="m">e&#8315;&sup1;&#8304;&#7503;</span>:<br>
+<span class="m">250 = 80 + 220 e&#8315;&sup1;&#8304;&#7503;</span> &rarr; <span class="m">170 = 220 e&#8315;&sup1;&#8304;&#7503;</span> &rarr; <span class="m">e&#8315;&sup1;&#8304;&#7503; = 170/220 = 17/22</span></p>
+<p class="st"><b>Step 3 &mdash; the shortcut.</b> You do <strong>not</strong> need <span class="m">k</span>. Notice
+<span class="m">e&#8315;&sup2;&#8304;&#7503; = (e&#8315;&sup1;&#8304;&#7503;)&sup2;</span> &mdash; just square it:<br>
+<span class="m">e&#8315;&sup2;&#8304;&#7503; = (17/22)&sup2; = 289/484 = 0.597107</span></p>
+<p class="st"><b>Step 4</b> <span class="m">T(20) = 80 + 220(0.597107) = 80 + 131.364</span></p>
+<p class="st"><b>Answer</b> <span class="ans">T(20) = 211.36 &deg;F</span></p>
+<p class="st"><b>Coffee variant</b> 92&deg;C, room 24&deg;C, 80&deg;C after 1 min, when does it hit 65&deg;C?<br>
+<span class="m">T = 24 + 68e&#8315;&#7503;&#7511;</span>; at <span class="m">t=1</span>: <span class="m">56 = 68e&#8315;&#7503;</span> &rarr; <span class="m">e&#8315;&#7503; = 14/17</span> &rarr; <span class="m">k = log(17/14) = 0.194156</span><br>
+For <span class="m">T=65</span>: <span class="m">41 = 68e&#8315;&#7503;&#7511;</span> &rarr; <span class="m">e&#8315;&#7503;&#7511; = 41/68</span> &rarr; <span class="m">kt = log(68/41)</span><br>
+<span class="m">t = log(1.65854)/0.194156 = 0.505933/0.194156 = </span><span class="ans">2.606 minutes</span></p>
+</div>
+
+<h3>16 &nbsp; Orthogonal trajectory of cardioids <span class="m">r = a(1&minus;cos&theta;)</span> &nbsp;<span class="seen">1&times;</span> <span class="cal">NEEDS CALCULUS</span></h3>
+<div class="box">
+<p class="st"><b>Given</b> the family's DE is already handed to you: <span class="m">dr/d&theta; = r cot(&theta;/2)</span>.</p>
+<p class="st"><b>Step 1 &mdash; the swap.</b> For polar, replace <span class="m">dr/d&theta;</span> by <span class="m">&minus;r&sup2;(d&theta;/dr)</span>:<br>
+<span class="m">&minus;r&sup2;(d&theta;/dr) = r cot(&theta;/2)</span></p>
+<p class="st"><b>Step 2 &mdash; tidy up.</b> Divide both sides by <span class="m">r</span>: <span class="m">&minus;r(d&theta;/dr) = cot(&theta;/2)</span>.<br>
+Now separate &mdash; get all the <span class="m">r</span> on one side, all the <span class="m">&theta;</span> on the other:<br>
+<span class="m">&minus;r d&theta; = cot(&theta;/2) dr</span> &rarr; <span class="m">dr/r = &minus;tan(&theta;/2) d&theta;</span></p>
+<p class="st"><b>Step 3 &mdash; integrate both sides.</b><br>
+Left: <span class="m">&int;dr/r = log r</span><br>
+Right: <span class="m">&int;&minus;tan(&theta;/2)d&theta;</span>. Using <span class="m">&int;tan u du = &minus;log(cos u)</span> with <span class="m">u = &theta;/2</span>
+(so <span class="m">d&theta; = 2du</span>): this gives <span class="m">+2 log(cos(&theta;/2))</span><br>
+So <span class="m">log r = 2 log cos(&theta;/2) + log c</span></p>
+<p class="st"><b>Step 4 &mdash; undo the logs.</b> <span class="m">2 log A = log A&sup2;</span> and <span class="m">log A + log B = log AB</span>:<br>
+<span class="m">log r = log(c cos&sup2;(&theta;/2))</span> &rarr; <span class="m">r = c cos&sup2;(&theta;/2)</span></p>
+<p class="st"><b>Step 5</b> Use <span class="m">cos&sup2;(&theta;/2) = (1 + cos&theta;)/2</span>:</p>
+<p class="st"><b>Answer</b> <span class="ans">r = C(1 + cos&theta;)</span> &nbsp;&mdash; the same cardioid, reflected.</p>
+</div>
+
+<h3>17 &nbsp; If <span class="m">r&#8319; = k cos(n&theta;)</span>, find the DE of that family &nbsp;<span class="seen">1&times;</span> <span class="cal">NEEDS CALCULUS</span></h3>
+<div class="box">
+<p class="st"><b>Aim</b> Get rid of the parameter <span class="m">k</span>. Taking logs first makes this easy.</p>
+<p class="st"><b>Step 1</b> <span class="m">log(r&#8319;) = log k + log(cos n&theta;)</span> &rarr; <span class="m">n log r = log k + log cos n&theta;</span></p>
+<p class="st"><b>Step 2</b> Differentiate w.r.t. <span class="m">&theta;</span>. <span class="m">log k</span> is a constant &rarr; 0.<br>
+Left: <span class="m">n&middot;d/d&theta;(log r) = n&middot;(1/r)(dr/d&theta;)</span> &nbsp;(chain rule &mdash; r depends on &theta;)<br>
+Right: <span class="m">d/d&theta;(log cos n&theta;) = (1/cos n&theta;)&middot;(&minus;n sin n&theta;) = &minus;n tan n&theta;</span></p>
+<p class="st"><b>Step 3</b> <span class="m">n(1/r)(dr/d&theta;) = &minus;n tan n&theta;</span>. Cancel <span class="m">n</span>:</p>
+<p class="st"><b>Answer</b> <span class="ans">(1/r)(dr/d&theta;) = &minus;tan(n&theta;), &nbsp;i.e. dr/d&theta; + r tan(n&theta;) = 0</span></p>
+</div>
+
+<h3>18 &nbsp; Orthogonal trajectory of <span class="m">r = b sin&theta;</span> &nbsp;<span class="seen">2&times;</span> <span class="cal">NEEDS CALCULUS</span></h3>
+<div class="box">
+<p class="st"><b>Step 1 &mdash; eliminate b.</b> <span class="m">dr/d&theta; = b cos&theta;</span>. Since <span class="m">b = r/sin&theta;</span>:<br>
+<span class="m">dr/d&theta; = (r/sin&theta;)cos&theta; = r cot&theta;</span> &rarr; <span class="m">(1/r)(dr/d&theta;) = cot&theta;</span></p>
+<p class="st"><b>Step 2 &mdash; swap.</b> Replacing <span class="m">dr/d&theta; &rarr; &minus;r&sup2;d&theta;/dr</span> turns <span class="m">cot&theta;</span> into <span class="m">&minus;tan&theta;</span>:<br>
+<span class="m">(1/r)(dr/d&theta;) = &minus;tan&theta;</span></p>
+<p class="st"><b>Step 3 &mdash; separate and integrate.</b><br>
+<span class="m">dr/r = &minus;tan&theta; d&theta;</span> &rarr; <span class="m">log r = &minus;(&minus;log cos&theta;) + log c = log cos&theta; + log c</span></p>
+<p class="st"><b>Answer</b> <span class="ans">r = c cos&theta;</span></p>
+</div>
+
+<h2>UNIT III &nbsp;&mdash;&nbsp; Q5(b) or Q6(b)</h2>
+
+<h3>21 &nbsp; Prove <span class="m">(1/(D+a))X = e&#8315;&#7491;&#8339;&int;X e&#7491;&#8339; dx</span> &nbsp;<span class="seen">4&times; &mdash; the safest 4 marks in the paper</span> <span class="cal">light calculus</span></h3>
+<div class="box">
+<p class="st"><b>What the notation means</b> <span class="m">D</span> means "differentiate", so <span class="m">Dy = dy/dx</span>.
+<span class="m">1/(D+a)</span> means "undo <span class="m">(D+a)</span>". Nothing to memorise numerically &mdash; this proof never changes.</p>
+<p class="st"><b>Step 1</b> Call the answer <span class="m">y</span>: &nbsp;<span class="m">y = (1/(D+a))X</span></p>
+<p class="st"><b>Step 2</b> Multiply both sides by <span class="m">(D+a)</span> to clear the fraction:<br>
+<span class="m">(D+a)y = X</span>, &nbsp;which written out is &nbsp;<span class="m">dy/dx + ay = X</span></p>
+<p class="st"><b>Step 3</b> This is a standard linear equation <span class="m">dy/dx + Py = Q</span> with <span class="m">P = a</span>.<br>
+Its integrating factor is <span class="m">e&#8747;&#7295;&#7496;&#7492; = e&#8747;&#7491;&#7496;&#7492; = e&#7491;&#8339;</span>.</p>
+<p class="st"><b>Step 4</b> Multiply the whole equation by <span class="m">e&#7491;&#8339;</span>:<br>
+<span class="m">e&#7491;&#8339;(dy/dx) + a e&#7491;&#8339; y = X e&#7491;&#8339;</span></p>
+<p class="st"><b>Step 5 &mdash; spot the product rule backwards.</b> The left side is exactly what you get
+if you differentiate <span class="m">y&middot;e&#7491;&#8339;</span>:<br>
+<span class="m">d/dx(y e&#7491;&#8339;) = (dy/dx)e&#7491;&#8339; + y(a e&#7491;&#8339;)</span> &nbsp;&#10003; same thing.<br>
+So the equation is simply <span class="m">d/dx(y e&#7491;&#8339;) = X e&#7491;&#8339;</span></p>
+<p class="st"><b>Step 6</b> Integrate both sides w.r.t. x. On the left, integrating a derivative just undoes it:<br>
+<span class="m">y e&#7491;&#8339; = &int;X e&#7491;&#8339; dx</span></p>
+<p class="st"><b>Step 7</b> Divide by <span class="m">e&#7491;&#8339;</span> (dividing by <span class="m">e&#7491;&#8339;</span> is multiplying by <span class="m">e&#8315;&#7491;&#8339;</span>):</p>
+<p class="st"><b>Answer</b> <span class="ans">y = e&#8315;&#7491;&#8339; &int;X e&#7491;&#8339; dx</span> &nbsp;&#9632; &nbsp;<em>Seven lines. Learn them.</em></p>
+</div>
+
+<h3>22 &nbsp; General solution if the A.E. is <span class="m">&lambda;&sup3;(&lambda;+4)&sup2;(&lambda;&sup2;+2&lambda;+5)&sup2; = 0</span> &nbsp;<span class="seen">1&times;</span> <span class="nc">NO CALCULUS</span></h3>
+<div class="box">
+<p class="st"><b>Step 1 &mdash; read off the roots.</b><br>
+<span class="m">&lambda;&sup3; = 0</span> &rarr; <span class="m">&lambda; = 0</span>, <strong>three times</strong><br>
+<span class="m">(&lambda;+4)&sup2; = 0</span> &rarr; <span class="m">&lambda; = &minus;4</span>, <strong>twice</strong><br>
+<span class="m">(&lambda;&sup2;+2&lambda;+5)&sup2; = 0</span> &rarr; solve <span class="m">&lambda;&sup2;+2&lambda;+5=0</span> by the quadratic formula:<br>
+<span class="m">&lambda; = [&minus;2 &plusmn; &radic;(4&minus;20)]/2 = [&minus;2 &plusmn; &radic;(&minus;16)]/2 = (&minus;2 &plusmn; 4i)/2 = &minus;1 &plusmn; 2i</span>, <strong>each twice</strong></p>
+<p class="st"><b>Step 2 &mdash; apply the rules.</b><br>
+&bull; root <span class="m">m</span> repeated <span class="m">k</span> times &rarr; <span class="m">(C&#8321; + C&#8322;x + &hellip; + C&#7503;x&#7503;&#8315;&sup1;)e&#7504;&#8339;</span><br>
+&bull; complex <span class="m">&alpha; &plusmn; i&beta;</span> &rarr; <span class="m">e&#7482;&#8339;(A cos&beta;x + B sin&beta;x)</span>; if repeated, the constants become linear in x</p>
+<p class="st"><b>Step 3 &mdash; build each piece.</b><br>
+<span class="m">&lambda;=0</span> three times &rarr; <span class="m">(C&#8321;+C&#8322;x+C&#8323;x&sup2;)e&#8304;&#8339; = C&#8321;+C&#8322;x+C&#8323;x&sup2;</span> &nbsp;(since <span class="m">e&#8304; = 1</span>)<br>
+<span class="m">&lambda;=&minus;4</span> twice &rarr; <span class="m">(C&#8324;+C&#8325;x)e&#8315;&#8308;&#8339;</span><br>
+<span class="m">&minus;1&plusmn;2i</span> twice &rarr; <span class="m">e&#8315;&#8339;[(C&#8326;+C&#8327;x)cos2x + (C&#8328;+C&#8329;x)sin2x]</span></p>
+<p class="st"><b>Answer</b> <span class="ans">y = (C&#8321;+C&#8322;x+C&#8323;x&sup2;) + (C&#8324;+C&#8325;x)e&#8315;&#8308;&#8339; + e&#8315;&#8339;[(C&#8326;+C&#8327;x)cos2x + (C&#8328;+C&#8329;x)sin2x]</span></p>
+</div>
+
+<h3>23 &nbsp; Show <span class="m">y&#8305;&#7515; &minus; k&#8308;y = 0</span> gives <span class="m">C&#8321;cos kx + C&#8322;sin kx + C&#8323;cosh kx + C&#8324;sinh kx</span> &nbsp;<span class="seen">1&times;</span> <span class="nc">NO CALCULUS</span></h3>
+<div class="box">
+<p class="st"><b>Step 1</b> Auxiliary equation: replace <span class="m">y&#8305;&#7515;</span> by <span class="m">m&#8308;</span>, <span class="m">y</span> by 1:<br>
+<span class="m">m&#8308; &minus; k&#8308; = 0</span></p>
+<p class="st"><b>Step 2</b> Factorise as a difference of two squares (twice):<br>
+<span class="m">m&#8308; &minus; k&#8308; = (m&sup2;)&sup2; &minus; (k&sup2;)&sup2; = (m&sup2; &minus; k&sup2;)(m&sup2; + k&sup2;) = 0</span></p>
+<p class="st"><b>Step 3</b> <span class="m">m&sup2; = k&sup2;</span> &rarr; <span class="m">m = &plusmn;k</span> (real). &nbsp;<span class="m">m&sup2; = &minus;k&sup2;</span> &rarr; <span class="m">m = &plusmn;ik</span> (complex, <span class="m">&alpha;=0, &beta;=k</span>).</p>
+<p class="st"><b>Step 4</b> Write the C.F.:<br>
+<span class="m">y = Ae&#7503;&#8339; + Be&#8315;&#7503;&#8339; + e&#8304;&#8339;(C cos kx + D sin kx)</span></p>
+<p class="st"><b>Step 5 &mdash; convert the exponentials.</b> By definition
+<span class="m">cosh kx = (e&#7503;&#8339;+e&#8315;&#7503;&#8339;)/2</span> and <span class="m">sinh kx = (e&#7503;&#8339;&minus;e&#8315;&#7503;&#8339;)/2</span>.<br>
+So <span class="m">e&#7503;&#8339; = cosh kx + sinh kx</span> and <span class="m">e&#8315;&#7503;&#8339; = cosh kx &minus; sinh kx</span>. Then<br>
+<span class="m">Ae&#7503;&#8339; + Be&#8315;&#7503;&#8339; = (A+B)cosh kx + (A&minus;B)sinh kx</span>. Rename <span class="m">A+B = C&#8323;</span>, <span class="m">A&minus;B = C&#8324;</span>.</p>
+<p class="st"><b>Answer</b> <span class="ans">y = C&#8321;cos kx + C&#8322;sin kx + C&#8323;cosh kx + C&#8324;sinh kx</span> &#9632;</p>
+</div>
+
+<h3>24 &nbsp; Solve the BVP <span class="m">y&Prime; + 4y&prime; + 4y = 0</span>, <span class="m">y(1)=0</span>, <span class="m">y&prime;(0)=&minus;1</span> &nbsp;<span class="seen">1&times;</span> <span class="cal">light calculus</span></h3>
+<div class="box">
+<p class="st"><b>Step 1</b> A.E.: <span class="m">m&sup2; + 4m + 4 = (m+2)&sup2; = 0</span> &rarr; <span class="m">m = &minus;2</span>, repeated.<br>
+Repeated root &rarr; <span class="m">y = (A + Bx)e&#8315;&sup2;&#8339;</span></p>
+<p class="st"><b>Step 2 &mdash; differentiate, using the product rule.</b> Let <span class="m">u = A+Bx</span>, <span class="m">v = e&#8315;&sup2;&#8339;</span>.<br>
+<span class="m">u&prime; = B</span>, &nbsp;<span class="m">v&prime; = &minus;2e&#8315;&sup2;&#8339;</span><br>
+<span class="m">y&prime; = u&prime;v + uv&prime; = Be&#8315;&sup2;&#8339; + (A+Bx)(&minus;2e&#8315;&sup2;&#8339;) = e&#8315;&sup2;&#8339;[B &minus; 2A &minus; 2Bx]</span></p>
+<p class="st"><b>Step 3</b> Apply <span class="m">y&prime;(0) = &minus;1</span>. At <span class="m">x=0</span>, <span class="m">e&#8304; = 1</span>:<br>
+<span class="m">B &minus; 2A = &minus;1</span> &nbsp;&hellip;(i)</p>
+<p class="st"><b>Step 4</b> Apply <span class="m">y(1) = 0</span>:<br>
+<span class="m">(A + B)e&#8315;&sup2; = 0</span>. Since <span class="m">e&#8315;&sup2; &ne; 0</span>, we need <span class="m">A + B = 0</span>, so <span class="m">B = &minus;A</span> &nbsp;&hellip;(ii)</p>
+<p class="st"><b>Step 5</b> Put (ii) into (i): <span class="m">&minus;A &minus; 2A = &minus;1</span> &rarr; <span class="m">&minus;3A = &minus;1</span> &rarr; <span class="m">A = 1/3</span>, <span class="m">B = &minus;1/3</span></p>
+<p class="st"><b>Answer</b> <span class="ans">y = (1 &minus; x)e&#8315;&sup2;&#8339; / 3</span></p>
+</div>
+
+<h3>25 &nbsp; Solve the IVP <span class="m">y&Prime; &minus; y = 0</span>, <span class="m">y(0)=3</span>, <span class="m">y&prime;(0)=3</span> &nbsp;<span class="seen">1&times;</span> <span class="nc">almost no calculus</span></h3>
+<div class="box">
+<p class="st"><b>Step 1</b> A.E.: <span class="m">m&sup2; &minus; 1 = 0</span> &rarr; <span class="m">m = +1</span> and <span class="m">m = &minus;1</span> &rarr; <span class="m">y = Ae&#8339; + Be&#8315;&#8339;</span></p>
+<p class="st"><b>Step 2</b> <span class="m">y&prime; = Ae&#8339; &minus; Be&#8315;&#8339;</span> &nbsp;(<span class="m">e&#8315;&#8339;</span> differentiates to <span class="m">&minus;e&#8315;&#8339;</span>)</p>
+<p class="st"><b>Step 3</b> At <span class="m">x=0</span>, both exponentials are 1:<br>
+<span class="m">y(0) = A + B = 3</span> &nbsp;&hellip;(i) &nbsp;&nbsp; <span class="m">y&prime;(0) = A &minus; B = 3</span> &nbsp;&hellip;(ii)</p>
+<p class="st"><b>Step 4</b> Add (i) and (ii): <span class="m">2A = 6</span> &rarr; <span class="m">A = 3</span>. Then <span class="m">B = 0</span>.</p>
+<p class="st"><b>Answer</b> <span class="ans">y = 3e&#8339;</span></p>
+</div>
+
+<h3>26 &nbsp; Find the P.I. of <span class="m">y&Prime; &minus; y&prime; = x&sup2; + 2x + 4</span> &nbsp;<span class="seen">1&times;</span> <span class="cal">NEEDS CALCULUS</span></h3>
+<div class="box">
+<p class="st"><b>Step 1</b> In operator form: <span class="m">(D&sup2; &minus; D)y = x&sup2;+2x+4</span>, so <span class="m">y&#7527; = (1/(D&sup2;&minus;D))(x&sup2;+2x+4)</span></p>
+<p class="st"><b>Step 2</b> Factor out <span class="m">&minus;D</span> so what is left starts with 1:<br>
+<span class="m">D&sup2; &minus; D = &minus;D(1 &minus; D)</span>, so <span class="m">y&#7527; = &minus;(1/D)&middot;(1/(1&minus;D))&middot;(x&sup2;+2x+4)</span></p>
+<p class="st"><b>Step 3</b> Expand <span class="m">1/(1&minus;D)</span> as a series (this is the binomial expansion
+<span class="m">(1&minus;D)&#8315;&sup1; = 1 + D + D&sup2; + D&sup3; + &hellip;</span>). Stop at <span class="m">D&sup2;</span> &mdash; higher terms kill a quadratic.</p>
+<p class="st"><b>Step 4</b> Apply it. <strong>Here <span class="m">D</span> just means "differentiate".</strong><br>
+<span class="m">(1)(x&sup2;+2x+4) = x&sup2;+2x+4</span><br>
+<span class="m">(D)(x&sup2;+2x+4) = 2x+2</span><br>
+<span class="m">(D&sup2;)(x&sup2;+2x+4) = 2</span><br>
+Add them: <span class="m">x&sup2; + 2x + 4 + 2x + 2 + 2 = x&sup2; + 4x + 8</span></p>
+<p class="st"><b>Step 5</b> Now the <span class="m">&minus;(1/D)</span>. <span class="m">1/D</span> means <strong>integrate</strong>, and the minus flips the sign:<br>
+<span class="m">&int;(x&sup2;+4x+8)dx = x&sup3;/3 + 2x&sup2; + 8x</span></p>
+<p class="st"><b>Answer</b> <span class="ans">y&#7527; = &minus;(x&sup3;/3 + 2x&sup2; + 8x)</span></p>
+</div>
+
+<h3>27 &nbsp; Solve the Legendre equation <span class="m">(2x+3)&sup2;y&Prime; + 2(2x+3)y&prime; &minus; 12y = 0</span> &nbsp;<span class="seen">1&times;</span> <span class="nc">NO CALCULUS after the swap</span></h3>
+<div class="box">
+<p class="st"><b>Step 1 &mdash; the substitution.</b> Put <span class="m">2x+3 = e&#7611;</span>. Here <span class="m">a = 2</span> (whatever multiplies x).<br>
+The standard replacements are:<br>
+<span class="m">(2x+3)y&prime; = 2Dy</span> &nbsp;&nbsp; <span class="m">(2x+3)&sup2;y&Prime; = 2&sup2;D(D&minus;1)y = 4D(D&minus;1)y</span><br>
+<strong>The 4 is the thing everyone forgets.</strong></p>
+<p class="st"><b>Step 2 &mdash; substitute.</b><br>
+<span class="m">4D(D&minus;1)y + 2(2Dy) &minus; 12y = 0</span><br>
+<span class="m">4D&sup2;y &minus; 4Dy + 4Dy &minus; 12y = 0</span><br>
+The <span class="m">&minus;4Dy</span> and <span class="m">+4Dy</span> cancel: <span class="m">4D&sup2;y &minus; 12y = 0</span></p>
+<p class="st"><b>Step 3</b> Divide by 4: <span class="m">D&sup2;y = 3y</span>. A.E.: <span class="m">m&sup2; = 3</span> &rarr; <span class="m">m = &plusmn;&radic;3</span></p>
+<p class="st"><b>Step 4</b> <span class="m">y = C&#8321;e&#8730;&sup3;&#7611; + C&#8322;e&#8315;&#8730;&sup3;&#7611;</span></p>
+<p class="st"><b>Step 5 &mdash; substitute back.</b> Since <span class="m">e&#7611; = 2x+3</span>, we get <span class="m">e&#8730;&sup3;&#7611; = (e&#7611;)&#8730;&sup3; = (2x+3)&#8730;&sup3;</span>.</p>
+<p class="st"><b>Answer</b> <span class="ans">y = C&#8321;(2x+3)&#8730;&sup3; + C&#8322;(2x+3)&#8315;&#8730;&sup3;</span></p>
+</div>
+
+<h3>28&ndash;29 &nbsp; Writing the C.F. from given roots &nbsp;<span class="seen">2&times;</span> <span class="nc">NO CALCULUS</span></h3>
+<div class="box">
+<p class="st"><b>Roots <span class="m">&minus;3&plusmn;i, 2, 2, 2</span>:</b><br>
+<span class="m">&minus;3&plusmn;i</span> is complex with <span class="m">&alpha;=&minus;3</span>, <span class="m">&beta;=1</span> &rarr; <span class="m">e&#8315;&sup3;&#8339;(C&#8321;cos x + C&#8322;sin x)</span><br>
+<span class="m">2</span> repeated three times &rarr; <span class="m">(C&#8323;+C&#8324;x+C&#8325;x&sup2;)e&sup2;&#8339;</span><br>
+<span class="ans">y = e&#8315;&sup3;&#8339;(C&#8321;cos x + C&#8322;sin x) + (C&#8323;+C&#8324;x+C&#8325;x&sup2;)e&sup2;&#8339;</span></p>
+<p class="st"><b>4th-order, two roots imaginary and two real distinct:</b><br>
+Call them <span class="m">&alpha;&plusmn;i&beta;</span> and <span class="m">m&#8321;, m&#8322;</span>:<br>
+<span class="ans">y = e&#7482;&#8339;(C&#8321;cos&beta;x + C&#8322;sin&beta;x) + C&#8323;e&#7504;&sup1;&#8339; + C&#8324;e&#7504;&sup2;&#8339;</span></p>
+</div>
+
+<h2>UNIT IV &nbsp;&mdash;&nbsp; Q7(b) or Q8(b) &nbsp;<span style="font-weight:400;font-size:9pt">&mdash; almost all pure arithmetic</span></h2>
+
+<div class="box win" style="padding:1.8mm 2.4mm">
+<strong>Start your revision here.</strong> Every question in this unit is building a table of differences and
+substituting into a formula. <strong>There is no calculus at all.</strong></div>
+
+<h3>31 &nbsp; Missing terms: <span class="m">x = 45,50,55,60,65</span>; <span class="m">y = 3.0, &ndash;, 2.0, &ndash;, &minus;2.4</span> &nbsp;<span class="seen">2&times;</span> <span class="nc">NO CALCULUS</span></h3>
+<div class="box">
+<p class="st"><b>The idea</b> You have <strong>3 known</strong> values. Three points determine a <em>quadratic</em>.
+For a quadratic, all <strong>third</strong> differences are zero. That gives two equations for the two unknowns.</p>
+<p class="st"><b>Step 1</b> Call the unknowns <span class="m">a</span> and <span class="m">b</span>:
+<span class="m">y = 3.0, a, 2.0, b, &minus;2.4</span></p>
+<p class="st"><b>Step 2</b> Build the difference table. Each entry = (the one below) &minus; (the one above).</p>
+<table><tr><th>y</th><th>1st difference</th><th>2nd difference</th><th>3rd difference</th></tr>
+<tr><td>3.0</td><td rowspan="1"><span class="m">a &minus; 3</span></td><td></td><td></td></tr>
+<tr><td>a</td><td><span class="m">2 &minus; a</span></td><td><span class="m">(2&minus;a)&minus;(a&minus;3) = 5 &minus; 2a</span></td><td></td></tr>
+<tr><td>2.0</td><td><span class="m">b &minus; 2</span></td><td><span class="m">(b&minus;2)&minus;(2&minus;a) = a + b &minus; 4</span></td><td><span class="m">(a+b&minus;4)&minus;(5&minus;2a) = 3a + b &minus; 9</span></td></tr>
+<tr><td>b</td><td><span class="m">&minus;2.4 &minus; b</span></td><td><span class="m">(&minus;2.4&minus;b)&minus;(b&minus;2) = &minus;0.4 &minus; 2b</span></td><td><span class="m">(&minus;0.4&minus;2b)&minus;(a+b&minus;4) = 3.6 &minus; a &minus; 3b</span></td></tr>
+<tr><td>&minus;2.4</td><td></td><td></td><td></td></tr></table>
+<p class="st"><b>Step 3</b> Set <strong>both</strong> third differences to zero:<br>
+<span class="m">3a + b &minus; 9 = 0</span> &nbsp;&hellip;(i) &nbsp;&nbsp; <span class="m">3.6 &minus; a &minus; 3b = 0</span> &nbsp;&hellip;(ii)</p>
+<p class="st"><b>Step 4</b> From (i): <span class="m">b = 9 &minus; 3a</span>. Put into (ii):<br>
+<span class="m">3.6 &minus; a &minus; 3(9 &minus; 3a) = 0</span> &rarr; <span class="m">3.6 &minus; a &minus; 27 + 9a = 0</span> &rarr; <span class="m">8a = 23.4</span> &rarr; <span class="m">a = 2.925</span><br>
+<span class="m">b = 9 &minus; 3(2.925) = 9 &minus; 8.775 = 0.225</span></p>
+<p class="st"><b>Answer</b> <span class="ans">y(50) = 2.925, &nbsp; y(60) = 0.225</span></p>
+<p class="st"><b>Step 5 &mdash; check (do this, it earns a mark).</b> Fill them in: <span class="m">3.0, 2.925, 2.0, 0.225, &minus;2.4</span><br>
+1st: <span class="m">&minus;0.075, &minus;0.925, &minus;1.775, &minus;2.625</span> &nbsp;&nbsp; 2nd: <span class="m">&minus;0.85, &minus;0.85, &minus;0.85</span> &#10003; constant.</p>
+<p class="st"><b>Warning</b> One equation is not enough. Setting a single <em>fourth</em> difference to zero gives only
+<span class="m">a + b = 3.15</span>, which you cannot solve. You need <strong>both third differences</strong>.</p>
+</div>
+
+<h3>32 &nbsp; Missing terms: <span class="m">x = 1&hellip;7</span>; <span class="m">y = 2, 5, &ndash;, 13, 22, &ndash;, 63</span> &nbsp;<span class="seen">1&times;</span> <span class="nc">NO CALCULUS</span></h3>
+<div class="box">
+<p class="st"><b>Different question &mdash; count the knowns.</b> Here there are <strong>5 known</strong> values, so a
+<em>quartic</em> (degree 4) fits, and it is the <strong>fifth</strong> differences that vanish.</p>
+<p class="st"><b>Easier route</b> Fit the quartic straight through the five known points
+<span class="m">(1,2), (2,5), (4,13), (5,22), (7,63)</span> using divided differences, then read off <span class="m">x=3</span> and <span class="m">x=6</span>.<br>
+<span class="m">P(x) = x&#8308;/60 + 2x&sup3;/15 &minus; 71x&sup2;/60 + 161x/30 &minus; 7/3</span></p>
+<p class="st"><b>Answer</b> <span class="ans">y(3) = 121/15 = 8.067, &nbsp; y(6) = 113/3 = 37.667</span><br>
+<em>Not round numbers &mdash; that is correct here, do not "tidy" them.</em></p>
+</div>
+
+<h3>33&ndash;34 &nbsp; Trapezoidal rule &nbsp;<span class="seen">2&times;</span> <span class="nc">NO CALCULUS</span></h3>
+<div class="box">
+<p class="st"><b>The rule</b> <span class="m">&int;y dx = (h/2)[(first + last) + 2&times;(everything in between)]</span>, &nbsp;<span class="m">h = (b&minus;a)/n</span></p>
+<p class="st"><b>(a) <span class="m">&int;&#8320;&sup1; dx/(1+x&sup2;)</span>, 4 strips.</b> <span class="m">h = 1/4 = 0.25</span>.<br>
+Compute <span class="m">y = 1/(1+x&sup2;)</span> at each x:<br>
+<span class="m">x=0: 1/1 = 1.000000</span> &nbsp;&middot;&nbsp; <span class="m">x=0.25: 1/1.0625 = 0.941176</span> &nbsp;&middot;&nbsp; <span class="m">x=0.5: 1/1.25 = 0.800000</span><br>
+<span class="m">x=0.75: 1/1.5625 = 0.640000</span> &nbsp;&middot;&nbsp; <span class="m">x=1: 1/2 = 0.500000</span><br>
+<span class="m">I = (0.25/2)[(1 + 0.5) + 2(0.941176 + 0.8 + 0.64)]</span><br>
+<span class="m">= 0.125[1.5 + 2(2.381176)] = 0.125[1.5 + 4.762352] = 0.125(6.262352)</span><br>
+<span class="ans">I = 0.782794</span> &nbsp;(exact <span class="m">&pi;/4 = 0.785398</span>)</p>
+<p class="st"><b>(b) <span class="m">&int;&#8320;&sup1; e&#8339; dx</span>, steps of 0.2.</b> <span class="m">h = 0.2</span>, five strips.<br>
+<span class="m">y = 1, 1.221403, 1.491825, 1.822119, 2.225541, 2.718282</span><br>
+<span class="m">I = 0.1[(1 + 2.718282) + 2(1.221403+1.491825+1.822119+2.225541)]</span><br>
+<span class="m">= 0.1[3.718282 + 2(6.760888)] = 0.1[3.718282 + 13.521776]</span><br>
+<span class="ans">I = 1.724006</span> &nbsp;(exact <span class="m">e &minus; 1 = 1.718282</span>)</p>
+</div>
+
+<h3>35 &nbsp; Backward difference table for <span class="m">y = 2x&sup2; &minus; x + cos2</span> on <span class="m">(2,3)</span>, <span class="m">h=0.2</span> &nbsp;<span class="seen">1&times;</span> <span class="nc">NO CALCULUS</span></h3>
+<div class="box">
+<p class="st"><b>Note</b> <span class="m">cos 2</span> is a <em>constant</em> (2 radians), <span class="m">= &minus;0.416147</span>. Not <span class="m">cos(2x)</span>.</p>
+<p class="st"><b>Step 1</b> Compute y at <span class="m">x = 2, 2.2, 2.4, 2.6, 2.8, 3.0</span>:<br>
+<span class="m">x=2: 8 &minus; 2 &minus; 0.416147 = 5.583853</span> &nbsp;&middot;&nbsp; <span class="m">x=2.2: 9.68 &minus; 2.2 &minus; 0.416147 = 7.063853</span><br>
+then <span class="m">8.703853, 10.503853, 12.463853, 14.583853</span></p>
+<p class="st"><b>Step 2</b> Differences:<br>
+<span class="m">&nabla;: 1.48, 1.64, 1.80, 1.96, 2.12</span><br>
+<span class="m">&nabla;&sup2;: 0.16, 0.16, 0.16, 0.16</span> &nbsp;&mdash; all equal, as they must be for a quadratic.</p>
+<p class="st"><b>Answer</b> <span class="ans">&nabla;&sup2;y&#8323; = 0.16</span> &nbsp;<em>Sanity check: for <span class="m">ax&sup2;</span> the 2nd difference is <span class="m">2ah&sup2; = 2(2)(0.04) = 0.16</span> &#10003;</em></p>
+</div>
+
+<h3>36 &nbsp; Estimate <span class="m">cosh(0.56)</span> from a table &nbsp;<span class="seen">1&times;</span> <span class="nc">NO CALCULUS</span></h3>
+<div class="box">
+<p class="st"><b>Data</b> <span class="m">x = 0.5, 0.6, 0.7, 0.8</span>; <span class="m">y = 1.1276, 1.1855, 1.2552, 1.3374</span>. <span class="m">h = 0.1</span>.</p>
+<p class="st"><b>Step 1</b> <span class="m">0.56</span> is near the <em>start</em> &rarr; use Newton <strong>forward</strong>.<br>
+<span class="m">&Delta;: 0.0579, 0.0697, 0.0822</span> &nbsp;&middot;&nbsp; <span class="m">&Delta;&sup2;: 0.0118, 0.0125</span> &nbsp;&middot;&nbsp; <span class="m">&Delta;&sup3;: 0.0007</span></p>
+<p class="st"><b>Step 2</b> <span class="m">p = (x &minus; x&#8320;)/h = (0.56 &minus; 0.5)/0.1 = 0.6</span></p>
+<p class="st"><b>Step 3</b> <span class="m">y = y&#8320; + p&Delta;y&#8320; + p(p&minus;1)/2&middot;&Delta;&sup2;y&#8320; + p(p&minus;1)(p&minus;2)/6&middot;&Delta;&sup3;y&#8320;</span><br>
+<span class="m">= 1.1276 + 0.6(0.0579) + (0.6)(&minus;0.4)/2 &times; 0.0118 + (0.6)(&minus;0.4)(&minus;1.4)/6 &times; 0.0007</span><br>
+<span class="m">= 1.1276 + 0.03474 &minus; 0.001416 + 0.0000392</span></p>
+<p class="st"><b>Answer</b> <span class="ans">cosh(0.56) &asymp; 1.16096</span> &nbsp;(true 1.16094)</p>
+</div>
+
+<h3>37&ndash;38 &nbsp; Lagrange interpolation, forward and inverse &nbsp;<span class="seen">2&times;</span> <span class="nc">NO CALCULUS</span></h3>
+<div class="box">
+<p class="st"><b>(a) Find <span class="m">f(1)</span> from <span class="m">(&minus;1,9), (0,5), (2,3)</span>.</b><br>
+Each term is <span class="m">y&#7522;</span> times a fraction: on top, <span class="m">(x&minus;</span>the other two x's<span class="m">)</span>;
+on the bottom, <span class="m">(x&#7522;&minus;</span>the other two<span class="m">)</span>.<br>
+<span class="m">P(x) = 9&middot;(x&minus;0)(x&minus;2)/((&minus;1&minus;0)(&minus;1&minus;2)) + 5&middot;(x+1)(x&minus;2)/((0+1)(0&minus;2)) + 3&middot;(x+1)(x&minus;0)/((2+1)(2&minus;0))</span><br>
+Denominators: <span class="m">(&minus;1)(&minus;3) = 3</span>, &nbsp;<span class="m">(1)(&minus;2) = &minus;2</span>, &nbsp;<span class="m">(3)(2) = 6</span><br>
+Put <span class="m">x = 1</span>: <span class="m">9(1)(&minus;1)/3 + 5(2)(&minus;1)/(&minus;2) + 3(2)(1)/6 = &minus;3 + 5 + 1</span><br>
+<span class="ans">f(1) = 3</span> &nbsp;<em>(the full polynomial is <span class="m">x&sup2; &minus; 3x + 5</span>)</em></p>
+<p class="st"><b>(b) Inverse: find <span class="m">x</span> when <span class="m">y=15</span> from <span class="m">(6,13), (9,14), (11,16)</span>.</b><br>
+Identical formula with x and y swapped:<br>
+<span class="m">x = 6&middot;(15&minus;14)(15&minus;16)/((13&minus;14)(13&minus;16)) + 9&middot;(15&minus;13)(15&minus;16)/((14&minus;13)(14&minus;16)) + 11&middot;(15&minus;13)(15&minus;14)/((16&minus;13)(16&minus;14))</span><br>
+<span class="m">= 6(1)(&minus;1)/((&minus;1)(&minus;3)) + 9(2)(&minus;1)/((1)(&minus;2)) + 11(2)(1)/((3)(2))</span><br>
+<span class="m">= 6(&minus;1/3) + 9(1) + 11(1/3) = &minus;2 + 9 + 3.667</span><br>
+<span class="ans">x = 32/3 = 10.667</span></p>
+</div>
+
+<h2>UNIT V &nbsp;&mdash;&nbsp; Q9(b) or Q10(b) &nbsp;<span style="font-weight:400;font-size:9pt">&mdash; entirely arithmetic</span></h2>
+
+<h3>41&ndash;42 &nbsp; Gauss-Seidel &nbsp;<span class="seen">3&times;</span> <span class="nc">NO CALCULUS</span></h3>
+<div class="box">
+<p class="st"><b>System A</b> <span class="m">2x+17y+4z=35</span>; <span class="m">3x+y+10z=24</span>; <span class="m">28x+4y&minus;z=32</span>, start <span class="m">(0,0,0)</span>.</p>
+<p class="st"><b>Step 1 &mdash; REORDER first.</b> Each row needs its diagonal entry to be the biggest in that row.<br>
+Row with the big <span class="m">x</span> is <span class="m">28x+4y&minus;z=32</span> &rarr; put it <strong>first</strong>.<br>
+Row with the big <span class="m">y</span> is <span class="m">2x+17y+4z=35</span> &rarr; <strong>second</strong>.<br>
+Row with the big <span class="m">z</span> is <span class="m">3x+y+10z=24</span> &rarr; <strong>third</strong>.</p>
+<p class="st"><b>Step 2 &mdash; make each variable the subject.</b><br>
+<span class="m">x = (32 &minus; 4y + z)/28</span> &nbsp;&middot;&nbsp; <span class="m">y = (35 &minus; 2x &minus; 4z)/17</span> &nbsp;&middot;&nbsp; <span class="m">z = (24 &minus; 3x &minus; y)/10</span></p>
+<p class="st"><b>Step 3 &mdash; iterate, always using the newest values.</b><br>
+<em>Iteration 1</em> (start <span class="m">y=0, z=0</span>):<br>
+<span class="m">x = (32 &minus; 0 + 0)/28 = 1.142857</span><br>
+<span class="m">y = (35 &minus; 2(1.142857) &minus; 0)/17 = (35 &minus; 2.285714)/17 = 1.924370</span> &nbsp;&larr; uses the <em>new</em> x<br>
+<span class="m">z = (24 &minus; 3(1.142857) &minus; 1.924370)/10 = (24 &minus; 3.428571 &minus; 1.924370)/10 = 1.864706</span><br>
+<em>Iteration 2</em>:<br>
+<span class="m">x = (32 &minus; 4(1.924370) + 1.864706)/28 = 0.934544</span><br>
+<span class="m">y = (35 &minus; 2(0.934544) &minus; 4(1.864706))/17 = 1.510123</span><br>
+<span class="m">z = (24 &minus; 3(0.934544) &minus; 1.510123)/10 = 1.968625</span></p>
+<p class="st"><b>Answer</b> <span class="ans">After 2 iterations: x = 0.934544, y = 1.510123, z = 1.968625</span> &nbsp;(heading for 1.001, 1.482, 1.952)</p>
+<p class="st"><b>System B</b> <span class="m">5x+2y+z=12</span>; <span class="m">x+4y+2z=15</span>; <span class="m">x+2y+5z=20</span>, start <span class="m">(1,0,0)</span>. Already dominant &mdash; no reorder.<br>
+<span class="m">x=(12&minus;2y&minus;z)/5</span>, <span class="m">y=(15&minus;x&minus;2z)/4</span>, <span class="m">z=(20&minus;x&minus;2y)/5</span><br>
+<em>It1:</em> <span class="m">x = 12/5 = 2.4</span>; <span class="m">y = (15&minus;2.4&minus;0)/4 = 3.15</span>; <span class="m">z = (20&minus;2.4&minus;6.3)/5 = 2.26</span><br>
+<em>It2:</em> <span class="m">x = (12&minus;6.3&minus;2.26)/5 = 0.688</span>; <span class="m">y = (15&minus;0.688&minus;4.52)/4 = 2.448</span>; <span class="m">z = (20&minus;0.688&minus;4.896)/5 = 2.8832</span><br>
+<span class="ans">x = 0.688, y = 2.448, z = 2.8832</span> &nbsp;(exact answer is 1, 2, 3)</p>
+</div>
+
+<h3>43 &nbsp; Rayleigh's power method, 2 iterations &nbsp;<span class="seen">1&times;</span> <span class="nc">NO CALCULUS</span></h3>
+<div class="box">
+<p class="st"><b>Given</b> <span class="m">A = [[2,&minus;2,1],[1,3,&minus;1],[&minus;1,2,2]]</span>, <span class="m">X&#8320; = [1,0,0]&#7488;</span>.</p>
+<p class="st"><b>The method</b> Multiply <span class="m">A</span> by the vector; pull out the largest-size number as
+<span class="m">&lambda;</span>; what remains is the next vector.</p>
+<p class="st"><b>Iteration 1</b> <span class="m">AX&#8320;</span> = each row of A dotted with <span class="m">[1,0,0]</span> = just the first column:<br>
+<span class="m">[2, 1, &minus;1]&#7488;</span>. Largest size is 2, so factor it out:<br>
+<span class="m">= 2[1, 0.5, &minus;0.5]&#7488;</span> &rarr; <span class="m">&lambda;&#8321; = 2</span>, <span class="m">X&#8321; = [1, 0.5, &minus;0.5]&#7488;</span></p>
+<p class="st"><b>Iteration 2</b> <span class="m">AX&#8321;</span>:<br>
+Row 1: <span class="m">2(1) + (&minus;2)(0.5) + 1(&minus;0.5) = 2 &minus; 1 &minus; 0.5 = 0.5</span><br>
+Row 2: <span class="m">1(1) + 3(0.5) + (&minus;1)(&minus;0.5) = 1 + 1.5 + 0.5 = 3</span><br>
+Row 3: <span class="m">&minus;1(1) + 2(0.5) + 2(&minus;0.5) = &minus;1 + 1 &minus; 1 = &minus;1</span><br>
+<span class="m">= [0.5, 3, &minus;1]&#7488; = 3[0.1667, 1, &minus;0.3333]&#7488;</span></p>
+<p class="st"><b>Answer</b> <span class="ans">&lambda; = 3, &nbsp; X = [0.167, 1, &minus;0.333]&#7488;</span></p>
+<p class="st"><b>Note</b> This particular matrix has <em>complex</em> eigenvalues, so the method never really settles.
+The question asks for two iterations &mdash; do them and stop. If the numbers look unstable, that is the matrix, not you.</p>
+</div>
+
+<h3>44 &nbsp; Find <span class="m">x</span> so the matrix has rank 2 &nbsp;<span class="seen">1&times;</span> <span class="nc">NO CALCULUS</span></h3>
+<div class="box">
+<p class="st"><b>Idea</b> A <span class="m">3&times;3</span> matrix has rank 3 unless its determinant is zero. So set
+<span class="m">|A| = 0</span>.</p>
+<p class="st"><b>Given</b> <span class="m">A = [[4&minus;x, 2&radic;5, 0], [2&radic;5, 4&minus;x, &radic;5], [0, &radic;5, 4&minus;x]]</span>. Write <span class="m">u = 4&minus;x</span>.</p>
+<p class="st"><b>Step 1</b> Expand along the top row:<br>
+<span class="m">|A| = u(u&middot;u &minus; &radic;5&middot;&radic;5) &minus; 2&radic;5(2&radic;5&middot;u &minus; &radic;5&middot;0) + 0</span><br>
+<span class="m">= u(u&sup2; &minus; 5) &minus; 2&radic;5(2&radic;5 u) = u&sup3; &minus; 5u &minus; 20u = u&sup3; &minus; 25u = u(u&sup2; &minus; 25)</span></p>
+<p class="st"><b>Step 2</b> Set to zero: <span class="m">u = 0</span> or <span class="m">u = &plusmn;5</span>, i.e. <span class="m">4&minus;x = 0, 5, &minus;5</span></p>
+<p class="st"><b>Answer</b> <span class="ans">x = 4, &nbsp;x = &minus;1, &nbsp;x = 9</span> &nbsp;<em>(at each of these a 2&times;2 minor is still non-zero, so the rank is exactly 2)</em></p>
+</div>
+
+<h3>45 &nbsp; Prove: if <span class="m">&lambda;</span> is an eigenvalue of <span class="m">A</span> then <span class="m">1/&lambda;</span> is one of <span class="m">A&#8315;&sup1;</span> &nbsp;<span class="seen">1&times;</span> <span class="nc">NO CALCULUS</span></h3>
+<div class="box">
+<p class="st"><b>Step 1</b> By definition, <span class="m">AX = &lambda;X</span> for some non-zero <span class="m">X</span>.</p>
+<p class="st"><b>Step 2</b> Multiply both sides <em>on the left</em> by <span class="m">A&#8315;&sup1;</span>:<br>
+<span class="m">A&#8315;&sup1;(AX) = A&#8315;&sup1;(&lambda;X)</span></p>
+<p class="st"><b>Step 3</b> On the left, <span class="m">A&#8315;&sup1;A = I</span> and <span class="m">IX = X</span>. On the right, <span class="m">&lambda;</span> is
+just a number so it slides out front:<br>
+<span class="m">X = &lambda;(A&#8315;&sup1;X)</span></p>
+<p class="st"><b>Step 4</b> Divide by <span class="m">&lambda;</span>. (Allowed: <span class="m">A</span> is invertible, so no eigenvalue is 0.)</p>
+<p class="st"><b>Answer</b> <span class="ans">A&#8315;&sup1;X = (1/&lambda;)X</span>, which says exactly that <span class="m">1/&lambda;</span> is an eigenvalue of <span class="m">A&#8315;&sup1;</span>. &#9632;</p>
+</div>
+
+<div class="box win">
+<p class="big" style="margin:0 0 1.2mm">If calculus is the problem, revise in this order</p>
+<strong>1. Unit V</strong> (Gauss-Seidel, Rayleigh, rank, the eigenvalue proof) &mdash; no calculus at all.<br>
+<strong>2. Unit IV</strong> (difference tables, missing terms, Lagrange, trapezoidal) &mdash; no calculus at all.<br>
+<strong>3. Unit II's numerical half</strong> (Euler, bungee jumper) &mdash; arithmetic once you have <span class="m">f(x,y)</span>.<br>
+<strong>4. Unit III's <span class="m">1/(D+a)</span> proof</strong> &mdash; seven lines, appeared <strong>4&times;</strong>, and you now have every one of them.<br>
+<strong>5. Unit III's C.F. questions</strong> &mdash; solving a quadratic and writing down a pattern.<br>
+Only after all that: the expansions and orthogonal trajectories, which genuinely need differentiation and integration.<br><br>
+<strong>That order alone is 4 of the 5 four-markers &mdash; 16 of the 20 marks &mdash; with barely any calculus.</strong>
+</div>
+
+<p class="foot">
+Every derivative and integral used is listed in the toolkit at the top; nothing below it assumes prior calculus.
+All numerical results computed and verified. <span class="seen">n&times;</span> = appearances across the 6 papers.
+</p>
+</body></html>
