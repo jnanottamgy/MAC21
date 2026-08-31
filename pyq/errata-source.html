@@ -1,0 +1,145 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Formula Notes — Errata</title>
+<style>
+@page{size:A4;margin:9mm 9mm 9mm 9mm}
+*{box-sizing:border-box}
+body{font-family:"DejaVu Sans","Segoe UI",Helvetica,Arial,sans-serif;font-size:8.3pt;line-height:1.34;color:#14181d;margin:0}
+h1{font-size:17pt;margin:0 0 1.5mm;letter-spacing:-.4px}
+h2{font-size:11pt;margin:4mm 0 1.8mm;padding:1.7mm 2.6mm;background:#14181d;color:#fff;border-radius:2px}
+p{margin:0 0 1.5mm}
+table{width:100%;border-collapse:collapse;margin:0 0 2.2mm;font-size:7.7pt}
+th{background:#eceef1;text-align:left;padding:1.1mm 1.5mm;border:.6px solid #9aa3ad;font-weight:700;font-size:7pt;text-transform:uppercase}
+td{padding:1.1mm 1.5mm;border:.6px solid #c2c8ce;vertical-align:top}
+tr:nth-child(even) td{background:#f7f8f9}
+tr{page-break-inside:avoid} h2{page-break-after:avoid}
+code,.m{font-family:"DejaVu Sans Mono",monospace;font-size:7.5pt;background:#eceef1;padding:0 1mm;border-radius:2px}
+.bad{background:#fadbdb;text-decoration:line-through;padding:0 1mm;border-radius:2px;font-family:"DejaVu Sans Mono",monospace;font-size:7.5pt}
+.good{background:#c9edd9;font-weight:800;padding:0 1mm;border-radius:2px;font-family:"DejaVu Sans Mono",monospace;font-size:7.5pt}
+.pg{font-family:"DejaVu Sans Mono",monospace;font-weight:700;background:#14181d;color:#fff;padding:.2mm 1.3mm;border-radius:2px;white-space:nowrap;font-size:7.2pt}
+.sev{display:inline-block;color:#fff;padding:.2mm 1.3mm;border-radius:2px;font-weight:700;font-size:6.8pt;white-space:nowrap}
+.s1{background:#8a1420}.s2{background:#a8481a}.s3{background:#5a636d}
+.box{border:1.3px solid #14181d;border-radius:3px;padding:2mm 2.6mm;margin:0 0 2.5mm;background:#f7f8f9;page-break-inside:avoid}
+.win{border-color:#16603a;background:#f3faf6}.warn{border-color:#8a1420;background:#fdf5f5}
+.lead{font-size:8.9pt;color:#3d454e;margin-bottom:2.5mm}
+.big{font-size:12.5pt;font-weight:800}
+ul{margin:0 0 1.5mm;padding-left:4mm}li{margin-bottom:.7mm}
+.foot{margin-top:3mm;padding-top:1.5mm;border-top:.8px solid #c2c8ce;font-size:7pt;color:#6b737c}
+</style></head><body>
+
+<h1>Formula Notes &mdash; Errata</h1>
+<p class="lead">Corrections to the 13-page handwritten <em>M2 unit 1&ndash;5 formulas</em>.
+<strong>Verdict: the notes are good and on the right syllabus</strong> &mdash; they cover all 28 sessions of
+MAC21 and contain nothing off-syllabus. But there are <strong>10 real errors</strong>, four of which would
+break a whole 7-marker. Fix those four in pen before you use the notes again.</p>
+
+<div class="box win" style="padding:1.8mm 2.4mm">
+<strong>What is right:</strong> Unit 2 entirely (circuits, cooling, orthogonal trajectories, Taylor/Euler/RK4)
+&middot; the whole of numerical differentiation on p9 (I checked every coefficient symbolically &mdash; all correct)
+&middot; trapezoidal and both Simpson rules &middot; Gauss-Seidel &middot; all four eigenvalue property proofs on p13
+&middot; variation of parameters &middot; CF cases and P.I. types 1&ndash;3.
+</div>
+
+<h2>Fix these four first &mdash; each breaks a full question</h2>
+<table>
+<tr><th style="width:5%">Pg</th><th style="width:22%">Topic</th><th style="width:34%">Notes say</th><th>Should be</th></tr>
+
+<tr><td><span class="pg">p6</span></td><td><strong>P.I. Type 4 — the shift rule</strong><br><span class="sev s1">breaks every e^(ax)·V problem</span></td>
+<td><span class="bad">1/f(D) · e^(ax)·V = e^(ax) · 1/f(D) · V</span></td>
+<td><span class="good">= e^(ax) · 1/f(D+a) · V</span><br>
+<em>Every D becomes D+a.</em> Check: for <span class="m">(D&minus;1)y = xe&sup2;&#8339;</span> the true P.I. is
+<span class="m">(x&minus;1)e&sup2;&#8339;</span>. The notes' rule gives <span class="m">(&minus;x&minus;1)e&sup2;&#8339;</span> &mdash; wrong.</td></tr>
+
+<tr><td><span class="pg">p7</span></td><td><strong>Legendre substitution</strong><br><span class="sev s1">appeared 4&times;</span></td>
+<td><span class="bad">t = log(ax+b) , then ax + b = log t</span></td>
+<td><span class="good">t = log(ax+b) , then ax + b = e^t</span><br>
+<em>Self-contradictory as written. Cauchy on the same page has it right (x = e&#7511;).</em></td></tr>
+
+<tr><td><span class="pg">p8</span></td><td><strong>Divided difference</strong><br><span class="sev s1">appeared 5&times;/5</span></td>
+<td><span class="bad">[x₀,x₁,x₂] = ([x₁,x₂] − [x₀,x₁]) / (x₂ − x₁)</span></td>
+<td><span class="good">= ([x₁,x₂] − [x₀,x₁]) / (x₂ − x₀)</span><br>
+<em>Denominator spans <strong>first to last</strong> node. On the recurring PYQ data (2,4)(4,56)(9,711) the
+correct value is <strong>15</strong>; the notes' version gives <strong>21</strong>.</em></td></tr>
+
+<tr><td><span class="pg">p2</span></td><td><strong>N-R, simultaneous equations</strong><br><span class="sev s1">appeared 4&times;</span></td>
+<td><span class="bad">−g(x₀,y₀) = h·gₓ(x₀,y₀) + k·f_y(x₀,y₀)</span></td>
+<td><span class="good">−g(x₀,y₀) = h·gₓ(x₀,y₀) + k·g_y(x₀,y₀)</span><br>
+<em>Second equation must use <strong>g</strong> throughout, not f.</em></td></tr>
+</table>
+
+<h2>Also wrong &mdash; fix if you have five minutes</h2>
+<table>
+<tr><th style="width:5%">Pg</th><th style="width:22%">Topic</th><th style="width:34%">Notes say</th><th>Should be</th></tr>
+<tr><td><span class="pg">p5</span></td><td>Trig identity <span class="sev s2">used in P.I.</span></td>
+<td><span class="bad">2 sin x · sin y = cos(x+y) − cos(x−y)</span></td>
+<td><span class="good">= cos(x−y) − cos(x+y)</span> &nbsp;<em>signs swapped</em></td></tr>
+<tr><td><span class="pg">p2</span></td><td>Taylor, 2 variables — 3rd degree term</td>
+<td><span class="bad">3(x−a)²(x−b)·f_xxy + 3(x−a)(x−b)²·f_xyy</span></td>
+<td><span class="good">3(x−a)²(y−b)·f_xxy + 3(x−a)(y−b)²·f_xyy</span><br><em>(x−b) written twice for (y−b)</em></td></tr>
+<tr><td><span class="pg">p2</span></td><td>Maclaurin, 2 variables — last term</td>
+<td><span class="bad">y³ · f_xxx(0,0)</span></td><td><span class="good">y³ · f_yyy(0,0)</span></td></tr>
+<tr><td><span class="pg">p2</span></td><td>r-s-t test — first line only</td>
+<td><span class="bad">rt − s³ > 0 and r > 0 → minimum</span></td>
+<td><span class="good">rt − s² > 0</span> &nbsp;<em>the other three lines are correct</em></td></tr>
+<tr><td><span class="pg">p4</span></td><td>Euler's method</td>
+<td><span class="bad">y_(n+1) = y₀ + h·f(xₙ, yₙ)</span></td>
+<td><span class="good">y_(n+1) = yₙ + h·f(xₙ, yₙ)</span> &nbsp;<em>y₀ only works for the first step</em></td></tr>
+<tr><td><span class="pg">p8</span></td><td>Newton backward — general term</td>
+<td><span class="bad">p(p+1)(p+2) … (p + (n+1))</span></td>
+<td><span class="good">p(p+1)(p+2) … (p + (n−1))</span> &nbsp;<em>early terms are fine</em></td></tr>
+</table>
+
+<h2>Sloppy but harmless &mdash; just know what is meant</h2>
+<table>
+<tr><th style="width:5%">Pg</th><th style="width:30%">What it says</th><th>Reading</th></tr>
+<tr><td><span class="pg">p12</span></td><td><span class="m">|A − λI| X = 0</span></td>
+<td>Two different things merged. Characteristic equation is <span class="good">|A − λI| = 0</span> (a determinant);
+eigenvectors come from <span class="good">(A − λI)X = 0</span> (a matrix equation).</td></tr>
+<tr><td><span class="pg">p12</span></td><td>Rayleigh "determines largest <em>eigen vector</em>"</td>
+<td>Largest <strong>eigenvalue</strong> — and its corresponding eigenvector.</td></tr>
+<tr><td><span class="pg">p5</span></td><td><span class="m">sin²x = (1 − cos²x)/2</span></td>
+<td>Make sure that reads <span class="good">cos 2x</span>, not <span class="m">cos²x</span> — the handwriting is ambiguous. Same for cos²x.</td></tr>
+<tr><td><span class="pg">p6</span></td><td>Variation of parameters headed with a 3rd-order equation</td>
+<td>The Wronskian formula given is the 2nd-order one — which is what the exam asks. Ignore the header.</td></tr>
+<tr><td><span class="pg">p12</span></td><td>Matrix-method sketch with <span class="m">e&#7511;</span> and <span class="m">e&#8315;&#7511;</span> mixed</td>
+<td>Exponents must be <span class="good">e^(λ₁t)</span> and <span class="good">e^(λ₂t)</span> consistently. The boxed
+<span class="m">X = P·diag(e^(λ₁t), e^(λ₂t))·[c₁ c₂]&#7488;</span> above it is correct — use that.</td></tr>
+<tr><td><span class="pg">p13</span></td><td>Property 4: "eigenvalues of <em>mA</em>"</td><td>of <strong>A</strong>. The proof itself is correct.</td></tr>
+</table>
+
+<h2>Gaps &mdash; on your syllabus, missing from the notes</h2>
+<div class="box warn">
+<strong>1. Finite-difference operator relations</strong> (session 18) &mdash; nowhere in the notes.
+You need <span class="good">Δ²yₙ = y_(n+2) − 2y_(n+1) + yₙ</span> and
+<span class="good">∇²yₙ = yₙ − 2y_(n−1) + y_(n−2)</span>.
+The 2-marker "express Δ²yₙ in terms of y values" has appeared <strong>twice</strong>, at slot <span class="m">Q7(a)</span>.
+Also worth knowing: <span class="m">Δ = E − 1</span>, <span class="m">∇ = 1 − E&#8315;&sup1;</span>.<br><br>
+<strong>2. Legendre operator relations</strong> &mdash; p7 gives the Cauchy ones
+(<span class="m">xy′ = Dy</span>, <span class="m">x²y″ = D(D−1)y</span>) then leaves the Legendre box blank.
+Write them in: <span class="good">(ax+b)y′ = aDy</span> &nbsp;
+<span class="good">(ax+b)²y″ = a²D(D−1)y</span> &nbsp;
+<span class="good">(ax+b)³y‴ = a³D(D−1)(D−2)y</span>.
+<em>Forgetting the a² is the classic way to lose this question.</em><br><br>
+<strong>3. The inconsistent case</strong> &mdash; p11 lists unique and infinite solutions but not
+<span class="good">ρ(A) ≠ ρ(A:B) → no solution</span>. That is one of the three cases the 2-marker asks for.<br><br>
+<strong>4. Two techniques with no formula to memorise</strong>, so they are absent by nature but still examinable:
+<strong>missing terms</strong> (set the higher differences to zero) and <strong>grouped-frequency estimation</strong>
+(build the cumulative "less than" column first). Both are in the solutions PDF, §23 and §24.
+</div>
+
+<div class="box">
+<p class="big" style="margin:0 0 1.2mm">Overall</p>
+<strong>Use them.</strong> Coverage is genuinely complete against the MAC21 portion &mdash; all five units, and
+nothing from the 25MAC21 scheme (no multiple integrals, no Laplace) has crept in, so they are matched to your
+paper. The proofs on p13 are correct and one of them (<span class="m">λ → 1/λ for A&#8315;&sup1;</span>) was asked in
+July 2024.<br>
+<strong>But correct the four red items in pen before you revise from them again</strong> &mdash; the shift rule and
+the divided-difference denominator in particular are used in questions that have appeared in nearly every paper.
+</div>
+
+<p class="foot">
+Checked page by page against the MAC21 session-wise portion. Every disputed formula was verified symbolically or
+numerically before being listed as an error &mdash; the shift rule, divided-difference denominator and trig identity
+were each tested on a worked example. Page 9 (numerical differentiation) was verified coefficient by coefficient
+and is entirely correct.
+</p>
+</body></html>
